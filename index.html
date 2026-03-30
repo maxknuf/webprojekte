@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webprojekte | Premium Landingpages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0A0B;
+      --bg-alt: #121214;
+      --accent: #E2C79A;
+      --text: #F8F5F2;
+      --text-muted: #9A948D;
+      --line: rgba(226, 199, 154, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh; display: flex; flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      padding: 80px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+    }
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      color: var(--accent); letter-spacing: 0.1em; font-weight: 400;
+    }
+    header p {
+      margin-top: 16px; font-size: 1.1rem;
+      color: var(--text-muted); font-weight: 300;
+    }
+    main {
+      flex: 1; padding: 80px 24px;
+      max-width: 1100px; margin: 0 auto; width: 100%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      padding: 48px 40px;
+      text-decoration: none; color: var(--text);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+    .card-tag {
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .card h2 {
+      font-family: 'Cinzel', serif; font-size: 1.5rem;
+      font-weight: 400; letter-spacing: 0.05em;
+    }
+    .card p {
+      font-size: 0.95rem; color: var(--text-muted);
+      font-weight: 300; line-height: 1.7;
+    }
+    .card-arrow {
+      margin-top: auto; padding-top: 24px;
+      font-size: 0.85rem; color: var(--accent);
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    footer {
+      text-align: center; padding: 40px 24px;
+      font-size: 0.8rem; color: var(--text-muted);
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Webprojekte</h1>
+    <p>Premium Landingpages &amp; Webauftritte</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <a href="martini-bar/martini-bar.html" class="card">
+        <span class="card-tag">Cocktailbar · Übersee</span>
+        <h2>Martini Bar Übersee</h2>
+        <p>Elegante Dark-Mode Website für die Martini Bar am Chiemsee. Originalbilder, echte Google-Rezensionen, Getränkekarte und Google Maps.</p>
+        <span class="card-arrow">Website ansehen →</span>
+      </a>
+
+      <a href="mexicotto/mexicotto-version-3-logo.html" class="card">
+        <span class="card-tag">Naturstein · Design</span>
+        <h2>Mexicotto</h2>
+        <p>Premium Landingpage für exklusive Naturstein-Kollektionen. Cinematic Hero-Animation, hochwertige Produktfotos und Katalog-Download.</p>
+        <span class="card-arrow">Website ansehen →</span>
+      </a>
+
+      <a href="ofenbau-hogger/ofenbau-hogger-relaunch.html" class="card">
+        <span class="card-tag">Handwerk · Bayern</span>
+        <h2>Ofenbau Hogger</h2>
+        <p>Moderner Webauftritt für traditionelles Ofenbau-Handwerk aus Bayern. Warme Ästhetik, klarer Aufbau und starke Präsenz.</p>
+        <span class="card-arrow">Website ansehen →</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Webprojekte · Alle Rechte vorbehalten
+  </footer>
+</body>
+</html>
