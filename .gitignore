@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Browser saved pages
+*_files/
+*.crdownload
+
+# Encrypted / sensitive files
+*.enc
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
