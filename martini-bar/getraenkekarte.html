@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martini Bar Übersee | Getränkekarte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0A0B;
+      --bg-alt: #121214;
+      --accent: #E2C79A; /* Sophisticated Champagne Gold */
+      --accent-dim: #9E7441;
+      --text: #F8F5F2;
+      --text-muted: #9A948D;
+      --line: rgba(226, 199, 154, 0.15);
+      --radius: 12px;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--text);
+      background-color: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    img { max-width: 100%; display: block; }
+    h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.05em; font-weight: 400; margin: 0; }
+    
+    .wrap { width: min(800px, calc(100% - 40px)); margin: 0 auto; }
+    
+    /* --- Header --- */
+    header {
+      padding: 40px 0 20px;
+      text-align: center;
+      position: relative;
+    }
+    .logo-box {
+      height: 60px;
+      margin: 0 auto 20px;
+      display: inline-block;
+    }
+    .logo-box img {
+      height: 100%;
+      width: auto;
+      filter: invert(1) brightness(1.5);
+    }
+    .header-content h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .header-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin: 0;
+    }
+
+    /* --- Menu Structure --- */
+    .menu-container {
+      padding: 20px 0 80px;
+    }
+    
+    .menu-section {
+      margin-bottom: 60px;
+    }
+    .menu-section-title {
+      font-size: 1.8rem;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .menu-section-title::before,
+    .menu-section-title::after {
+      content: '';
+      height: 1px;
+      background: var(--line);
+      flex-grow: 1;
+    }
+    .menu-section-desc {
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-top: -20px;
+      margin-bottom: 30px;
+    }
+
+    /* --- List --- */
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    
+    .item-name {
+      font-size: 1.1rem;
+      font-family: var(--font-display);
+      color: var(--text);
+      font-weight: 700;
+    }
+    
+    .item-dots {
+      flex-grow: 1;
+      border-bottom: 1px dotted var(--line);
+      position: relative;
+      top: -6px;
+    }
+    
+    .item-price {
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    .item-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 200;
+      line-height: 1.4;
+      padding-right: 50px;
+    }
+
+    /* Info text below sections */
+    .section-info {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    
+    /* Quick navigation for better mobile experience */
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 11, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 50;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+    }
+    .quick-nav a {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .quick-nav a:hover, .quick-nav a:active {
+      color: var(--accent);
+    }
+    
+    /* Footer */
+    footer { padding: 40px 0; border-top: 1px solid var(--line); text-align: center; margin-top: 40px; }
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); font-weight: 300; }
+    
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 14px 28px; border: 1px solid var(--accent);
+      color: var(--accent); font-family: var(--font-display);
+      text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.15em;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer; background: transparent;
+      margin-top: 30px;
+    }
+    .btn:hover { background: var(--accent); color: var(--bg); }
+
+    /* For extra small screens */
+    @media (max-width: 400px) {
+      .item-name { font-size: 1rem; }
+      .item-price { font-size: 0.95rem; }
+      .quick-nav { gap: 10px 16px; }
+      .quick-nav a { font-size: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="martini-bar.html" class="logo-box">
+      <img src="logo-martini-bar.png" alt="Martini Bar Logo">
+    </a>
+    <div class="header-content">
+      <h1>Drink Menu</h1>
+      <p>Bier, Wein, Cocktails</p>
+    </div>
+  </div>
+</header>
+
+<div class="quick-nav">
+  <a href="#martini">Martini</a>
+  <a href="#cocktails">Cocktails</a>
+  <a href="#spritz">Spritz</a>
+  <a href="#weine">Weine</a>
+  <a href="#biere">Bier & Alkoholfrei</a>
+</div>
+
+<div class="wrap menu-container">
+
+  <!-- MARTINI DRINKS -->
+  <section id="martini" class="menu-section">
+    <h2 class="menu-section-title">Martini - Drinks</h2>
+    <p class="menu-section-desc">Alle Drinks 6,50 €</p>
+    
+    <div class="item-list">
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Martini on the rocks</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Bianco, Rosso, Fiero, Extra Dry</div>
+      </div>
+      
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Negroni</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Martini Rosso, Gin, Campari</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Martini Aperol</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Martini Bianco, Aperol, Prosecco, Orange</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Gin Martini</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Martini Bianco, Gin</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Wodka Martini</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Martini Bianco, Wodka</div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-name">Espresso Martini</span>
+          <span class="item-dots"></span>
+          <span class="item-price">6,50</span>
+        </div>
+        <div class="item-desc">Wodka, Kahluá, Espresso</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COCKTAILS -->
+  <section id="cocktails" class="menu-section">
+    <h2 class="menu-section-title">Cocktails & Longdrinks</h2>
+    <p class="menu-section-desc">Alle Cocktails 6,50 € (Ausnahmen siehe Karte)</p>
+    
+    <div class="item-list">
+      <div class="item">
+        <div class="item-header"><span class="item-name">Planters Punch</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Rum dark & white, Zitrone, Grenadine, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Spicy Bacardi</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Zitrone, Grenadine, Mango-Maracuja-Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Zombie</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Rum dark, Captain Morgan, Zitrone, Grenadine, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Mai Tai</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Rum dark & white, Lime, Zitrone, Zucker, Ananas</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Pina Colada</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Rum dark & white, Sahne, Cocos, Ananas</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Tequila Sunrise</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Zitrone, Grenadine, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Caipirinha</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Pitu, Limette, brauner Zucker, Crashice</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Caipiroska</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Wodka, Limette, brauner Zucker, Crashice</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Caipifiero</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Martini Fiero, Limette, brauner Zucker, Crashice</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Gin Fizz</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Gin, Zucker, Zitrone, Soda</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Cuba Libre</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Bacardi, Lime, Cola, Limette</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Sex on the Beach</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Wodka, Passoa, Zitrone, Cranberry, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Singapore Sling</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Gin, Cointreau, Brandy, Lime, Grenadine, Ananas</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Sour 43</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Licor 43, Zitrone, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Cosmopolitan</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Wodka, Cointreau, Lime, Cranberry</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Paradise</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Gin, Apricotbrandy, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Whisky Sour</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Bourbon, Zitrone, Zucker, Orange</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">French 75</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Gin, Zitrone, Zucker, Prosecco</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Royal Passion Martini</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Wodka, Passoa, Maracuja, Prosecco</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Long Island Iced Tea</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">Rum, Tequila, Gin, Wodka, Cointreau, Cola</div>
+      </div>
+
+      <div class="item" style="margin-top: 15px;">
+        <div class="item-header"><span class="item-name">Bombay Saphire Gin</span><span class="item-dots"></span><span class="item-price">8,50</span></div>
+        <div class="item-desc">wahlweise mit Soda, Lemon, Tonic, Cola oder Saft</div>
+      </div>
+      
+      <div class="section-info">
+        Bacardi, Wodka, Gin, Bourbon, Martini, Campari, Aperol auch als klassische Longdrinks auf Anfrage.
+      </div>
+    </div>
+  </section>
+
+  <!-- SPRITZ -->
+  <section id="spritz" class="menu-section">
+    <h2 class="menu-section-title">Spritz</h2>
+    
+    <div class="item-list">
+      <div class="item">
+        <div class="item-header"><span class="item-name">Martini Spritz</span><span class="item-dots"></span><span class="item-price">5,50</span></div>
+        <div class="item-desc">Martini Bianco, Rosso oder Fiero, Prosecco, Soda (0,2l)</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Aperol – Campari – Limoncello</span><span class="item-dots"></span><span class="item-price">5,50</span></div>
+        <div class="item-desc">mit Prosecco, Soda (0,2l)</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Hugo</span><span class="item-dots"></span><span class="item-price">5,50</span></div>
+        <div class="item-desc">mit Prosecco oder Roséwein, Hollersirup, Soda (0,2l)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEINE & PROSECCO -->
+  <section id="weine" class="menu-section">
+    <h2 class="menu-section-title">Weine & Prosecco</h2>
+    
+    <div class="item-list">
+      <div class="item">
+        <div class="item-header"><span class="item-name">Offene Weine weiß, rosé, rot</span><span class="item-dots"></span><span class="item-price">4,50</span></div>
+        <div class="item-desc">Grüner Veltliner, Chardonnay, Primitivo Rosé, Zweigelt (0,25l)</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Doppio Passo Grillo weiß</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Doppio Passo Primitivo rosé</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Doppio Passo Primitivo rot</span><span class="item-dots"></span><span class="item-price">6,50</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Weinspritzer</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Prosecco</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,1 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Doppio Passo Flaschen</span><span class="item-dots"></span><span class="item-price">19,50</span></div>
+        <div class="item-desc">weiß, rosé, rot (0,7l)</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Prosecco Valdo</span><span class="item-dots"></span><span class="item-price">24,00</span></div>
+        <div class="item-desc">0,7 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Fürst Metternich Sekt</span><span class="item-dots"></span><span class="item-price">28,00</span></div>
+        <div class="item-desc">0,7 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Ca di Frati Lugana</span><span class="item-dots"></span><span class="item-price">32,00</span></div>
+        <div class="item-desc">0,7 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Valpolicella Ripasso</span><span class="item-dots"></span><span class="item-price">32,00</span></div>
+        <div class="item-desc">0,7 l</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIER & ALKOHOLFREI -->
+  <section id="biere" class="menu-section">
+    <h2 class="menu-section-title">Biere & Alkoholfrei</h2>
+    <p class="menu-section-desc">Biere auch alkoholfrei & leicht</p>
+    
+    <div class="item-list">
+      <div class="item">
+        <div class="item-header"><span class="item-name">Augustiner Helles</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,5 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Schönramer Helles</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,5 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Franziskaner Weißbier</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,5 l</div>
+      </div>
+
+      <div class="item" style="margin-top: 15px;">
+        <div class="item-header"><span class="item-name">Mineralwasser</span><span class="item-dots"></span><span class="item-price">3,00</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Cola, Tonic, Lemon</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">0,25 l</div>
+      </div>
+      <div class="item">
+        <div class="item-header"><span class="item-name">Säfte & Schorlen</span><span class="item-dots"></span><span class="item-price">4,00</span></div>
+        <div class="item-desc">Apfel, Orange, Ananasschorle (0,25 l)</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="martini-bar.html" class="btn">Zurück zur Startseite</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="footer-copy">&copy; 2026 Martini Bar Übersee. Alle Preise in Euro inkl. MwSt.</p>
+  </div>
+</footer>
+
+</body>
+</html>
