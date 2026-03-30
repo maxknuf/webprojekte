@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webprojekte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A0B;
+      --bg-card: #121214;
+      --accent: #E2C79A;
+      --accent-dim: #9E7441;
+      --text: #F8F5F2;
+      --text-muted: #9A948D;
+      --line: rgba(226, 199, 154, 0.15);
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Outfit', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      width: min(900px, 100%);
+    }
+
+    .card {
+      display: block;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 32px 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(226, 199, 154, 0.1);
+    }
+
+    .card h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .card .arrow {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent-dim);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .card:hover .arrow { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <h1>Webprojekte</h1>
+  <p class="subtitle">Landingpages & Entwürfe</p>
+
+  <div class="grid">
+    <a href="martini-bar.html" class="card">
+      <h2>Martini Bar</h2>
+      <p>Cocktailbar, Weinbar & Musikbar am Chiemsee – Übersee</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+
+    <a href="mexicotto.html" class="card">
+      <h2>Mexicotto</h2>
+      <p>Exklusive Feinsteinzeug Fliesen – Kollektion Verde 1999</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+
+    <a href="mexicotto-version-3-logo.html" class="card">
+      <h2>Mexicotto V3</h2>
+      <p>Mexicotto Landingpage – Logo-Variante</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+
+    <a href="ofenbau-hogger.html" class="card">
+      <h2>Ofenbau Hogger</h2>
+      <p>Kachelöfen & Kamine – Meisterbetrieb</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+
+    <a href="ofenbau-hogger-relaunch.html" class="card">
+      <h2>Ofenbau Hogger Relaunch</h2>
+      <p>Redesign der Ofenbau-Hogger-Seite</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+
+    <a href="ofenbau-hogger-gold.html" class="card">
+      <h2>Ofenbau Hogger Gold</h2>
+      <p>Gold-Edition der Ofenbau-Hogger-Seite</p>
+      <span class="arrow">Ansehen &rarr;</span>
+    </a>
+  </div>
+
+</body>
+</html>
