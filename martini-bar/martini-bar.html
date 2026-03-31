@@ -259,6 +259,35 @@
       background: var(--accent); color: var(--bg); transform: translateY(-4px); box-shadow: 0 15px 40px rgba(226, 199, 154, 0.25);
     }
 
+    /* --- Booking Section --- */
+    .res-section { background: var(--bg-alt); position: relative; overflow: hidden; }
+    .res-card {
+      background: var(--bg); border: 1px solid var(--line);
+      padding: 60px; border-radius: var(--radius);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+      max-width: 900px; margin: 0 auto;
+    }
+    .res-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; }
+    .form-group input, .form-group select {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--line);
+      padding: 16px; color: white; font-family: var(--font-body);
+      border-radius: 6px; outline: none; transition: 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--accent); background: rgba(255,255,255,0.07); }
+    
+    .seat-types { display: flex; gap: 16px; margin-bottom: 32px; }
+    .seat-opt {
+      flex: 1; padding: 20px; border: 1px solid var(--line); border-radius: 8px;
+      text-align: center; cursor: pointer; transition: 0.3s;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .seat-opt.active { border-color: var(--accent); background: rgba(226, 199, 154, 0.05); }
+    .seat-opt i { font-size: 0.8rem; color: var(--text-muted); font-style: normal; }
+    .seat-opt strong { font-family: var(--font-display); font-size: 1rem; }
+    .seat-opt.active strong { color: var(--accent); }
+
     @media (max-width: 900px) {
       .split, .loc-grid, .reviews-grid { grid-template-columns: 1fr; gap: 60px; }
       .showcase-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
@@ -290,6 +319,7 @@
     <div class="nav-links">
       <a href="#vibe">Der Vibe</a>
       <a href="#showcase">Impressionen</a>
+      <a href="#booking">Reservierung</a>
       <a href="getraenkekarte.html">Getränkekarte</a>
       <a href="#location">Anfahrt</a>
     </div>
@@ -361,7 +391,69 @@
 
 
 
-<!-- Google Reviews -->
+<!-- Reservation Section -->
+<section id="booking" class="res-section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Reservierung</h2>
+      <p>Sichern Sie sich Ihren Platz im Wohnzimmer von Übersee. Wählen Sie zwischen dem authentischen Bar-Erlebnis oder einem geselligen Tisch.</p>
+    </div>
+    
+    <div class="res-card">
+      <div class="seat-types">
+        <div class="seat-opt active" onclick="selectSeat('Barplatz', this)">
+          <strong>Barplatz</strong>
+          <i>8 Plätze verfügbar</i>
+        </div>
+        <div class="seat-opt" onclick="selectSeat('Tisch', this)">
+          <strong>Tisch</strong>
+          <i>Vom 2er bis 6er</i>
+        </div>
+      </div>
+
+      <div class="res-grid">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="res-name" placeholder="Ihr Name">
+        </div>
+        <div class="form-group">
+          <label>Personen</label>
+          <select id="res-count">
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5 Personen</option>
+            <option value="6">6 Personen (Stammtisch)</option>
+            <option value="7+">7+ Personen (Anfrage)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Datum</label>
+          <input type="date" id="res-date">
+        </div>
+        <div class="form-group">
+          <label>Uhrzeit</label>
+          <select id="res-time">
+            <option value="18:00">18:00 Uhr</option>
+            <option value="18:30">18:30 Uhr</option>
+            <option value="19:00">19:00 Uhr</option>
+            <option value="19:30">19:30 Uhr</option>
+            <option value="20:00">20:00 Uhr</option>
+            <option value="20:30">20:30 Uhr</option>
+            <option value="21:00">21:00 Uhr</option>
+          </select>
+        </div>
+      </div>
+      
+      <button onclick="sendReservation()" class="btn solid" style="width: 100%;">Verfügbarkeit anfragen via WhatsApp</button>
+      <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 20px;">
+        Haben Sie Sonderwünsche oder möchten für mehr als 6 Personen reservieren? <br>
+        Rufen Sie uns direkt an: <a href="tel:017630368575" style="color: var(--accent);">0176-30368575</a>
+      </p>
+    </div>
+  </div>
+</section>
 <section id="reviews" class="reviews-section">
   <div class="wrap">
     <div class="section-head">
@@ -452,6 +544,39 @@
     if (window.scrollY > 80) nav.classList.add('scrolled');
     else nav.classList.remove('scrolled');
   });
+
+  // Reservation Logic
+  let selectedSeat = 'Barplatz';
+  function selectSeat(type, el) {
+    selectedSeat = type;
+    document.querySelectorAll('.seat-opt').forEach(opt => opt.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function sendReservation() {
+    const name = document.getElementById('res-name').value;
+    const count = document.getElementById('res-count').value;
+    const date = document.getElementById('res-date').value;
+    const time = document.getElementById('res-time').value;
+
+    if (!name || !date) {
+      alert('Bitte füllen Sie Name und Datum aus.');
+      return;
+    }
+
+    const message = `Hallo Martini Bar Team, ich möchte gerne reservieren:
+    
+- Name: ${name}
+- Personen: ${count}
+- Bereich: ${selectedSeat}
+- Datum: ${date}
+- Uhrzeit: ${time}
+
+Bitte um kurze Bestätigung. Viele Grüße!`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/4917630368575?text=${encodedMessage}`, '_blank');
+  }
 </script>
 
 <!-- Floating Contact Actions -->
