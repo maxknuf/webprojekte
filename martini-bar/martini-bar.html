@@ -164,11 +164,13 @@
     /* --- Cinematic Video Section --- */
     .cinematic-video {
       position: relative; width: 100%; overflow: hidden;
-      max-height: 70vh; background: #000;
+      max-height: 70vh; background: var(--bg);
     }
     .cinematic-video video {
       width: 100%; display: block; object-fit: cover;
-      max-height: 70vh;
+      max-height: 70vh; opacity: 0.85;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
     }
     .cinematic-video-overlay {
       position: absolute; inset: 0;
@@ -190,7 +192,13 @@
     /* Map & Info */
     .location-wrap { padding: 100px 0; }
     .loc-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 100px; align-items: center; }
-    .map-box { height: 450px; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+    .map-box { 
+      height: 450px; border-radius: 8px; overflow: hidden; 
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+      mask-composite: intersect;
+    }
     .map-box iframe { width: 100%; height: 100%; border: 0; filter: invert(0.9) hue-rotate(180deg) brightness(1.15) contrast(1.05) grayscale(0.6); }
 
     .opening-item { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
