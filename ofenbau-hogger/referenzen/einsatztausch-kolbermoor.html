@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projekt: Einsatztausch in Kolbermoor — alter Kamineinsatz gegen modernen Heizeinsatz mit 7 kW getauscht. Verkleidung erhalten, 2 Tage Montage. Ofenbaumeister Hogger." />
+  <meta name="keywords" content="Einsatztausch Kolbermoor, Kamineinsatz tauschen, Heizeinsatz modernisieren, Ofenbau Hogger Referenz, Ofensanierung Kolbermoor" />
+  <title>Projekt: Einsatztausch in Kolbermoor | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/referenzen/einsatztausch-kolbermoor" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projekt: Einsatztausch in Kolbermoor | Ofenbau Hogger" />
+  <meta property="og:description" content="Einsatztausch in Kolbermoor: Alter Kamineinsatz gegen modernen Heizeinsatz getauscht. Vorhandene Verkleidung erhalten." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/referenzen/einsatztausch-kolbermoor" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projekt: Einsatztausch in Kolbermoor" />
+  <meta name="twitter:description" content="Einsatztausch in Kolbermoor — aus alt mach neu. Referenzprojekt von Ofenbau Hogger." />
+
+  <link rel="icon" href="../assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0C0B09;
+      --bg2:          #131210;
+      --bg3:          #1A1917;
+      --bg4:          #222120;
+      --gold:         #C4A84C;
+      --gold-light:   #DFC882;
+      --gold-dim:     #8A7230;
+      --red:          #A61216;
+      --text:         #F0EAE0;
+      --text-muted:   #9A9080;
+      --text-dim:     #5A5448;
+      --border:       rgba(196,168,76,0.15);
+      --border-soft:  rgba(240,234,224,0.07);
+      --radius:       4px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ──────────────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: translateZ(0);
+      transition: height 0.4s ease, opacity 0.25s;
+    }
+    .nav-logo-img:hover { opacity: 0.85; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
+    }
+
+    /* ─── MOBILE NAV ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 250;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 24px 40px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 251;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-weight: 400;
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 160px 0 100px;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to bottom, var(--bg) 0%, transparent 30%),
+        linear-gradient(to top, var(--bg) 0%, transparent 30%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-content .label { margin-bottom: 20px; }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .breadcrumb {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .breadcrumb a { color: var(--text-muted); transition: color 0.25s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ─── SECTION BASE ─────────────────────────────────────────── */
+    .section { padding: 100px 0; }
+    .section-alt { background: var(--bg2); }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-header .label { margin-bottom: 14px; }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── PROJECT DETAILS ──────────────────────────────────────── */
+    .project-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 64px;
+      align-items: start;
+    }
+    .project-story h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .project-story h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .project-story p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .project-sidebar {
+      background: var(--bg3);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      position: sticky;
+      top: 120px;
+    }
+    .sidebar-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .sidebar-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .sidebar-item:last-child { border-bottom: none; }
+    .sidebar-label {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+    .sidebar-value {
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    /* ─── QUOTE ─────────────────────────────────────────────────── */
+    .quote-section {
+      padding: 80px 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .quote-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: var(--gold-dim);
+      line-height: 1;
+      margin-bottom: -20px;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .quote-author {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ─── GALLERY ──────────────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(to top, rgba(12,11,9,0.85), transparent);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── WEITERE PROJEKTE ─────────────────────────────────────── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      aspect-ratio: 16/10;
+      display: flex;
+      align-items: flex-end;
+    }
+    .project-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+    .project-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,11,9,0.9) 0%, rgba(12,11,9,0.2) 60%);
+    }
+    .project-card-content {
+      position: relative;
+      z-index: 2;
+      padding: 32px;
+    }
+    .project-card-content .label { margin-bottom: 8px; }
+    .project-card-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .project-card-content p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── E-E-A-T BADGE ────────────────────────────────────────── */
+    .eeat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 20px;
+      margin-top: 32px;
+    }
+    .eeat-badge svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .eeat-badge span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ─── CTA SECTION ──────────────────────────────────────────── */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ─── INTERNAL LINKS ───────────────────────────────────────── */
+    .internal-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .internal-links a {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 2px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .internal-links a:hover {
+      color: var(--gold);
+      border-color: var(--gold-dim);
+    }
+
+    /* ─── FLOATING CONTACT ─────────────────────────────────────── */
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 180;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .floating-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.5);
+    }
+    .floating-btn svg { width: 22px; height: 22px; }
+    .floating-whatsapp { background: #25D366; }
+    .floating-email { background: var(--gold); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 60px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .project-layout { grid-template-columns: 1fr; gap: 40px; }
+      .project-sidebar { position: static; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 60vh; padding: 140px 0 80px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .floating-contact {
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        transform: none;
+      }
+      .floating-btn { width: 44px; height: 44px; }
+      .floating-btn svg { width: 20px; height: 20px; }
+      .section { padding: 72px 0; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .mobile-menu a { font-size: 1.4rem; }
+      .mobile-menu { gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── FLOATING CONTACT ────────────────────────────────────────── -->
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="../index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menu schliessen">&#10005;</button>
+  <a href="../index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="../fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="../ueber-uns.html" onclick="closeMobile()">Uber uns</a>
+  <a href="../referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="../index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="../index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#leistungen">Leistungen</a></li>
+      <li><a href="../fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="../ueber-uns.html">Uber uns</a></li>
+      <li><a href="../referenzen.html" class="active">Referenzen</a></li>
+      <li><a href="../index.html#prozess">Ablauf</a></li>
+      <li><a href="../index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menu offnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section class="hero">
+  <img src="../assets/images/referenzen/projekt-1.jpg" alt="Einsatztausch in Kolbermoor am Chiemsee von Ofenbau Hogger" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Referenzprojekt</p>
+    <h1>Einsatztausch in Kolbermoor — aus alt mach neu</h1>
+    <p>Alter Kamineinsatz raus, moderner Heizeinsatz rein. Vorhandene Verkleidung erhalten, Heizleistung verdoppelt — in nur 2 Tagen.</p>
+    <div class="breadcrumb">
+      <a href="../index.html">Startseite</a>
+      <span>/</span>
+      <a href="../referenzen.html">Referenzen</a>
+      <span>/</span>
+      <span>Einsatztausch Kolbermoor</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECT DETAILS ───────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="project-layout">
+
+      <div class="project-story reveal">
+        <h2>Neues Feuer im alten Kamin</h2>
+        <p>In Kolbermoor stand ein Kamin aus den 1990er Jahren, der seine besten Tage hinter sich hatte. Der Heizeinsatz war veraltet, der Wirkungsgrad schlecht, und die BImSchV-Frist lief ab. Die Verkleidung war jedoch in gutem Zustand und sollte erhalten bleiben. Ein klassischer Fall für einen Einsatztausch.</p>
+
+        <h3>Die Herausforderung</h3>
+        <p>Der alte Kamineinsatz musste zerstörungsfrei ausgebaut werden, ohne die vorhandene Naturstein-Verkleidung zu beschädigen. Gleichzeitig musste der neue Einsatz exakt in die bestehende Öffnung passen und den aktuellen Emissionsvorschriften entsprechen.</p>
+
+        <h3>Unsere Lösung</h3>
+        <p>Wir wählten einen modernen Heizeinsatz mit 7 kW Nennleistung und einem Wirkungsgrad von über 80%. Der neue Einsatz wurde passgenau in die bestehende Verkleidung integriert. Die Dichtungen, Anschlüsse und Rauchgasführung wurden komplett erneuert. Das Ergebnis: doppelte Heizleistung bei halbem Holzverbrauch.</p>
+
+        <h3>Die Umsetzung</h3>
+        <p>Der gesamte Einsatztausch dauerte nur zwei Arbeitstage. Am ersten Tag wurde der alte Einsatz ausgebaut und die Anschlüsse vorbereitet. Am zweiten Tag erfolgte der Einbau des neuen Heizeinsatzes, die Abdichtung und die Abnahme durch den Schornsteinfeger. Der Kunde konnte am selben Abend das erste Mal einheizen.</p>
+
+        
+</section>
+
+<!-- ── GALERIE ────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Projektbilder</p>
+      <h2>Kachelofen in Prien</h2>
+      <p>Impressionen vom fertigen Kachelofen mit Sitzbank.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="../assets/images/referenzen/projekt-1.jpg" alt="Einsatztausch Kolbermoor Frontansicht mit Sitzbank" loading="lazy" />
+        <div class="gallery-caption">Neuer Heizeinsatz in bestehender Verkleidung</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="../assets/images/oefen/fina-es.jpg" alt="Einsatztausch Kolbermoor Detail Sitzbank" loading="lazy" />
+        <div class="gallery-caption">Die beheizte Sitzbank ladt zum Verweilen ein</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KUNDENZITAT ────────────────────────────────────────────── -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-inner reveal">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Schnell, sauber und professionell. Der neue Einsatz heizt doppelt so gut wie der alte — und wir mussten nichts an der Verkleidung ändern.</p>
+      <p class="quote-author">Herr M. aus Kolbermoor</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WEITERE PROJEKTE ──────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Weitere Referenzen</p>
+      <h2>Weitere Projekte entdecken</h2>
+    </div>
+    <div class="projects-grid">
+      <a href="heizkamin-rosenheim.html" class="project-card reveal reveal-delay-1">
+        <img src="../assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" loading="lazy" />
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <p class="label">Heizkamin</p>
+          <h3>Moderner Heizkamin in Rosenheim</h3>
+          <p>Stahl &amp; Glas | 2024</p>
+        </div>
+      </a>
+      <a href="kachelofen-prien.html" class="project-card reveal reveal-delay-2">
+        <img src="../assets/images/oefen/apella.jpg" alt="Kachelofen Prien" loading="lazy" />
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <p class="label">Kachelofen</p>
+          <h3>Kachelofen mit Sitzbank in Prien</h3>
+          <p>Keramik &amp; Schamotte | 2024</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Ihr Projekt</p>
+    <h2>Ahnliches Projekt anfragen</h2>
+    <p>Lassen Sie sich kostenlos und unverbindlich beraten. Ofenbaumeister Bastian Hogger freut sich auf Ihr Kachelofen-Projekt.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="../index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+    <div class="internal-links">
+      <a href="../kachelofen-rosenheim.html">Kachelofen Rosenheim</a>
+      <a href="../referenzen.html">Alle Referenzen</a>
+      <a href="../ueber-uns.html">Uber Bastian Hogger</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">
+          Individuelle Kachelofen, Heizkamine und Speicherofen — handgefertigt mit Leidenschaft seit uber 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="../index.html#leistungen">Kachelofen</a></li>
+          <li><a href="../index.html#leistungen">Heizkamine</a></li>
+          <li><a href="../index.html#leistungen">Speicherofen</a></li>
+          <li><a href="../index.html#leistungen">Beratung &amp; Planung</a></li>
+          <li><a href="../fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="../ueber-uns.html">Uber Bastian Hogger</a></li>
+          <li><a href="../referenzen.html">Referenzen</a></li>
+          <li><a href="../index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="../index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="../index.html#kontakt">Musterstrasse 1<br>83022 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="../impressum.html">Impressum</a>
+        <a href="../datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ─────────────────────────────────────────────────────── -->
+<script>
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* Mobile menu */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+</script>
+
+<!-- Schema.org: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Projekt: Einsatztausch in Kolbermoor am Chiemsee",
+  "description": "Einsatztausch in Kolbermoor: Alter Kamineinsatz gegen modernen Heizeinsatz mit 7 kW getauscht. Verkleidung erhalten. Ofenbaumeister Bastian Hogger.",
+  "image": "https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Bastian Hogger",
+    "jobTitle": "Ofenbaumeister"
+  },
+  "publisher": {
+    "@type": "LocalBusiness",
+    "name": "Ofenbau Hogger",
+    "url": "https://ofenbau-hogger.de"
+  },
+  "datePublished": "2024-09-01",
+  "dateModified": "2024-09-01"
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://ofenbau-hogger.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Referenzen",
+      "item": "https://ofenbau-hogger.de/referenzen"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Einsatztausch Kolbermoor",
+      "item": "https://ofenbau-hogger.de/referenzen/einsatztausch-kolbermoor"
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

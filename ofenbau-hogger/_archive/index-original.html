@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bastian Hogger – Ihr Ofenbaumeister in Rosenheim. Maßgeschneiderte Kachelöfen, Heizkamine und Speicheröfen. Von der Idee bis zur Montage." />
+  <title>Ofenbau Hogger – Meisterbetrieb in Rosenheim</title>
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0C0B09;
+      --bg2:          #131210;
+      --bg3:          #1A1917;
+      --bg4:          #222120;
+      --gold:         #C4A84C;
+      --gold-light:   #DFC882;
+      --gold-dim:     #8A7230;
+      --red:          #A61216;
+      --red-light:    #D01519;
+      --text:         #F0EAE0;
+      --text-muted:   #9A9080;
+      --text-dim:     #5A5448;
+      --border:       rgba(196,168,76,0.15);
+      --border-soft:  rgba(240,234,224,0.07);
+      --radius:       4px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    .display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .display-lg {
+      font-size: clamp(3.2rem, 7vw, 7rem);
+    }
+    .display-md {
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+    }
+    .display-sm {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+    }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ──────────────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      transition: background 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+      padding: 28px 0;
+      border-bottom: 1px solid transparent;
+    }
+    #nav.scrolled {
+      background: rgba(12,11,9,0.96);
+      border-bottom-color: var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: translateZ(0);
+      transition: height 0.4s ease, opacity 0.25s;
+    }
+    #nav.scrolled .nav-logo-img {
+      height: 52px;
+    }
+    .nav-logo-img:hover {
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+
+    /* Mobile hamburger */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: rgba(12,11,9,0.55);
+      z-index: 1;
+    }
+    /* Decorative grid lines */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        linear-gradient(rgba(196,168,76,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,168,76,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 100%);
+      pointer-events: none;
+    }
+    .hero-flame, .hero-line { display: none; }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 120px 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .hero-logo {
+      height: clamp(160px, 28vw, 320px);
+      width: auto;
+      margin-bottom: 40px;
+      -webkit-mask-image: radial-gradient(ellipse 50% 55% at 50% 50%, black 0%, transparent 100%);
+      mask-image: radial-gradient(ellipse 50% 55% at 50% 50%, black 0%, transparent 100%);
+    }
+    .hero-title { display: none; }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      -webkit-mask-image: radial-gradient(ellipse 90% 200% at 50% 50%, black 20%, transparent 100%);
+      mask-image: radial-gradient(ellipse 90% 200% at 50% 50%, black 20%, transparent 100%);
+    }
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(240,234,224,0.25);
+      color: var(--text);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 2;
+    }
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold-dim), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ─── SECTION HEADERS ──────────────────────────────────────── */
+    .section-header {
+      margin-bottom: 64px;
+    }
+    .section-header .label {
+      display: block;
+      margin-bottom: 16px;
+    }
+    .section-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 20px;
+    }
+
+    /* ─── LEISTUNGEN ───────────────────────────────────────────── */
+    #leistungen {
+      padding: 120px 0;
+      background: var(--bg);
+    }
+    .leistungen-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .leistung-card {
+      position: relative;
+      background: var(--bg2);
+      padding: 52px 48px;
+      overflow: hidden;
+      transition: background 0.35s;
+      cursor: default;
+    }
+    .leistung-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .leistung-card:hover {
+      background: var(--bg3);
+    }
+    .leistung-card:hover::before {
+      opacity: 1;
+    }
+    .leistung-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 28px;
+      color: var(--gold);
+    }
+    .leistung-number {
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      opacity: 0.4;
+      line-height: 1;
+      transition: opacity 0.35s;
+    }
+    .leistung-card:hover .leistung-number {
+      opacity: 0.7;
+    }
+    .leistung-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .leistung-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 340px;
+    }
+    .leistung-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      transition: color 0.25s, gap 0.25s;
+    }
+    .leistung-card:hover .leistung-link {
+      color: var(--gold);
+      gap: 14px;
+    }
+
+    /* ─── ÜBER ─────────────────────────────────────────────────── */
+    #ueber {
+      padding: 120px 0;
+      background: var(--bg2);
+    }
+    .ueber-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .ueber-visual {
+      position: relative;
+      aspect-ratio: 3/4;
+      background: var(--bg3);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .ueber-portrait-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .ueber-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--bg4);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .ueber-badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold);
+    }
+    .ueber-badge-text {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .ueber-content .label {
+      display: block;
+      margin-bottom: 16px;
+    }
+    .ueber-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--text);
+      margin-bottom: 28px;
+      border-left: 2px solid var(--gold);
+      padding-left: 24px;
+    }
+    .ueber-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .ueber-credentials {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .credential {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .credential-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--gold);
+    }
+    .credential-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ─── QUALITÄT / WARUM HOGGER ──────────────────────────────── */
+    #qualitaet {
+      padding: 100px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .qualitaet-inner {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .qualitaet-inner h2 { margin-top: 16px; }
+    .qualitaet-inner .section-divider { margin-top: 24px; }
+    .qualitaet-inner > div > p { margin-top: 24px; font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; }
+    .qualitaet-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .feature-item {
+      background: var(--bg2);
+      padding: 36px 32px;
+      transition: background 0.3s;
+    }
+    .feature-item:hover { background: var(--bg3); }
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .feature-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── REFERENZEN ───────────────────────────────────────────── */
+    #referenzen {
+      padding: 120px 0;
+      background: var(--bg2);
+    }
+    .referenzen-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 64px;
+    }
+    .referenzen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .ref-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg3);
+    }
+    .ref-card:first-child {
+      grid-row: span 2;
+    }
+    .ref-card-inner {
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    .ref-card:first-child .ref-card-inner {
+      aspect-ratio: auto;
+      height: 100%;
+      min-height: 480px;
+    }
+    .ref-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s ease;
+    }
+    .ref-card:hover .ref-img {
+      transform: scale(1.04);
+    }
+    .ref-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,11,9,0.9) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .ref-card:hover .ref-overlay {
+      opacity: 1;
+    }
+    .ref-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 6px 14px;
+      border: 1px solid rgba(196,168,76,0.3);
+      border-radius: 2px;
+    }
+
+    /* ─── PROZESS ──────────────────────────────────────────────── */
+    #prozess {
+      padding: 120px 0;
+      background: var(--bg);
+    }
+    .prozess-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 64px;
+    }
+    .prozess-step {
+      background: var(--bg2);
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .prozess-step::after {
+      content: '';
+      position: absolute;
+      top: 40px; right: 0;
+      width: 1px; height: calc(100% - 80px);
+      background: var(--border-soft);
+    }
+    .prozess-step:last-child::after { display: none; }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text-dim);
+      opacity: 0.3;
+      margin-bottom: 20px;
+    }
+    .step-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .step-text {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── KONTAKT ──────────────────────────────────────────────── */
+    #kontakt {
+      padding: 120px 0;
+      background: var(--bg2);
+    }
+    .kontakt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .kontakt-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .kontakt-cta-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .kontakt-cta-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .kontakt-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .kontakt-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .kontakt-detail-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+    .kontakt-detail-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+    .kontakt-detail-val {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    /* Form */
+    .kontakt-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .form-input, .form-textarea, .form-select {
+      background: var(--bg3);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.25s;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: var(--text-dim);
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--gold-dim);
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .form-select option {
+      background: var(--bg3);
+      color: var(--text);
+    }
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--gold);
+      color: var(--bg);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+      width: 100%;
+      margin-top: 8px;
+    }
+    .form-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 60px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text-muted); }
+
+    /* ─── GOLD BANNER ──────────────────────────────────────────── */
+    .gold-banner {
+      background: var(--gold);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .gold-banner-track {
+      display: flex;
+      gap: 60px;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+    .gold-banner-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bg);
+      flex-shrink: 0;
+    }
+    .gold-banner-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(12,11,9,0.4);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── FLIESEN.STUDIO ──────────────────────────────────────────── */
+    #fliesen {
+      background: var(--bg);
+    }
+    .fliesen-hero {
+      position: relative;
+      height: min(560px, 60vw);
+      overflow: hidden;
+    }
+    .fliesen-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .fliesen-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(12,11,9,0.88) 0%, rgba(12,11,9,0.5) 55%, rgba(12,11,9,0.2) 100%),
+        linear-gradient(to top, rgba(12,11,9,0.6) 0%, transparent 50%);
+      display: flex;
+      align-items: center;
+    }
+    .fliesen-hero-content {
+      max-width: 560px;
+      padding: 60px 0;
+    }
+    .fliesen-hero-sub {
+      margin-top: 20px;
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.72;
+      max-width: 460px;
+    }
+    .fliesen-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .fliesen-intro-text {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.78;
+      padding-top: 8px;
+    }
+    .fliesen-kategorien {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      padding-bottom: 80px;
+    }
+    .fliesen-kat {
+      background: var(--bg2);
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .fliesen-kat:hover { background: var(--bg3); }
+    .fliesen-kat-img-wrap {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .fliesen-kat-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .fliesen-kat:hover .fliesen-kat-img { transform: scale(1.05); }
+    .fliesen-kat-body {
+      padding: 28px 24px 32px;
+    }
+    .fliesen-kat-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .fliesen-kat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .fliesen-kat-text {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .fliesen-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 48px;
+      background: var(--bg2);
+      border: 1px solid var(--border-soft);
+      margin-bottom: 0;
+    }
+    .fliesen-cta-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── MOBILE NAV ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 190;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 28px; right: 24px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .fliesen-kategorien { grid-template-columns: repeat(2, 1fr); }
+      .fliesen-intro-grid { grid-template-columns: 1fr; gap: 24px; }
+      .fliesen-cta { flex-direction: column; gap: 20px; align-items: flex-start; padding: 28px; }
+      .leistungen-grid {
+        grid-template-columns: 1fr;
+      }
+      .ueber-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .ueber-visual {
+        max-width: 380px;
+        aspect-ratio: 3/4;
+      }
+      .qualitaet-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .referenzen-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .ref-card:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+      .ref-card:first-child .ref-card-inner {
+        min-height: 300px;
+      }
+      .prozess-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .prozess-step::after { display: none; }
+      .kontakt-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .fliesen-kategorien { grid-template-columns: 1fr; }
+      .fliesen-hero { height: 70vw; min-height: 280px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+
+      .hero-content { max-width: 100%; padding: 80px 0; }
+      .hero-logo { height: clamp(72px, 22vw, 140px); }
+      .hero-actions { flex-direction: column; align-items: center; }
+
+      .referenzen-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .referenzen-grid { grid-template-columns: 1fr; }
+      .ref-card:first-child { grid-column: span 1; }
+      .ref-card:first-child .ref-card-inner { min-height: 260px; }
+
+      .prozess-steps { grid-template-columns: 1fr; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .ueber-credentials { flex-direction: column; gap: 20px; }
+
+      .leistung-card { padding: 36px 28px; }
+      .leistung-number { font-size: 3rem; right: 28px; top: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">✕</button>
+  <a href="#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="#fliesen" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="#ueber" onclick="closeMobile()">Über uns</a>
+  <a href="#referenzen" onclick="closeMobile()">Referenzen</a>
+  <a href="#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#fliesen">Fliesen.Studio</a></li>
+      <li><a href="#ueber">Über uns</a></li>
+      <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#prozess">Ablauf</a></li>
+      <li><a href="#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section id="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+    <source src="assets/videos/hero-cinematic.mp4" type="video/mp4" />
+    <source src="assets/videos/hero-fireplace.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container" style="width:100%;display:flex;justify-content:center;">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="hero-eyebrow">Meisterbetrieb seit 2010 · Rosenheim</span>
+      </div>
+      <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" class="hero-logo" />
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-gold">
+          Kostenlos beraten lassen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#referenzen" class="btn-ghost" style="background:#A61216;border-color:#A61216;color:#fff;">
+          Referenzen ansehen
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── GOLD BANNER ─────────────────────────────────────────────── -->
+<div class="gold-banner">
+  <div class="gold-banner-track">
+    <span class="gold-banner-item"><span>Kachelöfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Heizkamine</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Speicheröfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Grundöfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Außenküchen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Ofensanierung</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Meisterbetrieb</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Bayern & Umgebung</span><span class="gold-banner-dot"></span></span>
+    <!-- Duplicate for seamless loop -->
+    <span class="gold-banner-item"><span>Kachelöfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Heizkamine</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Speicheröfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Grundöfen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Außenküchen</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Ofensanierung</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Meisterbetrieb</span><span class="gold-banner-dot"></span></span>
+    <span class="gold-banner-item"><span>Bayern & Umgebung</span><span class="gold-banner-dot"></span></span>
+  </div>
+</div>
+
+<!-- ── LEISTUNGEN ─────────────────────────────────────────────── -->
+<section id="leistungen">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Leistungen</span>
+      <h2 class="display display-md">Was wir für Sie schaffen</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="leistungen-grid">
+
+      <div class="leistung-card reveal reveal-delay-1" id="leistung-kachelofen">
+        <span class="leistung-number">01</span>
+        <svg class="leistung-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="8" y="28" width="32" height="16" rx="2"/>
+          <path d="M16 28V20c0-4.4 3.6-8 8-8s8 3.6 8 8v8"/>
+          <path d="M24 12C24 8 26 5 24 4c-2 1-2 4-4 6" stroke-linecap="round"/>
+        </svg>
+        <h3 class="leistung-title">Kachelöfen</h3>
+        <p class="leistung-text">
+          Zeitlose Wärme in Handarbeit. Ob klassisch oder modern — jeder Kachelofen wird individuell nach Ihren Wünschen geplant und gefertigt. Natürliche Wärmespeicherung für Ihr Zuhause.
+        </p>
+        <a href="#kontakt" class="leistung-link">
+          Anfrage stellen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="leistung-card reveal reveal-delay-2" id="leistung-heizkamin">
+        <span class="leistung-number">02</span>
+        <svg class="leistung-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="6" y="30" width="36" height="12" rx="2"/>
+          <path d="M12 30V20a12 12 0 0 1 24 0v10"/>
+          <path d="M20 20c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
+          <circle cx="24" cy="20" r="2" fill="currentColor"/>
+        </svg>
+        <h3 class="leistung-title">Heizkamine</h3>
+        <p class="leistung-text">
+          Offenes Feuer als Herzstück Ihres Wohnraums. Moderne Heizkamine verbinden Ästhetik mit effizienter Wärmeleistung — perfekt abgestimmt auf Ihr Raumklima und Ihren Stil.
+        </p>
+        <a href="#referenzen" class="leistung-link">
+          Referenzen ansehen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="leistung-card reveal reveal-delay-1" id="leistung-speicherofen">
+        <span class="leistung-number">03</span>
+        <svg class="leistung-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="10" y="14" width="28" height="24" rx="3"/>
+          <path d="M10 24h28"/>
+          <path d="M18 14V10M30 14V10"/>
+          <circle cx="24" cy="33" r="2" fill="currentColor"/>
+        </svg>
+        <h3 class="leistung-title">Speicheröfen</h3>
+        <p class="leistung-text">
+          Effizient heizen, langanhaltend warm bleiben. Speicheröfen nehmen kurzzeitig viel Energie auf und geben sie stundenlang gleichmäßig als angenehme Strahlungswärme ab.
+        </p>
+        <a href="#kontakt" class="leistung-link">
+          Anfrage stellen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="leistung-card reveal reveal-delay-2" id="leistung-beratung">
+        <span class="leistung-number">04</span>
+        <svg class="leistung-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 6L6 18v24h36V18L24 6z"/>
+          <path d="M18 42V30a6 6 0 0 1 12 0v12"/>
+          <circle cx="24" cy="22" r="3"/>
+        </svg>
+        <h3 class="leistung-title">Beratung & Planung</h3>
+        <p class="leistung-text">
+          Jedes Projekt beginnt mit einem persönlichen Gespräch. Wir analysieren Ihre räumlichen Gegebenheiten, beraten zu Materialien und Heizsystemen und entwickeln den idealen Plan.
+        </p>
+        <a href="#prozess" class="leistung-link">
+          Ablauf ansehen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FLIESEN.STUDIO ──────────────────────────────────────────── -->
+<section id="fliesen">
+  <div class="fliesen-hero">
+    <img src="assets/images/fliesen/cotto-campiano.jpg" alt="Fliesen.Studio – Hogger" class="fliesen-hero-img" />
+    <div class="fliesen-hero-overlay">
+      <div class="container fliesen-hero-content reveal">
+        <span class="label">Fliesen.Studio</span>
+        <h2 class="display display-md" style="margin-top:16px;color:#fff;">Stein. Marmor.<br><em>Zement. Holz.</em></h2>
+        <p class="fliesen-hero-sub">Exklusive Feinsteinzeug-Fliesen und Naturmaterialien — kuratiert, beraten und verlegt aus einer Hand. Unser Fliesen.Studio ergänzt den Ofenbau zu einem vollständigen Raumkonzept.</p>
+        <a href="#kontakt" class="btn-gold" style="margin-top:32px;">
+          Fliesen anfragen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="fliesen-intro reveal" style="padding:80px 0 48px;">
+      <div class="fliesen-intro-grid">
+        <div>
+          <span class="label">Verde 1999</span>
+          <h3 class="display display-sm" style="margin-top:12px;">Beratung. Planung.<br>Verkauf. Montage.</h3>
+          <div class="section-divider" style="margin-top:20px;"></div>
+        </div>
+        <p class="fliesen-intro-text">
+          Als Partner von Verde 1999 bieten wir Ihnen Zugang zu einer der hochwertigsten Feinsteinzeug-Kollektionen Europas. Von der klassischen Terrakotta bis zum modernen Marmor-Look — wir begleiten Sie von der Auswahl bis zur Verlegung.
+        </p>
+      </div>
+    </div>
+
+    <div class="fliesen-kategorien">
+      <div class="fliesen-kat reveal reveal-delay-1">
+        <div class="fliesen-kat-img-wrap">
+          <img src="assets/images/fliesen/stein-optik-rustikal.jpg" alt="Steinoptik Fliesen" class="fliesen-kat-img" / loading="lazy">
+        </div>
+        <div class="fliesen-kat-body">
+          <div class="fliesen-kat-label">Steinoptik</div>
+          <h4 class="fliesen-kat-title">Natürliche Tiefe</h4>
+          <p class="fliesen-kat-text">Dakota, Jurassic, Archaios, Panarea, Lapis, Stone Instinct — Feinsteinzeug mit der Seele von Naturstein.</p>
+        </div>
+      </div>
+
+      <div class="fliesen-kat reveal reveal-delay-2">
+        <div class="fliesen-kat-img-wrap">
+          <img src="assets/images/fliesen/cotto-pomposa.jpg" alt="Marmoroptik Fliesen" class="fliesen-kat-img" / loading="lazy">
+        </div>
+        <div class="fliesen-kat-body">
+          <div class="fliesen-kat-label">Marmoroptik</div>
+          <h4 class="fliesen-kat-title">Zeitlose Eleganz</h4>
+          <p class="fliesen-kat-text">Marmi, Aquarius, Centuries, Cosmopolitan, Livingstone — Marmor-Look mit der Robustheit von Feinsteinzeug.</p>
+        </div>
+      </div>
+
+      <div class="fliesen-kat reveal reveal-delay-3">
+        <div class="fliesen-kat-img-wrap">
+          <img src="assets/images/fliesen/zubehoer-header.jpg" alt="Zementoptik Fliesen" class="fliesen-kat-img" / loading="lazy">
+        </div>
+        <div class="fliesen-kat-body">
+          <div class="fliesen-kat-label">Zement- & Holzoptik</div>
+          <h4 class="fliesen-kat-title">Modernes Handwerk</h4>
+          <p class="fliesen-kat-text">Matrix, Elementi, Retro, Artwood — von urbaner Zementoptik bis warmer Holzstruktur für zeitgemäße Interiors.</p>
+        </div>
+      </div>
+
+      <div class="fliesen-kat reveal reveal-delay-4">
+        <div class="fliesen-kat-img-wrap">
+          <img src="assets/images/fliesen/cotto-campiano.jpg" alt="Mexicotto Fliesen" class="fliesen-kat-img" / loading="lazy">
+        </div>
+        <div class="fliesen-kat-body">
+          <div class="fliesen-kat-label">Mexicotto & Naturstein</div>
+          <h4 class="fliesen-kat-title">Tradition & Ursprung</h4>
+          <p class="fliesen-kat-text">Handgefertigte Terrakotta, Cotto und Solnhofener Naturstein — für Räume mit Charakter und Geschichte.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fliesen-cta reveal">
+      <p class="fliesen-cta-text">Persönliche Beratung im Showroom oder bei Ihnen vor Ort — kostenlos und unverbindlich.</p>
+      <a href="#kontakt" class="btn-ghost">Beratungstermin anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ÜBER ────────────────────────────────────────────────────── -->
+<section id="ueber">
+  <div class="container">
+    <div class="ueber-grid">
+      <div class="ueber-visual reveal">
+        <img src="assets/images/team/bastian-hogger.jpg" alt="Bastian Hogger – Ofenbaumeister" class="ueber-portrait-img" />
+        <div class="ueber-badge">
+          <span class="ueber-badge-num">15+</span>
+          <span class="ueber-badge-text">Jahre<br>Erfahrung</span>
+        </div>
+      </div>
+      <div class="ueber-content reveal reveal-delay-2">
+        <span class="label">Über Bastian Hogger</span>
+        <blockquote class="ueber-quote">
+          "Feuer ist mehr als Wärme — es ist das älteste Gefühl von Zuhause."
+        </blockquote>
+        <p class="ueber-text">
+          Als geprüfter Ofenbaumeister bringe ich jahrzehntelange Handwerkstradition mit modernem Designverständnis zusammen. Ich begleite Sie persönlich vom ersten Gespräch bis zur Fertigstellung Ihres Ofens.
+        </p>
+        <p class="ueber-text">
+          Mein Betrieb in Rosenheim steht für höchste handwerkliche Qualität, ehrliche Beratung und Lösungen, die dauerhaft funktionieren. Kein Projekt gleicht dem anderen — jeder Ofen ist ein Unikat.
+        </p>
+        <div class="ueber-credentials">
+          <div class="credential">
+            <span class="credential-val">200+</span>
+            <span class="credential-label">Projekte<br>realisiert</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">15+</span>
+            <span class="credential-label">Jahre<br>Erfahrung</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">100%</span>
+            <span class="credential-label">Meister-<br>betrieb</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUALITÄT ─────────────────────────────────────────────────── -->
+<section id="qualitaet">
+  <div class="container">
+    <div class="qualitaet-inner">
+      <div class="reveal">
+        <span class="label">Warum Hogger</span>
+        <h2 class="display display-sm">Handwerk,<br>das hält.</h2>
+        <div class="section-divider"></div>
+        <p>Qualität entsteht durch Sorgfalt — nicht durch Schnelligkeit. Jedes Detail zählt, jeder Stein sitzt.</p>
+      </div>
+      <div class="qualitaet-features">
+        <div class="feature-item reveal reveal-delay-1">
+          <svg class="feature-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M18 3l4 8 9 1.3-6.5 6.3 1.5 9L18 23l-8 4.6 1.5-9L5 12.3l9-1.3z"/>
+          </svg>
+          <div class="feature-title">Meisterbetrieb</div>
+          <p class="feature-text">Geprüfte Qualität mit Meistertitel — für Ihr Vertrauen und rechtliche Sicherheit.</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-2">
+          <svg class="feature-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="18" cy="18" r="14"/>
+            <path d="M18 8v10l6 6"/>
+          </svg>
+          <div class="feature-title">Pünktlichkeit</div>
+          <p class="feature-text">Klare Zeitpläne, verlässliche Ausführung. Ihre Baustelle läuft, wie vereinbart.</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-3">
+          <svg class="feature-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 18c0-6.6 5.4-12 12-12s12 5.4 12 12"/>
+            <path d="M6 18c0 6.6 5.4 12 12 12"/>
+            <path d="M18 30c3 0 6-3 6-12"/>
+          </svg>
+          <div class="feature-title">Regionalität</div>
+          <p class="feature-text">Aus Rosenheim für Bayern. Kurze Wege, persönlicher Kontakt, lokale Verantwortung.</p>
+        </div>
+        <div class="feature-item reveal reveal-delay-4">
+          <svg class="feature-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M18 4l2.5 7.5H28l-6.3 4.5 2.5 7.5L18 19l-6.3 4.5 2.5-7.5L8 11.5h7.5z"/>
+            <path d="M18 22v10"/>
+          </svg>
+          <div class="feature-title">Individuelle Lösungen</div>
+          <p class="feature-text">Kein Standard von der Stange. Jeder Ofen wird auf Ihre Räume und Wünsche abgestimmt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REFERENZEN ──────────────────────────────────────────────── -->
+<section id="referenzen">
+  <div class="container">
+    <div class="referenzen-header reveal">
+      <div>
+        <span class="label">Referenzen</span>
+        <h2 class="display display-md" style="margin-top: 12px;">Unsere Arbeiten</h2>
+      </div>
+      <a href="#kontakt" class="btn-ghost">Ihr Projekt anfragen</a>
+    </div>
+    <div class="referenzen-grid">
+      <div class="ref-card reveal">
+        <div class="ref-card-inner">
+          <img class="ref-img" src="assets/images/oefen/apella.jpg" alt="Kachelofen Rosenheim" / loading="lazy">
+          <div class="ref-overlay">
+            <span class="ref-tag">Kachelofen · Rosenheim</span>
+          </div>
+        </div>
+      </div>
+      <div class="ref-card reveal reveal-delay-1">
+        <div class="ref-card-inner">
+          <img class="ref-img" src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Prien" / loading="lazy">
+          <div class="ref-overlay">
+            <span class="ref-tag">Heizkamin · Prien</span>
+          </div>
+        </div>
+      </div>
+      <div class="ref-card reveal reveal-delay-2">
+        <div class="ref-card-inner">
+          <img class="ref-img" src="assets/images/oefen/juwel-e.jpg" alt="Speicherofen Bad Aibling" / loading="lazy">
+          <div class="ref-overlay">
+            <span class="ref-tag">Speicherofen · Bad Aibling</span>
+          </div>
+        </div>
+      </div>
+      <div class="ref-card reveal reveal-delay-1">
+        <div class="ref-card-inner">
+          <img class="ref-img" src="assets/images/referenzen/projekt-1.jpg" alt="Grundofen Kolbermoor" / loading="lazy">
+          <div class="ref-overlay">
+            <span class="ref-tag">Grundofen · Kolbermoor</span>
+          </div>
+        </div>
+      </div>
+      <div class="ref-card reveal reveal-delay-2">
+        <div class="ref-card-inner">
+          <img class="ref-img" src="assets/images/oefen/sera-55.jpg" alt="Kaminanlage Wasserburg" / loading="lazy">
+          <div class="ref-overlay">
+            <span class="ref-tag">Kaminanlage · Wasserburg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROZESS ─────────────────────────────────────────────────── -->
+<section id="prozess">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Ablauf</span>
+      <h2 class="display display-md">So arbeiten wir</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="prozess-steps">
+      <div class="prozess-step reveal reveal-delay-1">
+        <div class="step-num">01</div>
+        <div class="step-title">Erstgespräch</div>
+        <p class="step-text">Wir besprechen Ihre Vorstellungen, Raumverhältnisse und Heizanforderungen — kostenlos und unverbindlich.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-2">
+        <div class="step-num">02</div>
+        <div class="step-title">Planung & Angebot</div>
+        <p class="step-text">Auf Basis Ihrer Wünsche erstellen wir eine individuelle Planung mit transparentem Festpreisangebot.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-3">
+        <div class="step-num">03</div>
+        <div class="step-title">Handwerk & Bau</div>
+        <p class="step-text">Unser erfahrenes Team setzt Ihr Projekt termingerecht und mit höchster handwerklicher Sorgfalt um.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-4">
+        <div class="step-num">04</div>
+        <div class="step-title">Übergabe & Service</div>
+        <p class="step-text">Nach der Fertigstellung erhalten Sie eine persönliche Einweisung und bleiben mit uns in Verbindung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KONTAKT ─────────────────────────────────────────────────── -->
+<section id="kontakt">
+  <div class="container">
+    <div class="kontakt-grid">
+      <div class="kontakt-info-block reveal">
+        <div>
+          <span class="label">Kontakt</span>
+          <h2 class="kontakt-cta-text" style="margin-top: 16px;">
+            Bereit für Ihren<br>Traum­ofen?
+          </h2>
+          <p class="kontakt-cta-sub">
+            Schreiben Sie uns oder rufen Sie direkt an. Wir freuen uns auf Ihr Vorhaben und beraten Sie gern — kostenlos und unverbindlich.
+          </p>
+        </div>
+        <div class="kontakt-details">
+          <div class="kontakt-detail">
+            <div class="kontakt-detail-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.13.96.35 1.9.67 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45c.91.32 1.85.54 2.81.67A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="kontakt-detail-label">Telefon</div>
+              <div class="kontakt-detail-val">01522 1010008</div>
+            </div>
+          </div>
+          <div class="kontakt-detail">
+            <div class="kontakt-detail-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="kontakt-detail-label">E-Mail</div>
+              <div class="kontakt-detail-val">info@ofenbau-hogger.de</div>
+            </div>
+          </div>
+          <div class="kontakt-detail">
+            <div class="kontakt-detail-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="kontakt-detail-label">Adresse</div>
+              <div class="kontakt-detail-val">Anton Bruckner Straße 1g · 83024 Rosenheim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="kontakt-form reveal reveal-delay-2" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="vorname">Vorname</label>
+            <input class="form-input" type="text" id="vorname" name="vorname" placeholder="Max" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nachname">Nachname</label>
+            <input class="form-input" type="text" id="nachname" name="nachname" placeholder="Mustermann" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">E-Mail</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="max@beispiel.de" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="telefon">Telefon (optional)</label>
+          <input class="form-input" type="tel" id="telefon" name="telefon" placeholder="+49 123 456789" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="interesse">Interesse</label>
+          <select class="form-select" id="interesse" name="interesse">
+            <option value="">Bitte wählen…</option>
+            <option>Kachelofen</option>
+            <option>Heizkamin</option>
+            <option>Speicherofen</option>
+            <option>Grundofen</option>
+            <option>Beratung</option>
+            <option>Wartung / Sanierung</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="nachricht">Nachricht</label>
+          <textarea class="form-textarea" id="nachricht" name="nachricht" placeholder="Erzählen Sie uns von Ihrem Vorhaben…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          Anfrage absenden
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form-note">Ihre Daten werden vertraulich behandelt und nicht weitergegeben.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="#leistung-kachelofen">Kachelöfen</a></li>
+          <li><a href="#leistung-heizkamin">Heizkamine</a></li>
+          <li><a href="#leistung-speicherofen">Speicheröfen</a></li>
+          <li><a href="#leistung-beratung">Beratung & Planung</a></li>
+          <li><a href="#fliesen">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="#ueber">Über Bastian Hogger</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#prozess">Unser Ablauf</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ─────────────────────────────────────────────────────── -->
+<script>
+  /* Hero video slow motion */
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    heroVideo.addEventListener('loadedmetadata', () => { heroVideo.playbackRate = 0.45; });
+  }
+
+  /* Nav scroll + parallax (single handler) */
+  const nav = document.getElementById('nav');
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 60);
+    if (heroBg && y < window.innerHeight * 1.2) {
+      heroBg.style.transform = `translateY(${y * 0.25}px)`;
+    }
+  }, { passive: true });
+
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* Mobile menu */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  /* Smooth anchor scroll with nav offset */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = nav.offsetHeight + 20;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    });
+  });
+
+
+  /* Form handler (demo) */
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Anfrage gesendet ✓';
+    btn.style.background = '#4a7c59';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = 'Anfrage absenden <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 4000);
+  }
+
+  /* Animated counter on scroll into view */
+  function animateCounters() {
+    document.querySelectorAll('.credential-val').forEach(el => {
+      const text = el.textContent;
+      const num = parseFloat(text.replace(/[^0-9.]/g, ''));
+      const suffix = text.replace(/[0-9.]/g, '');
+      if (isNaN(num)) return;
+      let start = 0;
+      const duration = 1400;
+      const step = timestamp => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(num * eased) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+  const credObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      credObs.disconnect();
+    }
+  }, { threshold: 0.5 });
+  const credSection = document.querySelector('.ueber-credentials');
+  if (credSection) credObs.observe(credSection);
+</script>
+</body>
+</html>

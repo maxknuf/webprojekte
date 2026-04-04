@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kamin sanieren in Rosenheim vom Meisterbetrieb Ofenbau Hogger. Kamin Sanierung, Ofensanierung, Einsatztausch & Schornsteinsanierung durch Ofenbaumeister Bastian Hogger. Jetzt beraten lassen." />
+  <meta name="keywords" content="Kamin sanieren Rosenheim, Kamin Sanierung, Ofensanierung, Kamin sanieren lassen, Kaminofen sanieren, Schornstein sanieren, Ofenbauer Rosenheim, Kaminsanierung Rosenheim" />
+  <title>Kamin sanieren Rosenheim – Ofensanierung vom Meisterbetrieb | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/kamin-sanieren.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kamin sanieren Rosenheim – Ofensanierung vom Meisterbetrieb | Ofenbau Hogger" />
+  <meta property="og:description" content="Professionelle Kamin Sanierung in Rosenheim. Ofenbaumeister Bastian Hogger – Einsatztausch, Schamotte-Erneuerung & Komplettsanierung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/kamin-sanieren.html" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kamin sanieren Rosenheim – Ofenbau Hogger" />
+  <meta name="twitter:description" content="Kamin Sanierung & Ofensanierung vom Meisterbetrieb in Rosenheim." />
+
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0C0B09;
+      --bg2:          #131210;
+      --bg3:          #1A1917;
+      --bg4:          #222120;
+      --gold:         #C4A84C;
+      --gold-light:   #DFC882;
+      --gold-dim:     #8A7230;
+      --red:          #A61216;
+      --red-light:    #D01519;
+      --text:         #F0EAE0;
+      --text-muted:   #9A9080;
+      --text-dim:     #5A5448;
+      --border:       rgba(196,168,76,0.15);
+      --border-soft:  rgba(240,234,224,0.07);
+      --radius:       4px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    .display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .display-lg { font-size: clamp(3.2rem, 7vw, 7rem); }
+    .display-md { font-size: clamp(2.4rem, 4.5vw, 4.2rem); }
+    .display-sm { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ─── NAV ──────────────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: translateZ(0);
+      transition: height 0.4s ease, opacity 0.25s;
+    }
+    .nav-logo-img:hover { opacity: 0.85; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+
+    /* Mobile hamburger */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
+    }
+
+    /* ─── MOBILE NAV ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 250;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 24px 40px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 251;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-weight: 400;
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 160px 0 100px;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to bottom, var(--bg) 0%, transparent 30%),
+        linear-gradient(to top, var(--bg) 0%, transparent 30%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-content .label { margin-bottom: 20px; }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .breadcrumb a { color: var(--text-muted); transition: color 0.25s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ─── SECTION BASE ─────────────────────────────────────────── */
+    .section { padding: 100px 0; }
+    .section-alt { background: var(--bg2); }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-header .label { margin-bottom: 14px; }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── PROBLEMS GRID ────────────────────────────────────────── */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+    }
+    .problem-card {
+      background: var(--bg2);
+      padding: 44px 28px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .problem-card:hover { background: var(--bg3); }
+    .problem-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 20px;
+      color: var(--red-light);
+    }
+    .problem-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .problem-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── SOLUTIONS GRID ───────────────────────────────────────── */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+    }
+    .solution-card {
+      background: var(--bg3);
+      padding: 44px 28px;
+      text-align: center;
+      transition: background 0.3s;
+      border-top: 2px solid transparent;
+    }
+    .solution-card:hover {
+      background: var(--bg4);
+      border-top-color: var(--gold-dim);
+    }
+    .solution-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 20px;
+      color: var(--gold);
+    }
+    .solution-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .solution-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── COMPARISON TABLE ─────────────────────────────────────── */
+    .compare-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .compare-col {
+      background: var(--bg3);
+      padding: 48px 40px;
+      border-top: 2px solid var(--border-soft);
+    }
+    .compare-col.recommended {
+      border-top-color: var(--gold);
+    }
+    .compare-col h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .compare-col .compare-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 3px 10px;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+    }
+    .compare-col p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .compare-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .compare-col ul li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .compare-col ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .compare-col.recommended ul li::before {
+      background: var(--gold-dim);
+    }
+    .compare-col:not(.recommended) ul li::before {
+      background: var(--text-dim);
+    }
+
+    /* ─── PRICING GRID ─────────────────────────────────────────── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .pricing-card {
+      background: var(--bg2);
+      padding: 48px 32px;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .pricing-card:hover { background: var(--bg3); }
+    .pricing-card.featured {
+      border-top: 2px solid var(--gold);
+    }
+    .pricing-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+    .pricing-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .pricing-card .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .pricing-card .price small {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+    .pricing-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── PROCESS STEPS ────────────────────────────────────────── */
+    .prozess-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      counter-reset: step;
+    }
+    .prozess-step {
+      position: relative;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .prozess-step::before {
+      counter-increment: step;
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--gold-dim);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .prozess-step::after {
+      content: '';
+      position: absolute;
+      top: 55px;
+      right: -16px;
+      width: 32px;
+      height: 1px;
+      background: var(--border);
+    }
+    .prozess-step:last-child::after { display: none; }
+    .prozess-step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .prozess-step p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── GALLERY ──────────────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(12,11,9,0.85) 0%, transparent 100%);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    #faq { padding: 100px 0; background: var(--bg); }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .faq-header p {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text);
+      transition: color 0.25s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-question svg {
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      color: var(--text-dim);
+      transition: transform 0.3s, color 0.3s;
+    }
+    .faq-item.open .faq-question svg {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-answer p {
+      padding: 0 0 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ─── CTA SECTION ──────────────────────────────────────────── */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ─── INTERNAL LINKS ───────────────────────────────────────── */
+    .internal-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .internal-link {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 2px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .internal-link:hover {
+      color: var(--gold);
+      border-color: var(--gold-dim);
+    }
+
+    /* ─── FLOATING CONTACT ─────────────────────────────────────── */
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 180;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .floating-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.5);
+    }
+    .floating-btn svg { width: 22px; height: 22px; }
+    .floating-whatsapp { background: #25D366; }
+    .floating-email { background: var(--gold); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 60px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .problems-grid { grid-template-columns: repeat(3, 1fr); }
+      .solutions-grid { grid-template-columns: repeat(3, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .prozess-steps { grid-template-columns: repeat(2, 1fr); }
+      .prozess-step::after { display: none; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+      .compare-layout { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .problems-grid { grid-template-columns: 1fr; }
+      .solutions-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .prozess-steps { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 60vh; padding: 140px 0 80px; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 14px; }
+      .hero-actions .btn-gold,
+      .hero-actions .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .floating-contact {
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        transform: none;
+      }
+      .floating-btn { width: 44px; height: 44px; }
+      .floating-btn svg { width: 20px; height: 20px; }
+      .section { padding: 72px 0; }
+      .compare-col { padding: 36px 28px; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .mobile-menu a { font-size: 1.4rem; }
+      .mobile-menu { gap: 18px; }
+      .problem-card { padding: 32px 20px; }
+      .solution-card { padding: 32px 20px; }
+      .pricing-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── FLOATING CONTACT ────────────────────────────────────────── -->
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menue schliessen">&#10005;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Uber uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section class="hero">
+  <img src="assets/images/referenzen/projekt-1.jpg" alt="Kamin sanieren in Rosenheim – Ofensanierung vom Meisterbetrieb Ofenbau Hogger" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Meisterbetrieb in Rosenheim</p>
+    <h1>Kamin sanieren in Rosenheim</h1>
+    <p>Ihr Kamin raucht, zieht schlecht oder erfüllt die gesetzlichen Vorgaben nicht mehr? Ofenbaumeister Bastian Hogger saniert Ihren Kamin fachgerecht — von der kleinen Reparatur bis zur Komplettsanierung.</p>
+    <div class="hero-actions">
+      <a href="index.html#kontakt" class="btn-gold">
+        Kostenlos beraten lassen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#loesungen" class="btn-ghost">Sanierungslösungen</a>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Startseite</a>
+      <span>/</span>
+      <span>Kamin sanieren</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── TYPISCHE PROBLEME ─────────────────────────────────────── -->
+<section class="section" id="probleme">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Warnsignale erkennen</p>
+      <h2>Typische Probleme am Kamin</h2>
+      <p>Diese Symptome deuten darauf hin, dass Ihr Kamin eine Sanierung braucht. Je früher Sie handeln, desto geringer der Aufwand.</p>
+    </div>
+
+    <div class="problems-grid">
+      <div class="problem-card reveal reveal-delay-1">
+        <svg class="problem-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="10" y="4" width="28" height="40" rx="3"/>
+          <path d="M18 14l12 20" stroke-width="2"/>
+          <path d="M30 14L18 34" stroke-width="2"/>
+          <path d="M15 24h18" opacity="0.4"/>
+        </svg>
+        <h3>Risse im Ofenkörper</h3>
+        <p>Haarrisse oder tiefe Spalten in der Verkleidung deuten auf thermische Spannungen oder Setzungsschäden hin. Rauchgase können austreten.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <svg class="problem-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="12" y="8" width="24" height="32" rx="2"/>
+          <path d="M20 20h8M20 26h8M20 32h4" opacity="0.5"/>
+          <circle cx="36" cy="12" r="6" fill="none" stroke-width="2"/>
+          <path d="M33 12h6M36 9v6" stroke-width="1.5"/>
+        </svg>
+        <h3>Veralteter Heizeinsatz</h3>
+        <p>Alte Heizeinsätze arbeiten ineffizient, verbrauchen zu viel Holz und erzeugen überhöhte Emissionen. Oft ist die Sichtscheibe blind oder gesprungen.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <svg class="problem-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 40c-8 0-14-6-14-14 0-6 4-11 8-16 2-2.5 4-5 6-10 2 5 4 7.5 6 10 4 5 8 10 8 16 0 8-6 14-14 14z"/>
+          <path d="M18 32c0-4 2.5-7 6-10" opacity="0.5"/>
+        </svg>
+        <h3>Rauchgeruch im Raum</h3>
+        <p>Wenn Rauch in den Wohnraum dringt, sind undichte Fugen, defekte Dichtungen oder ein verstopfter Zug die häufigsten Ursachen.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-4">
+        <svg class="problem-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 42V6"/>
+          <path d="M16 14l8-8 8 8"/>
+          <path d="M16 22l8 8 8-8" opacity="0.4"/>
+          <path d="M16 30l8 8 8-8" opacity="0.25"/>
+        </svg>
+        <h3>Schlechter Zug</h3>
+        <p>Der Kamin zieht nicht richtig, qualmt beim Anfeuern oder bei Wind. Ursache ist oft ein versotteter Schornstein oder falsche Dimensionierung.</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-5">
+        <svg class="problem-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="8" y="6" width="32" height="36" rx="3"/>
+          <path d="M16 16h16M16 24h10M16 32h13"/>
+          <circle cx="34" cy="34" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M31 34h6" stroke-width="1.5"/>
+        </svg>
+        <h3>BImSchV nicht erfüllt</h3>
+        <p>Ihr Ofen überschreitet die gesetzlichen Grenzwerte für Staub und CO. Ohne Sanierung droht die Stilllegung durch den Schornsteinfeger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SANIERUNGSLÖSUNGEN ─────────────────────────────────────── -->
+<section class="section section-alt" id="loesungen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Leistungen</p>
+      <h2>Unsere Sanierungslösungen</h2>
+      <p>Je nach Zustand und Alter Ihres Kamins bieten wir unterschiedliche Sanierungswege an — immer individuell auf Ihre Situation abgestimmt.</p>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card reveal reveal-delay-1">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="12" y="8" width="24" height="32" rx="2"/>
+          <path d="M18 24h12" stroke-width="2"/>
+          <path d="M24 18v12" stroke-width="2"/>
+          <path d="M16 14h16" opacity="0.3"/>
+          <path d="M16 36h16" opacity="0.3"/>
+        </svg>
+        <h3>Einsatztausch</h3>
+        <p>Der alte Heizeinsatz wird durch ein modernes, BImSchV-konformes Gerät ersetzt. Die Verkleidung bleibt erhalten.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-2">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="14" y="10" width="20" height="28" rx="2"/>
+          <path d="M14 18h20M14 26h20M14 34h20" opacity="0.3"/>
+          <path d="M20 14v28M28 14v28" opacity="0.3"/>
+        </svg>
+        <h3>Schamotte-Erneuerung</h3>
+        <p>Verschlissene oder gebrochene Schamottesteine werden ersetzt, damit die Brennkammer wieder optimal funktioniert.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-3">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="18" y="2" width="12" height="44" rx="2"/>
+          <path d="M18 12h12M18 22h12M18 32h12" opacity="0.3"/>
+          <path d="M14 42h20"/>
+          <path d="M22 8h4v6h-4z" opacity="0.5"/>
+        </svg>
+        <h3>Schornstein-Sanierung</h3>
+        <p>Versottete oder undichte Schornsteine werden mit Edelstahlrohr oder Keramik-Innenschale neu ausgekleidet.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-4">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 40V18l16-12 16 12v22H8z"/>
+          <path d="M18 40V28h12v12"/>
+          <circle cx="24" cy="20" r="4" opacity="0.5"/>
+        </svg>
+        <h3>Komplettsanierung</h3>
+        <p>Umfassende Erneuerung von Heizeinsatz, Zügen, Schamotte und Verkleidung — Ihr Kamin wird komplett neugestaltet.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-5">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="8" y="12" width="32" height="28" rx="3"/>
+          <path d="M8 20h32" opacity="0.3"/>
+          <rect x="14" y="24" width="20" height="12" rx="1" opacity="0.5"/>
+          <path d="M16 8h16v4H16z"/>
+        </svg>
+        <h3>Verkleidung erneuern</h3>
+        <p>Neue Kacheln, Naturstein oder Putz geben Ihrem Kamin ein frisches Erscheinungsbild — passend zum Wohnstil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SANIERUNG VS NEUBAU ────────────────────────────────────── -->
+<section class="section" id="entscheidung">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Entscheidungshilfe</p>
+      <h2>Wann lohnt sich eine Sanierung?</h2>
+      <p>Nicht immer ist ein Neubau die beste Lösung. In vielen Fällen spart eine gezielte Kamin Sanierung Zeit, Geld und Nerven.</p>
+    </div>
+
+    <div class="compare-layout">
+      <div class="compare-col recommended reveal reveal-delay-1">
+        <span class="compare-badge">Oft die bessere Wahl</span>
+        <h3>Sanierung</h3>
+        <p>Ideal, wenn die Grundsubstanz intakt ist und Sie Ihren bestehenden Kamin erhalten möchten.</p>
+        <ul>
+          <li>Geringere Kosten als ein Neubau</li>
+          <li>Bestehende Verkleidung bleibt erhalten</li>
+          <li>Kürzere Bauzeit (1-5 Tage)</li>
+          <li>Weniger Schmutz und Aufwand</li>
+          <li>Sofort BImSchV-konform</li>
+          <li>Wertsteigerung der Immobilie</li>
+        </ul>
+      </div>
+      <div class="compare-col reveal reveal-delay-2">
+        <h3>Neubau</h3>
+        <p>Sinnvoll bei schweren Bauschäden, komplett verändertem Grundriss oder wenn ein neues Design gewünscht ist.</p>
+        <ul>
+          <li>Komplett freie Gestaltung</li>
+          <li>Anderer Standort möglich</li>
+          <li>Höhere Investitionskosten</li>
+          <li>Längere Bauzeit (2-4 Wochen)</li>
+          <li>Rückbau & Entsorgung nötig</li>
+          <li>Schornsteinfeger-Neuabnahme</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PREISE ─────────────────────────────────────────────────── -->
+<section class="section section-alt" id="preise">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Orientierungspreise</p>
+      <h2>Was kostet eine Kamin Sanierung?</h2>
+      <p>Die Kosten hängen vom Umfang der Schäden und den notwendigen Maßnahmen ab. Hier eine erste Orientierung für Ihre Planung.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card reveal reveal-delay-1">
+        <h3>Kleine Reparatur</h3>
+        <div class="price">ab 500 €</div>
+        <p>Einzelne Schamottesteine ersetzen, Dichtungen tauschen, Sichtscheibe erneuern oder Risse verfugen.</p>
+      </div>
+      <div class="pricing-card reveal reveal-delay-2">
+        <h3>Einsatztausch</h3>
+        <div class="price">ab 3.500 € <small>inkl. Montage</small></div>
+        <p>Neuer Heizeinsatz bei intakter Verkleidung. BImSchV-konform, modernes Flammenbild und höherer Wirkungsgrad.</p>
+      </div>
+      <div class="pricing-card featured reveal reveal-delay-3">
+        <span class="pricing-badge">Häufig gewählt</span>
+        <h3>Teilsanierung</h3>
+        <div class="price">5.000 – 10.000 €</div>
+        <p>Einsatztausch plus Schamotte-Erneuerung, Zuganpassung, neue Dichtungen und ggf. Schornstein-Auskleidung.</p>
+      </div>
+      <div class="pricing-card reveal reveal-delay-4">
+        <h3>Komplettsanierung</h3>
+        <div class="price">10.000 – 20.000 €</div>
+        <p>Umfassende Erneuerung mit neuem Einsatz, neuer Verkleidung, Zugsanierung und Schornstein-Sanierung.</p>
+      </div>
+    </div>
+    <p class="pricing-note reveal">Alle Preise verstehen sich als Richtwerte inkl. MwSt. Ein verbindliches Angebot erhalten Sie nach der Besichtigung vor Ort.</p>
+  </div>
+</section>
+
+<!-- ── ABLAUF ─────────────────────────────────────────────────── -->
+<section class="section" id="ablauf">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">In 4 Schritten</p>
+      <h2>So läuft Ihre Kamin Sanierung ab</h2>
+      <p>Von der ersten Begutachtung bis zur finalen Abnahme — wir begleiten Sie durch den gesamten Sanierungsprozess.</p>
+    </div>
+
+    <div class="prozess-steps">
+      <div class="prozess-step reveal reveal-delay-1">
+        <h3>Bestandsaufnahme</h3>
+        <p>Wir besichtigen Ihren Kamin vor Ort, dokumentieren Schäden und prüfen den Zustand von Heizeinsatz, Schamotte, Zügen und Schornstein.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-2">
+        <h3>Diagnose & Angebot</h3>
+        <p>Sie erhalten eine detaillierte Schadensanalyse mit transparentem Festpreisangebot. Wir empfehlen die wirtschaftlich sinnvollste Lösung.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-3">
+        <h3>Fachgerechte Sanierung</h3>
+        <p>Unsere Ofenbauer sanieren Ihren Kamin termingerecht und sauber. Je nach Umfang dauert die Arbeit ein bis fünf Werktage.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-4">
+        <h3>Abnahme & Übergabe</h3>
+        <p>Nach der Abnahme durch den Bezirksschornsteinfeger weisen wir Sie in die Bedienung ein. Ihr Kamin ist wieder voll einsatzbereit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ────────────────────────────────────────────────── -->
+<section class="section section-alt" id="galerie">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Arbeit</p>
+      <h2>Kamin Sanierung in Bildern</h2>
+      <p>Einblicke in abgeschlossene Sanierungsprojekte rund um Rosenheim — vom Einsatztausch bis zur Kompletterneuerung.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/images/referenzen/projekt-1.jpg" alt="Kaminsanierung Projekt in Rosenheim — Ofenbau Hogger" loading="lazy" />
+        <div class="gallery-caption">Kamin Sanierung in Rosenheim</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/images/oefen/fina-es.jpg" alt="Neuer Heizeinsatz Fina ES nach Kaminsanierung" loading="lazy" />
+        <div class="gallery-caption">Neuer Heizeinsatz mit Panorama-Sichtscheibe</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="assets/images/oefen/kala-qs.jpg" alt="Sanierter Kamin mit Kala QS Heizeinsatz" loading="lazy" />
+        <div class="gallery-caption">Einsatztausch im Rahmen der Sanierung</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="referenzen.html" class="btn-ghost">Alle Referenzen ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ────────────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-header reveal">
+        <p class="label">Häufige Fragen</p>
+        <h2>FAQ zur Kamin Sanierung</h2>
+        <p>Die wichtigsten Fragen rund um das Thema Kamin sanieren in Rosenheim — kompakt beantwortet.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Woran erkenne ich, dass mein Kamin saniert werden muss?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Typische Anzeichen sind Risse in der Verkleidung, Rauchgeruch im Wohnraum, schlechter Zug beim Anfeuern, eine blinde oder gesprungene Sichtscheibe sowie ein Schornsteinfeger-Bescheid, dass die BImSchV-Grenzwerte nicht eingehalten werden. Im Zweifelsfall kommen wir für eine kostenlose Begutachtung vorbei.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie lange dauert eine Kamin Sanierung?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Das hängt vom Umfang ab. Eine kleine Reparatur ist oft in wenigen Stunden erledigt. Ein Einsatztausch dauert ein bis zwei Tage, eine Teilsanierung zwei bis drei Tage. Bei einer Komplettsanierung mit neuer Verkleidung rechnen Sie mit einer Woche. Die Planung und Materialbestellung benötigt zusätzlich zwei bis vier Wochen Vorlaufzeit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Kann ich meinen alten Kachelofen sanieren lassen, ohne die Kacheln zu verlieren?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, in den meisten Fällen bleibt die vorhandene Verkleidung komplett erhalten. Beim Einsatztausch wird nur der innenliegende Heizeinsatz gewechselt. Auch bei einer Schamotte-Erneuerung oder Zugsanierung müssen die Kacheln in der Regel nicht entfernt werden. Nur bei schweren strukturellen Schäden am Ofenkörper kann ein teilweiser Rückbau nötig sein.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Übernimmt Ofenbau Hogger auch die Abstimmung mit dem Schornsteinfeger?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Selbstverständlich. Wir stimmen alle Arbeiten vorab mit Ihrem Bezirksschornsteinfeger ab und begleiten die Abnahme nach der Sanierung. So stellen wir sicher, dass Ihr Kamin alle gesetzlichen Anforderungen erfüllt und sofort in Betrieb genommen werden darf.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Gibt es Fördermittel für eine Ofensanierung?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Je nach Art und Umfang der Sanierung können Fördermittel über BAFA oder KfW-Programme verfügbar sein — insbesondere wenn die Maßnahme Teil einer energetischen Gebäudesanierung ist. Wir beraten Sie gerne zu den aktuellen Fördermöglichkeiten in Rosenheim und Umgebung.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Jetzt handeln</p>
+    <h2>Kamin sanieren lassen — wir beraten Sie kostenlos</h2>
+    <p>Ob kleine Reparatur oder Komplettsanierung — Ofenbaumeister Bastian Hogger findet die beste Lösung für Ihren Kamin in Rosenheim.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+    <div class="internal-links">
+      <a href="ofen-modernisieren.html" class="internal-link">Ofen modernisieren</a>
+      <a href="kachelofen-rosenheim.html" class="internal-link">Kachelofen Rosenheim</a>
+      <a href="heizkamin-rosenheim.html" class="internal-link">Heizkamin Rosenheim</a>
+      <a href="was-kostet-ein-ofen.html" class="internal-link">Was kostet ein Ofen?</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="index.html#leistungen">Kachelöfen</a></li>
+          <li><a href="index.html#leistungen">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="index.html#leistungen">Beratung & Planung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html">Startseite</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ─────────────────────────────────────────────────────── -->
+<script>
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* Mobile menu */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+
+<!-- Schema.org: Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Kamin sanieren in Rosenheim",
+  "description": "Professionelle Kamin Sanierung und Ofensanierung in Rosenheim und Umgebung. Einsatztausch, Schamotte-Erneuerung, Schornstein-Sanierung und Komplettsanierung durch Ofenbaumeister Bastian Hogger.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://ofenbau-hogger.de",
+    "name": "Ofenbau Hogger – Bastian Hogger",
+    "telephone": "+4915221010008",
+    "email": "info@ofenbau-hogger.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Anton Bruckner Straße 1g",
+      "addressLocality": "Rosenheim",
+      "postalCode": "83024",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "47.856",
+      "longitude": "12.128"
+    },
+    "url": "https://ofenbau-hogger.de"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Rosenheim"},
+    {"@type": "City", "name": "Kolbermoor"},
+    {"@type": "City", "name": "Bad Aibling"},
+    {"@type": "City", "name": "Prien am Chiemsee"},
+    {"@type": "City", "name": "Wasserburg am Inn"},
+    {"@type": "City", "name": "Raubling"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Kamin Sanierung Angebote",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Kleine Reparatur",
+        "price": "500",
+        "priceCurrency": "EUR",
+        "description": "Schamottesteine ersetzen, Dichtungen tauschen, Sichtscheibe erneuern oder Risse verfugen"
+      },
+      {
+        "@type": "Offer",
+        "name": "Einsatztausch",
+        "price": "3500",
+        "priceCurrency": "EUR",
+        "description": "Neuer Heizeinsatz bei intakter Verkleidung, BImSchV-konform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Teilsanierung",
+        "price": "5000",
+        "priceCurrency": "EUR",
+        "description": "Einsatztausch plus Schamotte-Erneuerung, Zuganpassung und neue Dichtungen"
+      },
+      {
+        "@type": "Offer",
+        "name": "Komplettsanierung",
+        "price": "10000",
+        "priceCurrency": "EUR",
+        "description": "Umfassende Erneuerung mit neuem Einsatz, neuer Verkleidung und Schornstein-Sanierung"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Woran erkenne ich, dass mein Kamin saniert werden muss?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typische Anzeichen sind Risse in der Verkleidung, Rauchgeruch im Wohnraum, schlechter Zug beim Anfeuern, eine blinde oder gesprungene Sichtscheibe sowie ein Schornsteinfeger-Bescheid, dass die BImSchV-Grenzwerte nicht eingehalten werden. Im Zweifelsfall kommen wir für eine kostenlose Begutachtung vorbei."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert eine Kamin Sanierung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das hängt vom Umfang ab. Eine kleine Reparatur ist oft in wenigen Stunden erledigt. Ein Einsatztausch dauert ein bis zwei Tage, eine Teilsanierung zwei bis drei Tage. Bei einer Komplettsanierung mit neuer Verkleidung rechnen Sie mit einer Woche."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich meinen alten Kachelofen sanieren lassen, ohne die Kacheln zu verlieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, in den meisten Fällen bleibt die vorhandene Verkleidung komplett erhalten. Beim Einsatztausch wird nur der innenliegende Heizeinsatz gewechselt. Auch bei einer Schamotte-Erneuerung oder Zugsanierung müssen die Kacheln in der Regel nicht entfernt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Übernimmt Ofenbau Hogger auch die Abstimmung mit dem Schornsteinfeger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selbstverständlich. Wir stimmen alle Arbeiten vorab mit Ihrem Bezirksschornsteinfeger ab und begleiten die Abnahme nach der Sanierung. So stellen wir sicher, dass Ihr Kamin alle gesetzlichen Anforderungen erfüllt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es Fördermittel für eine Ofensanierung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Je nach Art und Umfang der Sanierung können Fördermittel über BAFA oder KfW-Programme verfügbar sein — insbesondere wenn die Maßnahme Teil einer energetischen Gebäudesanierung ist. Wir beraten Sie gerne zu den aktuellen Fördermöglichkeiten in Rosenheim und Umgebung."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://ofenbau-hogger.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kamin sanieren",
+      "item": "https://ofenbau-hogger.de/kamin-sanieren.html"
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

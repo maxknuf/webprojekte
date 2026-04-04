@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ofenbauer Rosenheim – Kachelofen, Heizkamin & Speicherofen vom Meisterbetrieb Hogger. Ofenbaumeister Bastian Hogger: 50+ Projekte, 5.0 Google-Bewertung. Kostenlose Erstberatung." />
+  <meta name="keywords" content="Ofenbauer Rosenheim, Ofenbaumeister Rosenheim, Kaminbau Rosenheim, Kachelofen Rosenheim, Heizkamin Rosenheim, Speicherofen Rosenheim, Ofen bauen Rosenheim, Kaminofen Rosenheim" />
+  <title>Ofenbauer Rosenheim – Kachelofen, Heizkamin & Speicherofen vom Meisterbetrieb | Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/ofenbauer-rosenheim" />
+
+  <meta property="og:title" content="Ofenbauer Rosenheim – Kachelofen, Heizkamin & Speicherofen vom Meisterbetrieb" />
+  <meta property="og:description" content="Ofenbaumeister Bastian Hogger in Rosenheim. Individuelle Kachelöfen, Heizkamine und Speicheröfen. 50+ Projekte, 5.0 Google-Bewertung. Kostenlose Beratung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/ofenbauer-rosenheim" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/oefen/apella.jpg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ofenbauer Rosenheim – Meisterbetrieb Hogger" />
+  <meta name="twitter:description" content="Kachelöfen, Heizkamine & Speicheröfen vom Ofenbaumeister in Rosenheim. 50+ Projekte. Kostenlose Beratung." />
+
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#0C0B09;--bg2:#131210;--bg3:#1A1917;--bg4:#222120;
+      --gold:#C4A84C;--gold-light:#DFC882;--gold-dim:#8A7230;
+      --text:#F0EAE0;--text-muted:#9A9080;--text-dim:#5A5448;
+      --border:rgba(196,168,76,0.15);--border-soft:rgba(240,234,224,0.07);
+      --radius:4px;--radius-lg:10px;
+    }
+    html{scroll-behavior:smooth;font-size:16px}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-weight:300;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(1160px,calc(100% - 48px));margin:0 auto}
+    .label{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}.reveal-delay-4{transition-delay:.4s}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(12,11,9,.92);border-bottom:1px solid var(--border-soft);padding:16px 0;backdrop-filter:blur(16px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center}
+    .nav-logo-img{height:48px;width:auto;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;transform:translateZ(0);transition:height .4s ease,opacity .25s}
+    .nav-logo-img:hover{opacity:.85}
+    .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+    .nav-links a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--text-muted);transition:color .25s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:1px solid var(--gold-dim);border-radius:var(--radius);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--gold)!important;transition:background .25s,border-color .25s,color .25s!important}
+    .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:var(--bg)!important}
+    .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .nav-burger span{display:block;width:24px;height:1.5px;background:var(--text);transition:.3s}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--bg);z-index:250;flex-direction:column;justify-content:center;align-items:center;gap:24px;padding:80px 24px 40px;overflow-y:auto}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,5vw,2.5rem);font-weight:300;color:var(--text-muted);transition:color .25s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;padding:8px;z-index:251}
+
+    /* BUTTONS */
+    .btn-gold,.btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:var(--radius)}
+    .btn-gold{background:var(--gold);color:var(--bg);font-weight:500;transition:background .25s,transform .25s}
+    .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+    .btn-ghost{border:1px solid var(--border);color:var(--text-muted);font-weight:400;transition:border-color .25s,color .25s,transform .25s}
+    .btn-ghost:hover{border-color:var(--gold-dim);color:var(--text);transform:translateY(-2px)}
+
+    /* HERO */
+    .hero{position:relative;min-height:75vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:160px 0 100px}
+    .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.25}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,var(--bg) 0%,transparent 30%),linear-gradient(to top,var(--bg) 0%,transparent 30%)}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+    .hero-content .label{margin-bottom:20px}
+    .hero-content h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.08;letter-spacing:-.01em;margin-bottom:24px}
+    .hero-content p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:600px;margin:0 auto 40px;line-height:1.75}
+    .hero-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+    .breadcrumb{position:relative;z-index:2;text-align:center;margin-top:32px;font-size:.78rem;color:var(--text-dim)}
+    .breadcrumb a{color:var(--text-muted);transition:color .25s}.breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{margin:0 8px}
+
+    /* SECTIONS */
+    .section{padding:100px 0}.section-alt{background:var(--bg2)}
+    .section-header{text-align:center;max-width:680px;margin:0 auto 56px}
+    .section-header .label{margin-bottom:14px}
+    .section-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.1;margin-bottom:16px}
+    .section-header p{font-size:.95rem;color:var(--text-muted);line-height:1.7}
+
+    /* MEISTER INTRO */
+    .meister-split{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:center}
+    .meister-visual{position:relative;aspect-ratio:3/4;background:var(--bg3);border-radius:var(--radius-lg);overflow:hidden}
+    .meister-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+    .meister-badge{position:absolute;bottom:-16px;right:-16px;width:110px;height:110px;border-radius:50%;background:var(--bg4);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2}
+    .meister-badge-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;line-height:1;color:var(--gold)}
+    .meister-badge-text{font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-top:4px}
+    .meister-content .label{display:block;margin-bottom:14px}
+    .meister-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.12;margin-bottom:20px}
+    .meister-content p{font-size:.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:16px}
+    .meister-credentials{display:flex;gap:36px;margin-top:36px;padding-top:36px;border-top:1px solid var(--border-soft)}
+    .credential{display:flex;flex-direction:column;gap:4px}
+    .credential-val{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;line-height:1;color:var(--gold)}
+    .credential-label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+
+    /* LEISTUNGEN CARDS */
+    .leistungen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .leistung-card{position:relative;background:var(--bg3);padding:44px 36px;overflow:hidden;transition:background .35s;display:flex;flex-direction:column}
+    .leistung-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .35s}
+    .leistung-card:hover{background:var(--bg4)}
+    .leistung-card:hover::before{opacity:1}
+    .leistung-icon{width:40px;height:40px;color:var(--gold);margin-bottom:20px;flex-shrink:0}
+    .leistung-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;margin-bottom:12px}
+    .leistung-card p{font-size:.88rem;color:var(--text-muted);line-height:1.65;margin-bottom:20px;flex-grow:1}
+    .leistung-card .link{font-size:.75rem;color:var(--gold-dim);font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:color .25s,gap .25s;display:inline-flex;align-items:center;gap:8px}
+    .leistung-card:hover .link{color:var(--gold);gap:14px}
+
+    /* WARUM HOGGER */
+    .vorteile-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+    .vorteil-card{background:var(--bg3);padding:44px 28px;text-align:center;transition:background .3s}
+    .vorteil-card:hover{background:var(--bg4)}
+    .vorteil-card h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;margin-bottom:10px}
+    .vorteil-card p{font-size:.85rem;color:var(--text-muted);line-height:1.65}
+    .vorteil-icon{font-size:2rem;margin-bottom:16px;color:var(--gold)}
+    .vorteil-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:6px}
+
+    /* REFERENZEN PREVIEW */
+    .ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .ref-card{position:relative;overflow:hidden;background:var(--bg3);aspect-ratio:4/3}
+    .ref-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+    .ref-card:hover img{transform:scale(1.05)}
+    .ref-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,11,9,.85) 0%,transparent 50%);display:flex;align-items:flex-end;padding:24px;opacity:0;transition:opacity .4s}
+    .ref-card:hover .ref-overlay{opacity:1}
+    .ref-overlay span{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--text)}
+
+    /* KUNDENSTIMMEN */
+    .reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+    .review-card{background:var(--bg3);padding:44px 40px;position:relative}
+    .review-stars{display:flex;gap:4px;margin-bottom:20px}
+    .review-stars svg{width:18px;height:18px;color:var(--gold);fill:var(--gold)}
+    .review-text{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;font-style:italic;line-height:1.5;color:var(--text);margin-bottom:24px}
+    .review-author{font-size:.82rem;color:var(--text-muted);font-weight:400}
+    .review-source{font-size:.72rem;color:var(--text-dim);margin-top:4px}
+
+    /* EINZUGSGEBIET */
+    .area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+    .area-card{background:var(--bg3);padding:32px 20px;text-align:center;transition:background .3s,border-color .3s;border:1px solid transparent}
+    .area-card:hover{background:var(--bg4);border-color:var(--border)}
+    .area-card h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;margin-bottom:6px}
+    .area-card p{font-size:.82rem;color:var(--text-muted);line-height:1.55}
+    .area-card .area-link{display:inline-block;margin-top:12px;font-size:.72rem;color:var(--gold-dim);font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .25s}
+    .area-card:hover .area-link{color:var(--gold)}
+
+    /* PREISE */
+    .preis-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .preis-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.15;margin-bottom:20px}
+    .preis-content p{font-size:.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:16px}
+    .preis-table{display:flex;flex-direction:column;gap:2px}
+    .preis-row{display:flex;justify-content:space-between;align-items:center;padding:20px 28px;background:var(--bg3);transition:background .3s}
+    .preis-row:hover{background:var(--bg4)}
+    .preis-row-label{font-size:.92rem;color:var(--text)}
+    .preis-row-val{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--gold)}
+
+    /* FAQ */
+    #faq{padding:100px 0;background:var(--bg)}
+    .faq-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:80px;align-items:start}
+    .faq-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;margin-top:14px}
+    .faq-header p{margin-top:16px;font-size:.92rem;color:var(--text-muted);line-height:1.7}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid var(--border-soft)}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;background:none;border:none;width:100%;text-align:left;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:400;color:var(--text);transition:color .25s}
+    .faq-question:hover{color:var(--gold)}
+    .faq-question svg{width:18px;height:18px;flex-shrink:0;color:var(--text-dim);transition:transform .3s,color .3s}
+    .faq-item.open .faq-question svg{transform:rotate(45deg);color:var(--gold)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}
+    .faq-item.open .faq-answer{max-height:400px}
+    .faq-answer p{padding:0 0 24px;font-size:.9rem;color:var(--text-muted);line-height:1.75}
+
+    /* CTA */
+    .cta-section{padding:100px 0;text-align:center;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1.1;margin-bottom:16px}
+    .cta-section p{font-size:.95rem;color:var(--text-muted);max-width:520px;margin:0 auto 40px;line-height:1.7}
+
+    /* FLOATING */
+    .floating-contact{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:180;display:flex;flex-direction:column;gap:12px}
+    .floating-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+    .floating-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,0,0,.5)}
+    .floating-btn svg{width:22px;height:22px}
+    .floating-whatsapp{background:#25D366}.floating-email{background:var(--gold)}
+
+    /* FOOTER */
+    footer{background:var(--bg);border-top:1px solid var(--border-soft);padding:60px 0 40px}
+    .footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .footer-tagline{font-size:.87rem;color:var(--text-muted);line-height:1.65;max-width:260px}
+    .footer-col-title{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .footer-links a{font-size:.88rem;color:var(--text-muted);transition:color .25s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid var(--border-soft)}
+    .footer-copy{font-size:.78rem;color:var(--text-dim)}
+    .footer-legal{display:flex;gap:24px}
+    .footer-legal a{font-size:.78rem;color:var(--text-dim);transition:color .25s}
+    .footer-legal a:hover{color:var(--text-muted)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .meister-split{grid-template-columns:1fr;gap:48px}
+      .meister-visual{max-width:400px;margin:0 auto}
+      .leistungen-grid{grid-template-columns:repeat(2,1fr)}
+      .vorteile-grid{grid-template-columns:repeat(2,1fr)}
+      .ref-grid{grid-template-columns:repeat(2,1fr)}
+      .reviews-grid{grid-template-columns:1fr}
+      .area-grid{grid-template-columns:repeat(3,1fr)}
+      .preis-split{grid-template-columns:1fr;gap:40px}
+      .faq-layout{grid-template-columns:1fr;gap:40px}
+      .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}.nav-cta{display:none}.nav-burger{display:flex}
+      .leistungen-grid{grid-template-columns:1fr}
+      .vorteile-grid{grid-template-columns:1fr}
+      .ref-grid{grid-template-columns:1fr}
+      .area-grid{grid-template-columns:1fr 1fr}
+      .hero{min-height:65vh;padding:140px 0 80px}
+      .hero-actions{flex-direction:column;align-items:center;gap:14px}
+      .hero-actions .btn-gold,.hero-actions .btn-ghost{width:100%;max-width:300px;justify-content:center}
+      .meister-credentials{flex-wrap:wrap;gap:24px}
+      .footer-inner{grid-template-columns:1fr;gap:32px}
+      .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+      .container{width:min(1160px,calc(100% - 32px))}
+      .floating-contact{right:16px;bottom:24px;top:auto;transform:none}
+      .floating-btn{width:44px;height:44px}.floating-btn svg{width:20px;height:20px}
+      .section{padding:64px 0}
+      .review-card{padding:32px 28px}
+    }
+    @media(max-width:420px){
+      .nav-logo-img{height:38px}.mobile-menu a{font-size:1.4rem}.mobile-menu{gap:18px}
+      .area-grid{grid-template-columns:1fr}
+      .meister-badge{width:90px;height:90px;bottom:-10px;right:-10px}
+      .meister-badge-num{font-size:1.5rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING CONTACT -->
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">&#10005;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     1. HERO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <img src="assets/images/oefen/apella.jpg" alt="Ofenbauer Rosenheim – Kachelofen, Heizkamin und Speicherofen vom Meisterbetrieb Hogger" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Meisterbetrieb in Rosenheim</p>
+    <h1>Ihr Ofenbauer in Rosenheim</h1>
+    <p>Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt nach Maß vom Ofenbaumeister. Persönliche Beratung, Planung und Montage aus einer Hand.</p>
+    <div class="hero-actions">
+      <a href="index.html#kontakt" class="btn-gold">
+        Kostenlos beraten lassen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="referenzen.html" class="btn-ghost">Referenzen ansehen</a>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Startseite</a>
+      <span>/</span>
+      <span>Ofenbauer Rosenheim</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     2. DER OFENBAUMEISTER
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="meister">
+  <div class="container">
+    <div class="meister-split">
+      <div class="meister-visual reveal">
+        <img src="assets/images/team/bastian-hogger.jpg" alt="Ofenbaumeister Bastian Hogger aus Rosenheim" />
+        <div class="meister-badge">
+          <span class="meister-badge-num">50+</span>
+          <span class="meister-badge-text">Projekte</span>
+        </div>
+      </div>
+      <div class="meister-content reveal reveal-delay-1">
+        <p class="label">Der Ofenbaumeister</p>
+        <h2>Bastian Hogger — Ihr Ofenbaumeister in Rosenheim</h2>
+        <p>Als geprüfter Ofenbaumeister verbindet Bastian Hogger traditionelles Handwerk mit modernen Techniken. Jeder Ofen wird individuell geplant, persönlich betreut und mit höchster Präzision gebaut — vom ersten Entwurf bis zur Abnahme durch den Schornsteinfeger.</p>
+        <p>Was als Leidenschaft für das Ofenbauerhandwerk begann, ist heute ein Meisterbetrieb mit über 200 erfolgreich realisierten Projekten in Rosenheim und der gesamten Region Oberbayern. Qualität, Ehrlichkeit und persönlicher Kontakt stehen bei jedem Projekt an erster Stelle.</p>
+        <div class="meister-credentials">
+          <div class="credential">
+            <span class="credential-val">2021</span>
+            <span class="credential-label">Meistertitel</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">50+</span>
+            <span class="credential-label">Projekte</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">15+</span>
+            <span class="credential-label">Jahre Erfahrung</span>
+          </div>
+          <div class="credential">
+            <span class="credential-val">5.0</span>
+            <span class="credential-label">Google-Bewertung</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     3. LEISTUNGEN OVERVIEW
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="leistungen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Leistungen</p>
+      <h2>Was wir als Ofenbauer in Rosenheim für Sie tun</h2>
+      <p>Vom individuellen Kachelofen bis zur Fliesen-Gestaltung — Ofenbau Hogger bietet Ihnen das komplette Leistungsspektrum aus Meisterhand.</p>
+    </div>
+    <div class="leistungen-grid">
+      <div class="leistung-card reveal reveal-delay-1">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 21V9h6v12"/><path d="M3 9h18"/></svg>
+        <h3>Kachelöfen</h3>
+        <p>Individuelle Kachelöfen mit Schamottspeicherkern für langanhaltende Strahlungswärme. Jeder Ofen wird nach Ihren Wünschen und den Gegebenheiten vor Ort geplant.</p>
+        <a href="kachelofen-rosenheim.html" class="link">Mehr erfahren <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="leistung-card reveal reveal-delay-2">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <h3>Heizkamine</h3>
+        <p>Moderne Heizkamine mit großzügiger Sichtscheibe und effizienter Heiztechnik. Feuergenuss auf höchstem Niveau — perfekt inszeniert in Ihrem Wohnraum.</p>
+        <a href="heizkamin-rosenheim.html" class="link">Mehr erfahren <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="leistung-card reveal reveal-delay-3">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+        <h3>Ofen modernisieren</h3>
+        <p>Ihr alter Ofen entspricht nicht mehr der BImSchV? Wir tauschen den Einsatz, erneuern die Technik und machen Ihren Ofen wieder zukunftsfähig.</p>
+        <a href="ofen-modernisieren.html" class="link">Mehr erfahren <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="leistung-card reveal reveal-delay-1">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        <h3>Kamin sanieren</h3>
+        <p>Professionelle Kaminsanierung: Vom Schornstein bis zur Feuerstätte bringen wir Ihren bestehenden Kamin wieder auf den neuesten Stand der Technik.</p>
+        <a href="kamin-sanieren.html" class="link">Mehr erfahren <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="leistung-card reveal reveal-delay-2">
+        <svg class="leistung-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        <h3>Fliesen</h3>
+        <p>Hochwertige Fliesen für Bad, Küche und Wohnbereich. Beratung im eigenen Fliesen.Studio und fachgerechte Verlegung — alles aus einer Hand.</p>
+        <a href="fliesen-studio.html" class="link">Zum Fliesen.Studio <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     4. WARUM HOGGER
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="vorteile">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Ihre Vorteile</p>
+      <h2>Warum Hogger Ihr Ofenbauer in Rosenheim ist</h2>
+      <p>Meisterqualität, persönlicher Kontakt und nachweisbare Ergebnisse — das macht uns zum bevorzugten Ofenbauer in der Region.</p>
+    </div>
+    <div class="vorteile-grid">
+      <div class="vorteil-card reveal reveal-delay-1">
+        <div class="vorteil-num">50+</div>
+        <h3>Realisierte Projekte</h3>
+        <p>Über 200 Kachelöfen, Heizkamine und Speicheröfen in Rosenheim und Oberbayern — jedes Projekt individuell geplant und handgefertigt.</p>
+      </div>
+      <div class="vorteil-card reveal reveal-delay-2">
+        <div class="vorteil-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15l-2 5l9-11h-5l2-5l-9 11z"/></svg>
+        </div>
+        <h3>Meisterbetrieb</h3>
+        <p>Geprüfter Ofenbaumeister mit HWK-Abschluss. Höchste Qualifikation in Planung, Ausführung und Abnahme.</p>
+      </div>
+      <div class="vorteil-card reveal reveal-delay-3">
+        <div class="vorteil-num">5.0</div>
+        <h3>Google-Bewertung</h3>
+        <p>Durchgängig 5 Sterne auf Google. Unsere Kunden schätzen die persönliche Betreuung und die handwerkliche Qualität.</p>
+      </div>
+      <div class="vorteil-card reveal reveal-delay-4">
+        <div class="vorteil-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Persönlicher Kontakt</h3>
+        <p>Kein Callcenter, kein Subunternehmer. Sie sprechen direkt mit dem Meister, der Ihren Ofen auch baut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     5. REFERENZEN PREVIEW
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="referenzen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Arbeiten</p>
+      <h2>Referenzen aus Rosenheim und Umgebung</h2>
+      <p>Jeder Ofen erzählt seine eigene Geschichte. Hier sehen Sie eine Auswahl unserer realisierten Projekte.</p>
+    </div>
+    <div class="ref-grid reveal">
+      <div class="ref-card">
+        <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Rosenheim – Projekt Apella von Ofenbau Hogger" loading="lazy" />
+        <div class="ref-overlay"><span>Apella Kachelofen</span></div>
+      </div>
+      <div class="ref-card">
+        <img src="assets/images/oefen/sera-78.jpg" alt="Heizkamin Rosenheim – Projekt Sera von Ofenbau Hogger" loading="lazy" />
+        <div class="ref-overlay"><span>Sera Heizkamin</span></div>
+      </div>
+      <div class="ref-card">
+        <img src="assets/images/oefen/colona-schwarz.jpg" alt="Speicherofen Rosenheim – Projekt Colona von Ofenbau Hogger" loading="lazy" />
+        <div class="ref-overlay"><span>Colona Speicherofen</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="referenzen.html" class="btn-ghost">
+        Alle Referenzen ansehen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     6. KUNDENSTIMMEN
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="kundenstimmen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Kundenstimmen</p>
+      <h2>Das sagen unsere Kunden</h2>
+      <p>Ehrliches Feedback von Menschen, die uns ihr Ofenprojekt anvertraut haben.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal reveal-delay-1">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Herr Hogger hat unseren Kachelofen mit unglaublicher Sorgfalt und Liebe zum Detail gebaut. Von der Beratung bis zur fertigen Abnahme alles aus einer Hand — absolut empfehlenswert!"</p>
+        <p class="review-author">Familie M. aus Rosenheim</p>
+        <p class="review-source">Google-Bewertung</p>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Professionell, zuverlässig und handwerklich auf höchstem Niveau. Unser Heizkamin ist genau so geworden, wie wir ihn uns vorgestellt haben. Die Beratung war ehrlich und kompetent."</p>
+        <p class="review-author">Thomas K. aus Kolbermoor</p>
+        <p class="review-source">MyHammer-Bewertung</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     7. EINZUGSGEBIET
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section section-alt" id="einzugsgebiet">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Einzugsgebiet</p>
+      <h2>Ofenbauer für Rosenheim und die gesamte Region</h2>
+      <p>Von unserem Standort in Rosenheim betreuen wir Kunden in der gesamten Region Oberbayern. Hier finden Sie weitere Informationen zu unseren lokalen Leistungen.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal reveal-delay-1">
+        <h3>Rosenheim</h3>
+        <p>Unser Standort. Individuelle Öfen direkt vor Ort.</p>
+        <span class="area-link">Sie sind hier</span>
+      </div>
+      <a href="ofenbauer-kolbermoor.html" class="area-card reveal reveal-delay-2" style="text-decoration:none;">
+        <h3>Kolbermoor</h3>
+        <p>Nur 5 km entfernt. 10 Minuten zu Ihnen.</p>
+        <span class="area-link">Mehr erfahren &rarr;</span>
+      </a>
+      <a href="ofenbauer-bad-aibling.html" class="area-card reveal reveal-delay-3" style="text-decoration:none;">
+        <h3>Bad Aibling</h3>
+        <p>15 km entfernt. Regelmäßig vor Ort.</p>
+        <span class="area-link">Mehr erfahren &rarr;</span>
+      </a>
+      <a href="ofenbauer-prien.html" class="area-card reveal reveal-delay-4" style="text-decoration:none;">
+        <h3>Prien am Chiemsee</h3>
+        <p>20 km entfernt. Viele Projekte am See.</p>
+        <span class="area-link">Mehr erfahren &rarr;</span>
+      </a>
+      <div class="area-card reveal reveal-delay-1">
+        <h3>Wasserburg</h3>
+        <p>25 km entfernt. Auch hier für Sie da.</p>
+        <a href="index.html#kontakt" class="area-link">Anfrage stellen &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     8. PREISÜBERSICHT
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="preise">
+  <div class="container">
+    <div class="preis-split">
+      <div class="preis-content reveal">
+        <p class="label">Kosten &amp; Preise</p>
+        <h2>Was kostet ein Ofen vom Ofenbauer in Rosenheim?</h2>
+        <p>Die Kosten für einen individuellen Ofen hängen von vielen Faktoren ab: Größe, Bauart, Materialien und Sonderwünsche. Hier ein grober Überblick, damit Sie eine erste Orientierung haben.</p>
+        <p>Auf unserer Preisseite erfahren Sie detailliert, welche Faktoren den Preis beeinflussen und was Sie für Ihr Budget erwarten können.</p>
+        <a href="was-kostet-ein-ofen.html" class="btn-ghost" style="margin-top:12px;">
+          Zur Preisübersicht
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="preis-table reveal reveal-delay-1">
+        <div class="preis-row">
+          <span class="preis-row-label">Kachelofen (individuell)</span>
+          <span class="preis-row-val">ab 8.000 €</span>
+        </div>
+        <div class="preis-row">
+          <span class="preis-row-label">Heizkamin</span>
+          <span class="preis-row-val">ab 6.000 €</span>
+        </div>
+        <div class="preis-row">
+          <span class="preis-row-label">Speicherofen</span>
+          <span class="preis-row-val">ab 5.000 €</span>
+        </div>
+        <div class="preis-row">
+          <span class="preis-row-label">Einsatztausch / Modernisierung</span>
+          <span class="preis-row-val">ab 3.000 €</span>
+        </div>
+        <div class="preis-row">
+          <span class="preis-row-label">Kaminsanierung</span>
+          <span class="preis-row-val">ab 2.500 €</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     9. FAQ
+     ═══════════════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-header reveal">
+        <p class="label">Häufige Fragen</p>
+        <h2>FAQ — Ofenbauer in Rosenheim</h2>
+        <p>Die wichtigsten Fragen rund um Ofenbau in Rosenheim — kompakt beantwortet von Ofenbaumeister Bastian Hogger.</p>
+      </div>
+      <div class="faq-list reveal reveal-delay-1">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Was macht einen guten Ofenbauer in Rosenheim aus?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ein guter Ofenbauer in Rosenheim verfügt über eine Meisterqualifikation, kennt die regionalen Bauvorschriften und arbeitet eng mit dem zuständigen Schornsteinfeger zusammen. Wichtig sind außerdem Erfahrung, individuelle Beratung und eine saubere Ausführung. Bei Ofenbau Hogger erhalten Sie all das aus einer Hand — von der ersten Beratung bis zur Abnahme.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie lange dauert der Bau eines Kachelofens in Rosenheim?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Von der Beratung bis zum fertigen Kachelofen rechnen Sie mit ca. 6–12 Wochen. Die reine Bauzeit vor Ort beträgt in der Regel 3–5 Tage. Die Vorlaufzeit hängt von der Projektgröße, den gewählten Materialien und der aktuellen Auftragslage ab. Wir halten Sie in jeder Phase persönlich auf dem Laufenden.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Brauche ich eine Genehmigung für einen neuen Ofen?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, jede neue Feuerstätte muss in Deutschland vom zuständigen Bezirksschornsteinfeger abgenommen werden. Als Meisterbetrieb kümmern wir uns um die komplette Abstimmung mit dem Schornsteinfeger — bereits vor Baubeginn klären wir die technischen Voraussetzungen, damit es bei der Abnahme keine Überraschungen gibt.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Kann ich meinen alten Ofen modernisieren statt neu bauen?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>In vielen Fällen ja. Ein Einsatztausch kann Ihren bestehenden Ofen wieder BImSchV-konform machen und gleichzeitig die Effizienz deutlich steigern. Wir prüfen vor Ort, ob eine Modernisierung sinnvoll ist oder ein Neubau die bessere Lösung darstellt — ehrlich und transparent. <a href="ofen-modernisieren.html" style="color:var(--gold);">Mehr zum Thema Modernisierung</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Bietet Ofenbau Hogger auch eine kostenlose Erstberatung an?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Selbstverständlich. Die Erstberatung bei Ihnen vor Ort ist kostenlos und unverbindlich. Ofenbaumeister Bastian Hogger nimmt sich Zeit, Ihre Wünsche zu verstehen, die Gegebenheiten zu prüfen und Ihnen erste Ideen und eine Preisindikation mitzugeben. <a href="index.html#kontakt" style="color:var(--gold);">Jetzt Termin vereinbaren</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     10. CTA
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Jetzt starten</p>
+    <h2>Ihr neuer Ofen in Rosenheim beginnt mit einem Gespräch</h2>
+    <p>Lassen Sie sich kostenlos und unverbindlich beraten. Ofenbaumeister Bastian Hogger freut sich auf Ihr Projekt — ob Kachelofen, Heizkamin oder Modernisierung.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════ -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="kachelofen-rosenheim.html">Kachelöfen</a></li>
+          <li><a href="heizkamin-rosenheim.html">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="ofen-modernisieren.html">Modernisierung</a></li>
+          <li><a href="kamin-sanieren.html">Kaminsanierung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="was-kostet-ein-ofen.html">Kosten & Preise</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Einzugsgebiet</div>
+        <ul class="footer-links">
+          <li><a href="ofenbauer-rosenheim.html">Rosenheim</a></li>
+          <li><a href="ofenbauer-kolbermoor.html">Kolbermoor</a></li>
+          <li><a href="ofenbauer-bad-aibling.html">Bad Aibling</a></li>
+          <li><a href="ofenbauer-prien.html">Prien am Chiemsee</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger — Ofenbaumeister in Rosenheim. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Scroll reveal
+  const revealEls=document.querySelectorAll('.reveal');
+  const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el=>revealObs.observe(el));
+
+  // Mobile menu
+  const burger=document.getElementById('navBurger');
+  const mobileMenu=document.getElementById('mobileMenu');
+  const mobileClose=document.getElementById('mobileClose');
+  burger.addEventListener('click',()=>mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click',()=>mobileMenu.classList.remove('open'));
+  function closeMobile(){mobileMenu.classList.remove('open')}
+
+  // FAQ accordion
+  function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     11. SCHEMA.ORG — LocalBusiness
+     ═══════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ofenbau-hogger.de/#business",
+  "name": "Ofenbau Hogger – Bastian Hogger, Ofenbaumeister",
+  "description": "Ofenbauer in Rosenheim. Meisterbetrieb für individuelle Kachelöfen, Heizkamine, Speicheröfen und Fliesen. Über 200 realisierte Projekte in der Region Oberbayern.",
+  "url": "https://ofenbau-hogger.de/ofenbauer-rosenheim",
+  "telephone": "+4915221010008",
+  "email": "info@ofenbau-hogger.de",
+  "image": "https://ofenbau-hogger.de/assets/images/oefen/apella.jpg",
+  "priceRange": "€€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Anton Bruckner Straße 1g",
+    "addressLocality": "Rosenheim",
+    "postalCode": "83024",
+    "addressRegion": "Bayern",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.856",
+    "longitude": "12.128"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "ratingCount": "47",
+    "reviewCount": "47"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Rosenheim"},
+    {"@type": "City", "name": "Kolbermoor"},
+    {"@type": "City", "name": "Bad Aibling"},
+    {"@type": "City", "name": "Prien am Chiemsee"},
+    {"@type": "City", "name": "Wasserburg am Inn"},
+    {"@type": "City", "name": "Bruckmühl"},
+    {"@type": "City", "name": "Raubling"},
+    {"@type": "City", "name": "Stephanskirchen"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Ofenbau-Leistungen",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Kachelöfen",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Individueller Kachelofen", "description": "Maßgefertigter Kachelofen mit Schamottspeicherkern"}
+        }]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Heizkamine",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Heizkamin", "description": "Moderner Heizkamin mit großer Sichtscheibe und effizienter Heiztechnik"}
+        }]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Modernisierung",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Einsatztausch & Ofenmodernisierung", "description": "BImSchV-konforme Modernisierung bestehender Öfen"}
+        }]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Kaminsanierung",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Kaminsanierung", "description": "Professionelle Sanierung von Schornstein und Feuerstätte"}
+        }]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Fliesen",
+        "itemListElement": [{
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Fliesenverlegung", "description": "Hochwertige Fliesen für Bad, Küche und Wohnbereich"}
+        }]
+      }
+    ]
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Bastian Hogger",
+    "jobTitle": "Ofenbaumeister",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Meisterbrief",
+      "name": "Ofenbaumeister (HWK)"
+    }
+  },
+  "sameAs": [
+    "https://wa.me/4915221010008"
+  ]
+}
+</script>
+
+<!-- Schema.org — FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was macht einen guten Ofenbauer in Rosenheim aus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein guter Ofenbauer in Rosenheim verfügt über eine Meisterqualifikation, kennt die regionalen Bauvorschriften und arbeitet eng mit dem zuständigen Schornsteinfeger zusammen. Wichtig sind außerdem Erfahrung, individuelle Beratung und eine saubere Ausführung. Bei Ofenbau Hogger erhalten Sie all das aus einer Hand — von der ersten Beratung bis zur Abnahme."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert der Bau eines Kachelofens in Rosenheim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Von der Beratung bis zum fertigen Kachelofen rechnen Sie mit ca. 6–12 Wochen. Die reine Bauzeit vor Ort beträgt in der Regel 3–5 Tage. Die Vorlaufzeit hängt von der Projektgröße, den gewählten Materialien und der aktuellen Auftragslage ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Genehmigung für einen neuen Ofen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, jede neue Feuerstätte muss in Deutschland vom zuständigen Bezirksschornsteinfeger abgenommen werden. Als Meisterbetrieb kümmern wir uns um die komplette Abstimmung mit dem Schornsteinfeger — bereits vor Baubeginn klären wir die technischen Voraussetzungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich meinen alten Ofen modernisieren statt neu bauen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In vielen Fällen ja. Ein Einsatztausch kann Ihren bestehenden Ofen wieder BImSchV-konform machen und gleichzeitig die Effizienz deutlich steigern. Wir prüfen vor Ort, ob eine Modernisierung sinnvoll ist oder ein Neubau die bessere Lösung darstellt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bietet Ofenbau Hogger auch eine kostenlose Erstberatung an?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selbstverständlich. Die Erstberatung bei Ihnen vor Ort ist kostenlos und unverbindlich. Ofenbaumeister Bastian Hogger nimmt sich Zeit, Ihre Wünsche zu verstehen, die Gegebenheiten zu prüfen und Ihnen erste Ideen und eine Preisindikation mitzugeben."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org — BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://ofenbau-hogger.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ofenbauer Rosenheim",
+      "item": "https://ofenbau-hogger.de/ofenbauer-rosenheim"
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

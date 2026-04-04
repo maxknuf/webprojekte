@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ofenbauer Bad Aibling – Kachelöfen, Heizkamine & Speicheröfen vom Meisterbetrieb Ofenbau Hogger aus Rosenheim. Nur 15 km entfernt. Kostenlose Erstberatung." />
+  <meta name="keywords" content="Ofenbauer Bad Aibling, Kachelofen Bad Aibling, Heizkamin Bad Aibling, Ofenbaumeister Bad Aibling, Ofen Bad Aibling, Kaminbau Bad Aibling" />
+  <title>Ofenbauer Bad Aibling – Kachelofen & Heizkamin vom Meisterbetrieb | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/ofenbauer-bad-aibling.html" />
+
+  <meta property="og:title" content="Ofenbauer Bad Aibling – Kachelofen & Heizkamin vom Meisterbetrieb" />
+  <meta property="og:description" content="Ihr Ofenbaumeister für Bad Aibling. Kachelöfen, Heizkamine und Speicheröfen – individuell gefertigt. Nur 15 km von Rosenheim." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/ofenbauer-bad-aibling.html" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/oefen/juwel-e.jpg" />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ofenbauer Bad Aibling – Ofenbau Hogger" />
+  <meta name="twitter:description" content="Kachelöfen, Heizkamine & Speicheröfen für Bad Aibling vom Meisterbetrieb aus Rosenheim." />
+
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#0C0B09;--bg2:#131210;--bg3:#1A1917;--bg4:#222120;
+      --gold:#C4A84C;--gold-light:#DFC882;--gold-dim:#8A7230;
+      --text:#F0EAE0;--text-muted:#9A9080;--text-dim:#5A5448;
+      --border:rgba(196,168,76,0.15);--border-soft:rgba(240,234,224,0.07);
+      --radius:4px;--radius-lg:10px;
+    }
+    html{scroll-behavior:smooth;font-size:16px}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-weight:300;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    .container{width:min(1160px,calc(100% - 48px));margin:0 auto}
+    .label{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
+
+    #nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(12,11,9,.92);border-bottom:1px solid var(--border-soft);padding:16px 0;backdrop-filter:blur(16px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{display:flex;align-items:center}
+    .nav-logo-img{height:48px;width:auto;image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;transform:translateZ(0);transition:height .4s ease,opacity .25s}
+    .nav-logo-img:hover{opacity:.85}
+    .nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+    .nav-links a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;color:var(--text-muted);transition:color .25s}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border:1px solid var(--gold-dim);border-radius:var(--radius);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--gold)!important;transition:background .25s,border-color .25s,color .25s!important}
+    .nav-cta:hover{background:var(--gold);border-color:var(--gold);color:var(--bg)!important}
+    .nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .nav-burger span{display:block;width:24px;height:1.5px;background:var(--text);transition:.3s}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--bg);z-index:250;flex-direction:column;justify-content:center;align-items:center;gap:24px;padding:80px 24px 40px;overflow-y:auto}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,5vw,2.5rem);font-weight:300;color:var(--text-muted);transition:color .25s}
+    .mobile-menu a:hover{color:var(--gold)}
+    .mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;padding:8px;z-index:251}
+
+    .btn-gold,.btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:var(--radius)}
+    .btn-gold{background:var(--gold);color:var(--bg);font-weight:500;transition:background .25s,transform .25s}
+    .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+    .btn-ghost{border:1px solid var(--border);color:var(--text-muted);font-weight:400;transition:border-color .25s,color .25s,transform .25s}
+    .btn-ghost:hover{border-color:var(--gold-dim);color:var(--text);transform:translateY(-2px)}
+
+    .hero{position:relative;min-height:65vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:160px 0 100px}
+    .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,var(--bg) 0%,transparent 30%),linear-gradient(to top,var(--bg) 0%,transparent 30%)}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:780px;margin:0 auto}
+    .hero-content .label{margin-bottom:20px}
+    .hero-content h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(2.4rem,5.5vw,4.8rem);line-height:1.08;letter-spacing:-.01em;margin-bottom:24px}
+    .hero-content p{font-size:1.05rem;color:var(--text-muted);font-weight:300;max-width:560px;margin:0 auto 40px;line-height:1.75}
+    .hero-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+    .breadcrumb{position:relative;z-index:2;text-align:center;margin-top:32px;font-size:.78rem;color:var(--text-dim)}
+    .breadcrumb a{color:var(--text-muted);transition:color .25s}.breadcrumb a:hover{color:var(--gold)}
+    .breadcrumb span{margin:0 8px}
+
+    .section{padding:80px 0}.section-alt{background:var(--bg2)}
+    .section-header{text-align:center;max-width:640px;margin:0 auto 56px}
+    .section-header .label{margin-bottom:14px}
+    .section-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.1;margin-bottom:16px}
+    .section-header p{font-size:.95rem;color:var(--text-muted);line-height:1.7}
+
+    .intro-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .intro-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;line-height:1.15;margin-bottom:20px}
+    .intro-text p{font-size:.95rem;color:var(--text-muted);line-height:1.75;margin-bottom:16px}
+    .intro-img{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3}
+    .intro-img img{width:100%;height:100%;object-fit:cover}
+
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .service-card{background:var(--bg3);padding:40px 32px;transition:background .3s}
+    .service-card:hover{background:var(--bg4)}
+    .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:10px}
+    .service-card p{font-size:.88rem;color:var(--text-muted);line-height:1.65;margin-bottom:16px}
+    .service-card .link{font-size:.78rem;color:var(--gold);font-weight:500;letter-spacing:.08em;text-transform:uppercase;transition:color .25s}
+    .service-card .link:hover{color:var(--gold-light)}
+
+    .referenz-split{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+    .referenz-img{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3}
+    .referenz-img img{width:100%;height:100%;object-fit:cover}
+    .referenz-text h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:300;line-height:1.15;margin-bottom:16px}
+    .referenz-text p{font-size:.92rem;color:var(--text-muted);line-height:1.75;margin-bottom:20px}
+
+    .vorteile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .vorteil-card{background:var(--bg2);padding:44px 32px;text-align:center;transition:background .3s}
+    .vorteil-card:hover{background:var(--bg3)}
+    .vorteil-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;margin-bottom:10px}
+    .vorteil-card p{font-size:.88rem;color:var(--text-muted);line-height:1.65}
+    .vorteil-icon{font-size:2rem;margin-bottom:16px;color:var(--gold)}
+
+    #faq{padding:80px 0;background:var(--bg)}
+    .faq-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:80px;align-items:start}
+    .faq-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;margin-top:14px}
+    .faq-header p{margin-top:16px;font-size:.92rem;color:var(--text-muted);line-height:1.7}
+    .faq-list{display:flex;flex-direction:column}
+    .faq-item{border-bottom:1px solid var(--border-soft)}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;background:none;border:none;width:100%;text-align:left;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:400;color:var(--text);transition:color .25s}
+    .faq-question:hover{color:var(--gold)}
+    .faq-question svg{width:18px;height:18px;flex-shrink:0;color:var(--text-dim);transition:transform .3s,color .3s}
+    .faq-item.open .faq-question svg{transform:rotate(45deg);color:var(--gold)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}
+    .faq-item.open .faq-answer{max-height:300px}
+    .faq-answer p{padding:0 0 24px;font-size:.9rem;color:var(--text-muted);line-height:1.75}
+
+    .cta-section{padding:80px 0;text-align:center;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:16px}
+    .cta-section p{font-size:.95rem;color:var(--text-muted);max-width:500px;margin:0 auto 40px;line-height:1.7}
+
+    .floating-contact{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:180;display:flex;flex-direction:column;gap:12px}
+    .floating-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+    .floating-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,0,0,.5)}
+    .floating-btn svg{width:22px;height:22px}
+    .floating-whatsapp{background:#25D366}.floating-email{background:var(--gold)}
+
+    footer{background:var(--bg);border-top:1px solid var(--border-soft);padding:60px 0 40px}
+    .footer-inner{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .footer-tagline{font-size:.87rem;color:var(--text-muted);line-height:1.65;max-width:260px}
+    .footer-col-title{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:20px}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .footer-links a{font-size:.88rem;color:var(--text-muted);transition:color .25s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid var(--border-soft)}
+    .footer-copy{font-size:.78rem;color:var(--text-dim)}
+    .footer-legal{display:flex;gap:24px}
+    .footer-legal a{font-size:.78rem;color:var(--text-dim);transition:color .25s}
+    .footer-legal a:hover{color:var(--text-muted)}
+
+    @media(max-width:1024px){
+      .intro-split{grid-template-columns:1fr;gap:40px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .referenz-split{grid-template-columns:1fr;gap:40px}
+      .vorteile-grid{grid-template-columns:1fr}
+      .faq-layout{grid-template-columns:1fr;gap:40px}
+      .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+    }
+    @media(max-width:768px){
+      .nav-links{display:none}.nav-cta{display:none}.nav-burger{display:flex}
+      .services-grid{grid-template-columns:1fr}
+      .hero{min-height:60vh;padding:140px 0 80px}
+      .hero-actions{flex-direction:column;align-items:center;gap:14px}
+      .hero-actions .btn-gold,.hero-actions .btn-ghost{width:100%;max-width:280px;justify-content:center}
+      .footer-inner{grid-template-columns:1fr;gap:32px}
+      .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+      .container{width:min(1160px,calc(100% - 32px))}
+      .floating-contact{right:16px;bottom:24px;top:auto;transform:none}
+      .floating-btn{width:44px;height:44px}.floating-btn svg{width:20px;height:20px}
+      .section{padding:60px 0}
+    }
+    @media(max-width:420px){
+      .nav-logo-img{height:38px}.mobile-menu a{font-size:1.4rem}.mobile-menu{gap:18px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">&#10005;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="assets/images/oefen/juwel-e.jpg" alt="Ofenbauer Bad Aibling – Kachelofen und Heizkamin von Ofenbau Hogger" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Ofenbaumeister für Bad Aibling</p>
+    <h1>Ofenbauer in Bad Aibling — Ihr Ofenbaumeister aus Rosenheim</h1>
+    <p>Individuelle Kachelöfen, Heizkamine und Speicheröfen für Bad Aibling und Umgebung. Meisterbetrieb Ofenbau Hogger — nur 20 Minuten entfernt.</p>
+    <div class="hero-actions">
+      <a href="index.html#kontakt" class="btn-gold">
+        Kostenlos beraten lassen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="referenzen.html" class="btn-ghost">Referenzen ansehen</a>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Startseite</a>
+      <span>/</span>
+      <span>Ofenbauer Bad Aibling</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="intro-split">
+      <div class="intro-text reveal">
+        <p class="label">Auch in Bad Aibling für Sie da</p>
+        <h2>Ihr Ofenbauer für Bad Aibling und das Mangfalltal</h2>
+        <p>Bad Aibling liegt rund 15 Kilometer westlich von Rosenheim — in etwa 20 Minuten Fahrzeit erreichen wir Sie bequem vor Ort. Die Kurstadt mit ihren schönen Altbauten und modernen Neubauvierteln bietet ideale Voraussetzungen für individuelle Ofenlösungen.</p>
+        <p>Ob Sie einen klassischen Kachelofen für Ihr denkmalgeschütztes Haus oder einen modernen Heizkamin für Ihren Neubau suchen: Ofenbaumeister Bastian Hogger berät Sie persönlich und entwickelt eine Lösung, die perfekt zu Ihrem Zuhause passt.</p>
+      </div>
+      <div class="intro-img reveal reveal-delay-1">
+        <img src="assets/images/oefen/juwel-e.jpg" alt="Ofenprojekt in der Region Bad Aibling" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Leistungen</p>
+      <h2>Das können wir für Sie in Bad Aibling tun</h2>
+      <p>Vom individuellen Kachelofen bis zur Fliesengestaltung — Ofenbau Hogger bietet Ihnen das volle Leistungsspektrum aus Meisterhand.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <h3>Kachelofen</h3>
+        <p>Individuell geplante Kachelöfen mit Schamottspeicherkern — für langanhaltende Strahlungswärme und einzigartiges Design.</p>
+        <a href="kachelofen-rosenheim.html" class="link">Mehr erfahren &rarr;</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <h3>Heizkamin</h3>
+        <p>Moderne Heizkamine mit großzügiger Sichtscheibe und effizienter Heiztechnik — Feuergenuss auf höchstem Niveau.</p>
+        <a href="heizkamin-rosenheim.html" class="link">Mehr erfahren &rarr;</a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <h3>Speicherofen</h3>
+        <p>Kompakte Speicheröfen, die mit wenig Holz viel Wärme speichern und über Stunden gleichmäßig abgeben.</p>
+        <a href="index.html#leistungen" class="link">Mehr erfahren &rarr;</a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <h3>Einsatztausch &amp; Modernisierung</h3>
+        <p>Ihr alter Ofen entspricht nicht mehr der BImSchV? Wir tauschen den Einsatz und machen Ihren Ofen wieder zukunftsfähig.</p>
+        <a href="ofen-modernisieren.html" class="link">Mehr erfahren &rarr;</a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <h3>Fliesen.Studio</h3>
+        <p>Hochwertige Fliesen für Bad, Küche und Wohnbereich — Beratung und Verlegung aus einer Hand.</p>
+        <a href="fliesen-studio.html" class="link">Mehr erfahren &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZ AUS DER REGION -->
+<section class="section">
+  <div class="container">
+    <div class="referenz-split reveal">
+      <div class="referenz-img">
+        <img src="assets/images/oefen/juwel-e.jpg" alt="Ofen-Projekt in der Region Bad Aibling" />
+      </div>
+      <div class="referenz-text">
+        <p class="label">Referenz aus der Region</p>
+        <h3>Wärme mit Charakter</h3>
+        <p>Dieser elegante Ofen verbindet klare Linien mit effizienter Wärmetechnik. Geplant und gebaut von Ofenbaumeister Bastian Hogger, fügt er sich harmonisch in den Wohnraum ein und sorgt für behagliche Atmosphäre an kalten Tagen.</p>
+        <a href="referenzen.html" class="btn-ghost">Alle Referenzen ansehen &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARUM HOGGER -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Ihre Vorteile</p>
+      <h2>Warum Hogger in Bad Aibling?</h2>
+    </div>
+    <div class="vorteile-grid">
+      <div class="vorteil-card reveal reveal-delay-1">
+        <div class="vorteil-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Nur 15 km entfernt</h3>
+        <p>Von Rosenheim nach Bad Aibling sind es rund 20 Minuten Fahrzeit. Wir kommen regelmäßig in die Kurstadt und kennen die örtlichen Gegebenheiten bestens.</p>
+      </div>
+      <div class="vorteil-card reveal reveal-delay-2">
+        <div class="vorteil-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15l-2 5l9-11h-5l2-5l-9 11z"/></svg>
+        </div>
+        <h3>Meisterbetrieb</h3>
+        <p>Ofenbaumeister Bastian Hogger steht persönlich für höchste Qualität in Planung, Ausführung und Abnahme — vom ersten Gespräch bis zum fertigen Ofen.</p>
+      </div>
+      <div class="vorteil-card reveal reveal-delay-3">
+        <div class="vorteil-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Persönlicher Kontakt</h3>
+        <p>Bei uns gibt es keine Callcenter oder anonyme Sachbearbeiter. Sie sprechen direkt mit dem Meister, der Ihren Ofen auch baut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-header reveal">
+        <p class="label">Häufige Fragen</p>
+        <h2>FAQ für Bad Aibling</h2>
+        <p>Die wichtigsten Fragen unserer Kunden aus Bad Aibling und Umgebung — kompakt beantwortet.</p>
+      </div>
+      <div class="faq-list reveal reveal-delay-1">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Ist Ofenbau Hogger auch in Bad Aibling tätig?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, Bad Aibling und das gesamte Mangfalltal gehören fest zu unserem Einzugsgebiet. Wir haben bereits zahlreiche Öfen in der Kurstadt und den umliegenden Gemeinden gebaut und kennen die regionalen Besonderheiten bestens.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie weit ist es von Rosenheim nach Bad Aibling?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Bad Aibling ist etwa 15 Kilometer von Rosenheim entfernt. Die Fahrzeit beträgt rund 20 Minuten. Die Anfahrt ist für unsere Kunden selbstverständlich kostenlos und im Angebot enthalten.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Eignet sich ein Kachelofen auch für Altbauten in Bad Aibling?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Gerade in den charmanten Altbauten Bad Aiblings entfalten Kachelöfen ihren vollen Reiz. Wir prüfen vor Ort Statik, Schornsteinanschluss und Raumgegebenheiten und planen Ihren Ofen passgenau — natürlich in Abstimmung mit dem zuständigen Schornsteinfeger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Jetzt starten</p>
+    <h2>Ihr neuer Ofen in Bad Aibling wartet</h2>
+    <p>Lassen Sie sich kostenlos und unverbindlich beraten. Ofenbaumeister Bastian Hogger freut sich auf Ihr Projekt.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="kachelofen-rosenheim.html">Kachelöfen</a></li>
+          <li><a href="heizkamin-rosenheim.html">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="ofen-modernisieren.html">Modernisierung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls=document.querySelectorAll('.reveal');
+  const revealObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el=>revealObs.observe(el));
+  const burger=document.getElementById('navBurger');const mobileMenu=document.getElementById('mobileMenu');const mobileClose=document.getElementById('mobileClose');
+  burger.addEventListener('click',()=>mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click',()=>mobileMenu.classList.remove('open'));
+  function closeMobile(){mobileMenu.classList.remove('open')}
+  function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://ofenbau-hogger.de","name":"Ofenbau Hogger – Bastian Hogger","description":"Ofenbaumeister in Rosenheim – Kachelöfen, Heizkamine und Speicheröfen für Bad Aibling und Umgebung.","telephone":"+4915221010008","email":"info@ofenbau-hogger.de","url":"https://ofenbau-hogger.de","address":{"@type":"PostalAddress","streetAddress":"Anton Bruckner Straße 1g","addressLocality":"Rosenheim","postalCode":"83024","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":"47.856","longitude":"12.128"},"areaServed":[{"@type":"City","name":"Bad Aibling"},{"@type":"City","name":"Rosenheim"},{"@type":"City","name":"Kolbermoor"},{"@type":"City","name":"Mangfalltal"}],"priceRange":"€€€","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ist Ofenbau Hogger auch in Bad Aibling tätig?","acceptedAnswer":{"@type":"Answer","text":"Ja, Bad Aibling und das gesamte Mangfalltal gehören fest zu unserem Einzugsgebiet. Wir haben bereits zahlreiche Öfen in der Kurstadt und den umliegenden Gemeinden gebaut und kennen die regionalen Besonderheiten bestens."}},{"@type":"Question","name":"Wie weit ist es von Rosenheim nach Bad Aibling?","acceptedAnswer":{"@type":"Answer","text":"Bad Aibling ist etwa 15 Kilometer von Rosenheim entfernt. Die Fahrzeit beträgt rund 20 Minuten. Die Anfahrt ist für unsere Kunden selbstverständlich kostenlos und im Angebot enthalten."}},{"@type":"Question","name":"Eignet sich ein Kachelofen auch für Altbauten in Bad Aibling?","acceptedAnswer":{"@type":"Answer","text":"Gerade in den charmanten Altbauten Bad Aiblings entfalten Kachelöfen ihren vollen Reiz. Wir prüfen vor Ort Statik, Schornsteinanschluss und Raumgegebenheiten und planen Ihren Ofen passgenau — natürlich in Abstimmung mit dem zuständigen Schornsteinfeger."}}]}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://ofenbau-hogger.de/"},{"@type":"ListItem","position":2,"name":"Ofenbauer Bad Aibling","item":"https://ofenbau-hogger.de/ofenbauer-bad-aibling.html"}]}
+</script>
+</body>
+</html>

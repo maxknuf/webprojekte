@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Über Bastian Hogger – Ofenbaumeister in Rosenheim. Handwerkstradition seit 2010, Meistertitel seit 2021." />
+  <title>Über uns – Ofenbau Hogger</title>
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0C0B09;
+      --bg2:        #131210;
+      --bg3:        #1A1917;
+      --bg4:        #222120;
+      --gold:       #C4A84C;
+      --gold-light: #DFC882;
+      --gold-dim:   #8A7230;
+      --red:        #A61216;
+      --text:       #F0EAE0;
+      --text-muted: #9A9080;
+      --text-dim:   #5A5448;
+      --border:     rgba(196,168,76,0.15);
+      --border-soft:rgba(240,234,224,0.07);
+      --radius:     4px;
+    }
+
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .section-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 20px;
+    }
+
+    /* ─── NAV ──────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo-img { height: 48px; width: auto; image-rendering: -webkit-optimize-contrast; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; color: var(--text-muted); transition: color 0.25s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border: 1px solid var(--gold-dim); border-radius: var(--radius); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--gold) !important; transition: background 0.25s, border-color 0.25s, color 0.25s !important; }
+    .nav-cta:hover { background: var(--gold); border-color: var(--gold); color: var(--bg) !important; }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--text); }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 250; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 80px 24px 40px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 300; color: var(--text-muted); transition: color 0.25s; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; padding: 8px; z-index: 251; }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────── */
+    .sr { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .sr.visible { opacity: 1; transform: translateY(0); }
+    .sr-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .sr-left.visible { opacity: 1; transform: translateX(0); }
+    .sr-right { opacity: 0; transform: translateX(60px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .sr-right.visible { opacity: 1; transform: translateX(0); }
+    .sr-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .sr-scale.visible { opacity: 1; transform: scale(1); }
+
+    /* ─── PARALLAX HERO ───────────────────────────────── */
+    .p-hero {
+      position: relative;
+      height: 100svh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p-hero-img {
+      position: absolute;
+      inset: -20%;
+      width: 140%;
+      height: 140%;
+      object-fit: cover;
+      object-position: center 80%;
+      will-change: transform;
+    }
+    .p-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(12,11,9,0.45) 0%, rgba(12,11,9,0.88) 100%);
+    }
+    .p-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .p-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: heroIn 1.2s ease forwards 0.3s;
+    }
+    .p-hero-title em { font-style: italic; color: var(--gold-light); }
+    .p-hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: heroIn 1s ease forwards 0.7s;
+    }
+    .p-hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: heroIn 1s ease forwards 1.2s;
+    }
+    .p-hero-scroll span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); }
+    .scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--gold-dim), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+    @keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+    @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+    /* ─── STORY SECTION (Scrollytelling) ──────────────── */
+    .story-chapter {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+    }
+    .story-sticky {
+      position: sticky;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .story-sticky img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 6s ease;
+    }
+    .story-chapter:hover .story-sticky img { transform: scale(1.05); }
+    .story-sticky-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 40%, var(--bg) 100%);
+    }
+    .story-body {
+      width: 50%;
+      padding: 140px 60px 140px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .story-chapter.reverse { flex-direction: row-reverse; }
+    .story-chapter.reverse .story-sticky-overlay {
+      background: linear-gradient(to left, transparent 40%, var(--bg) 100%);
+    }
+    .story-chapter.reverse .story-body {
+      padding: 140px 80px 140px 60px;
+    }
+    .story-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text-dim);
+      opacity: 0.2;
+      margin-bottom: 16px;
+    }
+    .story-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .story-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.78;
+      margin-bottom: 16px;
+    }
+
+    /* ─── QUOTE BANNER ────────────────────────────────── */
+    .quote-banner {
+      padding: 100px 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      text-align: center;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3.5vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.35;
+      max-width: 740px;
+      margin: 0 auto;
+      color: var(--text);
+    }
+    .quote-text::before { content: '"'; color: var(--gold); }
+    .quote-text::after { content: '"'; color: var(--gold); }
+    .quote-author {
+      margin-top: 24px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── VALUES GRID ─────────────────────────────────── */
+    .values {
+      padding: 120px 0;
+    }
+    .values-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .values-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .value-card {
+      background: var(--bg2);
+      padding: 48px 40px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .value-card:hover { background: var(--bg3); }
+    .value-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--gold);
+      margin: 0 auto 24px;
+    }
+    .value-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .value-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── TEAM PHOTO ──────────────────────────────────── */
+    .team-photo {
+      position: relative;
+      overflow: hidden;
+    }
+    .team-photo-img {
+      width: 100%;
+      height: min(600px, 50vw);
+      object-fit: cover;
+      object-position: center 15%;
+      will-change: transform;
+    }
+    .team-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, var(--bg) 0%, transparent 30%),
+        linear-gradient(to bottom, var(--bg) 0%, transparent 20%);
+    }
+    .team-photo-caption {
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      text-align: center;
+    }
+    .team-photo-caption h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 300;
+    }
+    .team-photo-caption p {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+
+    /* ─── CREDENTIALS ─────────────────────────────────── */
+    .credentials {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .cred-item {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .cred-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .cred-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ─── TIMELINE ────────────────────────────────────── */
+    .timeline {
+      padding: 120px 0;
+      background: var(--bg2);
+    }
+    .timeline-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .timeline-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .tl-track {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .tl-track::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .tl-item {
+      position: relative;
+      padding: 0 0 64px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item:nth-child(odd) { flex-direction: row; }
+    .tl-item:nth-child(even) { flex-direction: row-reverse; }
+    .tl-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--bg2);
+      z-index: 2;
+    }
+    .tl-content {
+      width: 45%;
+    }
+    .tl-item:nth-child(odd) .tl-content { padding-right: 40px; text-align: right; }
+    .tl-item:nth-child(even) .tl-content { padding-left: 40px; text-align: left; }
+    .tl-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .tl-title {
+      font-size: 0.95rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .tl-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── CTA ─────────────────────────────────────────── */
+    .cta {
+      padding: 120px 0;
+      text-align: center;
+    }
+    .cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+    .cta p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-gold, .btn-ghost { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: var(--radius); }
+    .btn-gold { background: var(--gold); color: var(--bg); font-weight: 500; transition: background 0.25s, transform 0.25s; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-ghost { border: 1px solid var(--border-soft); color: var(--text-muted); transition: border-color 0.25s, color 0.25s; }
+    .btn-ghost:hover { border-color: rgba(240,234,224,0.25); color: var(--text); }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer { background: var(--bg); border-top: 1px solid var(--border-soft); padding: 48px 0 32px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dim); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-dim); transition: color 0.25s; }
+    .footer-links a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .story-chapter { flex-direction: column !important; }
+      .story-sticky { position: relative; width: 100%; height: 60vw; }
+      .story-body { width: 100%; padding: 60px 24px !important; }
+      .story-sticky-overlay { background: linear-gradient(to top, var(--bg) 10%, transparent 60%) !important; }
+      .values-grid { grid-template-columns: 1fr; }
+      .cred-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .tl-track::before { left: 20px; }
+      .tl-item { flex-direction: row !important; }
+      .tl-dot { left: 20px; }
+      .tl-content { width: 100% !important; padding: 0 0 0 52px !important; text-align: left !important; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .team-photo-img { height: 60vw; }
+    }
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .cred-grid { grid-template-columns: 1fr 1fr; }
+      .story-year { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── MOBILE MENU ──────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&#x2715;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="#" class="active">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────── -->
+<section style="padding:180px 0 100px;background:var(--bg);text-align:center;">
+  <div class="container">
+    <span class="label" style="opacity:0;animation:heroIn 1s ease forwards 0.2s;">Über uns</span>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;margin-top:20px;opacity:0;animation:heroIn 1s ease forwards 0.5s;">
+      Bastian Hogger
+    </h1>
+    <div style="width:40px;height:1px;background:var(--gold);margin:28px auto;opacity:0;animation:heroIn 1s ease forwards 0.7s;"></div>
+    <p style="font-size:0.85rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);opacity:0;animation:heroIn 1s ease forwards 0.9s;">
+      Der Ofenbaumeister · Rosenheim · Seit 2010
+    </p>
+  </div>
+</section>
+
+<!-- ── CREDENTIALS ────────────────────────────────────── -->
+<section class="credentials">
+  <div class="container">
+    <div class="cred-grid">
+      <div class="cred-item sr">
+        <div class="cred-num" data-target="50">0</div>
+        <div class="cred-label">Projekte</div>
+      </div>
+      <div class="cred-item sr">
+        <div class="cred-num" data-target="15">0</div>
+        <div class="cred-label">Jahre Erfahrung</div>
+      </div>
+      <div class="cred-item sr">
+        <div class="cred-num" data-target="2021">2021</div>
+        <div class="cred-label">Meistertitel</div>
+      </div>
+      <div class="cred-item sr">
+        <div class="cred-num" data-target="5" data-suffix=".0">0</div>
+        <div class="cred-label">Sterne Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY: ANFANG ──────────────────────────────────── -->
+<div class="story-chapter sr-scale">
+  <div class="story-sticky">
+    <img src="assets/images/team/bastian-hogger.jpg" alt="Bastian Hogger Portrait" />
+    <div class="story-sticky-overlay"></div>
+  </div>
+  <div class="story-body">
+    <div class="story-year sr-right">2010</div>
+    <h2 class="story-title sr-right">Die Entscheidung</h2>
+    <p class="story-text sr-right">
+      2010 fiel die Entscheidung: Bastian Hogger widmete sich dem Ofenbauerhandwerk. Was als Leidenschaft begann, wurde schnell zur Berufung. Von Anfang an stand der persönliche Kontakt zum Kunden im Mittelpunkt — ehrliche Beratung, handwerkliche Sorgfalt.
+    </p>
+    <p class="story-text sr-right">
+      In den folgenden Jahren sammelte er Erfahrung an hunderten Projekten: Kachelöfen, Heizkamine, Speicheröfen, Sanierungen — jedes Projekt einzigartig, jeder Kunde ein Partner.
+    </p>
+  </div>
+</div>
+
+<!-- ── QUOTE ──────────────────────────────────────────── -->
+<section class="quote-banner">
+  <div class="container">
+    <div class="sr">
+      <p class="quote-text">Feuer ist mehr als Wärme — es ist das älteste Gefühl von Zuhause.</p>
+      <div class="quote-author">Bastian Hogger</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY: MEISTER ─────────────────────────────────── -->
+<div class="story-chapter reverse sr-scale">
+  <div class="story-sticky">
+    <img src="assets/images/team/messe_basti.jpeg" alt="Bastian Hogger auf der Messe" />
+    <div class="story-sticky-overlay"></div>
+  </div>
+  <div class="story-body">
+    <div class="story-year sr-left">2021</div>
+    <h2 class="story-title sr-left">Der Meistertitel</h2>
+    <p class="story-text sr-left">
+      Nach über einem Jahrzehnt praktischer Erfahrung folgte 2021 der Meistertitel. Die offizielle Bestätigung dessen, was Kunden längst wussten: Hier arbeitet ein Handwerker, der sein Fach versteht — von der Planung bis zum letzten Stein.
+    </p>
+    <p class="story-text sr-left">
+      Der Meisterbetrieb steht für geprüfte Qualität, rechtliche Sicherheit und die Garantie, dass Ihr Ofen von einem Experten gebaut wird. Nicht nur handwerklich, auch fachlich auf höchstem Niveau.
+    </p>
+  </div>
+</div>
+
+<!-- ── TEAM PHOTO ─────────────────────────────────────── -->
+<div class="team-photo sr-scale">
+  <img src="assets/images/team/messe_carina_basti.jpeg" alt="Team Hogger" class="team-photo-img" id="teamImg" />
+  <div class="team-photo-overlay"></div>
+  <div class="team-photo-caption sr">
+    <h3>Bastian & Carina Hogger</h3>
+    <p>Das Team hinter Der Ofenbauer</p>
+  </div>
+</div>
+
+<!-- ── VALUES ─────────────────────────────────────────── -->
+<section class="values">
+  <div class="container">
+    <div class="values-header sr">
+      <span class="label">Unsere Werte</span>
+      <h2>Wofür wir stehen</h2>
+      <div class="section-divider" style="margin:20px auto 0;"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card sr">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 4l6 12 13 2-9.5 9 2.5 13L24 33l-12 7 2.5-13L5 18l13-2z"/>
+        </svg>
+        <div class="value-title">Meisterqualität</div>
+        <p class="value-text">Geprüftes Handwerk mit Meistertitel. Jeder Ofen wird nach höchsten Standards geplant und gebaut.</p>
+      </div>
+      <div class="value-card sr">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 12v12l8 8"/>
+        </svg>
+        <div class="value-title">Verlässlichkeit</div>
+        <p class="value-text">Was wir versprechen, halten wir. Klare Zeitpläne, transparente Kosten, persönliche Kommunikation.</p>
+      </div>
+      <div class="value-card sr">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 6C14 6 8 14 8 24c0 10 16 20 16 20s16-10 16-20c0-10-6-18-16-18z"/>
+          <circle cx="24" cy="22" r="5"/>
+        </svg>
+        <div class="value-title">Regionalität</div>
+        <p class="value-text">Aus Rosenheim für Bayern. Kurze Wege, persönlicher Kontakt, lokale Verantwortung seit über 15 Jahren.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ───────────────────────────────────────── -->
+<section class="timeline">
+  <div class="container">
+    <div class="timeline-header sr">
+      <span class="label">Meilensteine</span>
+      <h2>Unsere Geschichte</h2>
+      <div class="section-divider" style="margin:20px auto 0;"></div>
+    </div>
+    <div class="tl-track">
+      <div class="tl-item sr">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-year">2010</div>
+          <div class="tl-title">Start ins Ofenbauerhandwerk</div>
+          <p class="tl-text">Die Entscheidung, den Beruf des Ofenbauers zu erlernen.</p>
+        </div>
+      </div>
+      <div class="tl-item sr">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-year">2015</div>
+          <div class="tl-title">100. Projekt</div>
+          <p class="tl-text">Hundert zufriedene Kunden in Rosenheim und Umgebung.</p>
+        </div>
+      </div>
+      <div class="tl-item sr">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-year">2021</div>
+          <div class="tl-title">Meisterprüfung bestanden</div>
+          <p class="tl-text">Ofenbaumeister — geprüfte Qualität und höchste Fachkompetenz.</p>
+        </div>
+      </div>
+      <div class="tl-item sr">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-year">2023</div>
+          <div class="tl-title">Fliesen.Studio eröffnet</div>
+          <p class="tl-text">Erweiterung um exklusive Fliesen und Bodenbeläge — alles aus einer Hand.</p>
+        </div>
+      </div>
+      <div class="tl-item sr">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-year">2025</div>
+          <div class="tl-title">50+ Projekte</div>
+          <p class="tl-text">Über 200 realisierte Projekte und wachsend — Rosenheims Ofenbaumeister.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────── -->
+<section class="cta">
+  <div class="container">
+    <div class="sr">
+      <span class="label">Kontakt</span>
+      <h2>Lernen Sie uns<br>persönlich kennen</h2>
+      <p>Ob Erstberatung, Showroom-Besuch oder Termin vor Ort — wir freuen uns auf Sie.</p>
+      <div class="cta-actions">
+        <a href="index.html#kontakt" class="btn-gold">
+          Kontakt aufnehmen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="referenzen.html" class="btn-ghost">Referenzen ansehen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html">Startseite</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Scroll Reveal */
+  const srEls = document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale');
+  const srObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); srObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  srEls.forEach(el => srObs.observe(el));
+
+  /* Parallax Hero */
+  const heroImg = document.getElementById('heroImg');
+  const teamImg = document.getElementById('teamImg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight * 1.5) {
+      heroImg.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
+    }
+    if (teamImg) {
+      const rect = teamImg.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+        teamImg.style.transform = `translateY(${(progress - 0.5) * 60}px)`;
+      }
+    }
+  }, { passive: true });
+
+  /* Counter */
+  const credNums = document.querySelectorAll('.cred-num');
+  const cObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const target = parseInt(el.dataset.target);
+        if (target === 2021) { el.textContent = '2021'; cObs.unobserve(el); return; }
+        const customSuffix = el.dataset.suffix;
+        const suffix = customSuffix !== undefined ? customSuffix : (target === 100 ? '%' : '+');
+        const dur = 1600;
+        let s = 0;
+        const step = ts => {
+          if (!s) s = ts;
+          const p = Math.min((ts - s) / dur, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        cObs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  credNums.forEach(el => cObs.observe(el));
+
+  /* Mobile Menu */
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => menu.classList.add('open'));
+  closeBtn.addEventListener('click', () => menu.classList.remove('open'));
+  function closeMobile() { menu.classList.remove('open'); }
+</script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Datenschutzerklärung – Ofenbau Hogger, Ofenbaumeister Bastian Hogger in Rosenheim." />
+  <title>Datenschutzerklärung | Ofenbau Hogger</title>
+  <link rel="icon" type="image/png" href="assets/images/brand/Favicon-Retina.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0C0B09;
+      --bg2:        #131210;
+      --bg3:        #1A1917;
+      --bg4:        #222120;
+      --gold:       #C4A84C;
+      --gold-light: #DFC882;
+      --gold-dim:   #8A7230;
+      --text:       #F0EAE0;
+      --text-muted: #9A9080;
+      --text-dim:   #5A5448;
+      --border:     rgba(196,168,76,0.15);
+      --border-soft:rgba(240,234,224,0.07);
+      --radius:     4px;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── NAV ──────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo-img { height: 48px; width: auto; image-rendering: -webkit-optimize-contrast; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; color: var(--text-muted); transition: color 0.25s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border: 1px solid var(--gold-dim); border-radius: var(--radius); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--gold) !important; transition: background 0.25s, border-color 0.25s, color 0.25s !important; }
+    .nav-cta:hover { background: var(--gold); border-color: var(--gold); color: var(--bg) !important; }
+    .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--text); }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 250; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 80px 24px 40px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 300; color: var(--text-muted); transition: color 0.25s; }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; padding: 8px; z-index: 251; }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────── */
+    .sr { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .sr.visible { opacity: 1; transform: translateY(0); }
+
+    /* ─── PAGE HEADER ─────────────────────────────────── */
+    .page-header {
+      padding: 160px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-top: 14px;
+    }
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    /* ─── LEGAL CONTENT ──────────────────────────────── */
+    .legal {
+      padding: 80px 0 120px;
+    }
+    .legal-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .legal-section {
+      margin-bottom: 56px;
+    }
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+    .legal-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .legal-section .section-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+    .legal-section h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    .legal-section p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+    .legal-section ul {
+      list-style: none;
+      margin: 12px 0 14px;
+      padding: 0;
+    }
+    .legal-section ul li {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .legal-section a {
+      color: var(--gold);
+      transition: color 0.25s;
+    }
+    .legal-section a:hover {
+      color: var(--gold-light);
+    }
+    .legal-section strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer { background: var(--bg); border-top: 1px solid var(--border-soft); padding: 48px 0 32px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.78rem; color: var(--text-dim); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 0.78rem; color: var(--text-dim); transition: color 0.25s; }
+    .footer-links a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .page-header { padding: 130px 0 60px; }
+      .legal { padding: 60px 0 80px; }
+    }
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── MOBILE MENU ──────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&#x2715;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ── PAGE HEADER ──────────────────────────────────── -->
+<header class="page-header">
+  <div class="container sr">
+    <span class="label">Rechtliches</span>
+    <h1><em>Datenschutzerklärung</em></h1>
+  </div>
+</header>
+
+<!-- ── LEGAL CONTENT ────────────────────────────────── -->
+<section class="legal">
+  <div class="container">
+    <div class="legal-inner">
+
+      <!-- Verantwortlicher -->
+      <div class="legal-section sr">
+        <span class="label">Verantwortliche Stelle</span>
+        <h2>Verantwortlicher</h2>
+        <div class="section-line"></div>
+        <p>
+          <strong>Der Ofenbauer – Bastian Hogger</strong><br>
+          Anton Bruckner Straße 1g<br>
+          83024 Rosenheim<br><br>
+          Telefon: <a href="tel:+4915221010008">01522 1010008</a><br>
+          E-Mail: <a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a>
+        </p>
+        <p>
+          Verantwortliche Stelle ist die natürliche Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+        </p>
+      </div>
+
+      <!-- Allgemeine Hinweise -->
+      <div class="legal-section sr">
+        <span class="label">Grundsätze</span>
+        <h2>Allgemeine Hinweise</h2>
+        <div class="section-line"></div>
+        <p>
+          Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+        </p>
+        <p>
+          Die Datenverarbeitung auf dieser Website erfolgt durch den oben genannten Websitebetreiber. Die Kontaktdaten können Sie dem Abschnitt "Verantwortlicher" entnehmen.
+        </p>
+        <p>
+          Wir erfassen Ihre Daten, wenn Sie uns diese im Rahmen der Kontaktaufnahme mitteilen. Weitere Daten können automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst werden. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem, Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+        </p>
+      </div>
+
+      <!-- SSL -->
+      <div class="legal-section sr">
+        <span class="label">Sicherheit</span>
+        <h2>SSL- bzw. TLS-Verschlüsselung</h2>
+        <div class="section-line"></div>
+        <p>
+          Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+        </p>
+        <p>
+          Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+        </p>
+      </div>
+
+      <!-- Hosting -->
+      <div class="legal-section sr">
+        <span class="label">Infrastruktur</span>
+        <h2>Hosting</h2>
+        <div class="section-line"></div>
+        <p>
+          Diese Website wird bei GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Wenn Sie unsere Website besuchen, werden durch GitHub automatisch Server-Logfiles erfasst. Diese enthalten Ihre IP-Adresse, den verwendeten Browser, das Betriebssystem, die Referrer-URL, den Hostname des zugreifenden Rechners sowie die Uhrzeit der Serveranfrage.
+        </p>
+        <p>
+          Die Nutzung von GitHub Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.
+        </p>
+        <p>
+          Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+        </p>
+      </div>
+
+      <!-- Kontaktformular -->
+      <div class="legal-section sr">
+        <span class="label">Kommunikation</span>
+        <h2>Kontaktformular und Anfragen</h2>
+        <div class="section-line"></div>
+        <p>
+          Auf unserer Website können Sie über ein Kontaktformular Anfragen an uns senden. Die von Ihnen eingegebenen Daten (Name, Kontaktdaten, Nachricht, Projektdetails) werden dabei direkt per WhatsApp-Nachricht oder E-Mail an uns übermittelt. Es erfolgt <strong>keine Speicherung der Daten auf einem Server</strong> dieser Website.
+        </p>
+        <p>
+          Die Verarbeitung Ihrer Daten erfolgt zum Zweck der Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b DSGVO — vorvertragliche Maßnahmen bzw. Vertragserfüllung). Ihre Daten werden nur für die Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben, es sei denn, dies ist zur Durchführung des Auftrags erforderlich.
+        </p>
+        <h3>WhatsApp</h3>
+        <p>
+          Anfragen über das Kontaktformular werden per WhatsApp (Meta Platforms Ireland Limited) zugestellt. Dabei gelten die Datenschutzbestimmungen von WhatsApp/Meta. Bitte beachten Sie, dass bei der Nutzung von WhatsApp Daten an Server von Meta in den USA übertragen werden können. Weitere Informationen: <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">WhatsApp Datenschutzrichtlinie</a>.
+        </p>
+      </div>
+
+      <!-- TikTok -->
+      <div class="legal-section sr">
+        <span class="label">Eingebettete Inhalte</span>
+        <h2>TikTok-Einbindung</h2>
+        <div class="section-line"></div>
+        <p>
+          Auf unserer Website sind Videos der Plattform TikTok (TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Irland) eingebunden. Hierfür wird das TikTok-Embed-Skript (embed.js) geladen.
+        </p>
+        <p>
+          Beim Laden des Skripts wird eine Verbindung zu den Servern von TikTok hergestellt. Dabei wird TikTok mitgeteilt, welche Seite Sie besucht haben. Zudem können Cookies auf Ihrem Endgerät gesetzt und Nutzungsdaten erhoben werden — auch wenn Sie kein TikTok-Konto besitzen. Diese Daten können von TikTok mit anderen Daten verknüpft werden.
+        </p>
+        <p>
+          Die Einbindung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der ansprechenden Darstellung unseres Online-Angebots). Weitere Informationen: <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener">TikTok Datenschutzerklärung</a>.
+        </p>
+      </div>
+
+      <!-- Google Fonts -->
+      <div class="legal-section sr">
+        <h2>Google Fonts</h2>
+        <div class="section-line"></div>
+        <p>
+          Diese Website nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, die von Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland) bereitgestellt werden.
+        </p>
+        <p>
+          Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriftarten direkt von den Google-Servern. Dabei wird Ihre IP-Adresse an Google übermittelt. Google Fonts werden nicht lokal auf unserem Server gespeichert, sondern von den Servern von Google in den USA geladen.
+        </p>
+        <p>
+          Die Nutzung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der einheitlichen und ansprechenden Darstellung unserer Website. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a> und den <a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener">Google Fonts FAQ</a>.
+        </p>
+      </div>
+
+      <!-- Cookies -->
+      <div class="legal-section sr">
+        <span class="label">Tracking</span>
+        <h2>Cookies</h2>
+        <div class="section-line"></div>
+        <p>
+          Diese Website verwendet <strong>keine eigenen Cookies</strong>. Wir setzen keine Analyse- oder Tracking-Cookies ein.
+        </p>
+        <p>
+          Allerdings können Drittanbieter, deren Dienste wir auf unserer Website einbinden, eigene Cookies auf Ihrem Endgerät setzen. Dies betrifft insbesondere:
+        </p>
+        <ul>
+          <li><strong>TikTok</strong> — beim Laden eingebetteter Videos können Cookies von TikTok gesetzt werden.</li>
+          <li><strong>Google Fonts</strong> — beim Laden der Schriftarten können von Google Cookies gesetzt werden.</li>
+        </ul>
+        <p>
+          Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.
+        </p>
+      </div>
+
+      <!-- Betroffenenrechte -->
+      <div class="legal-section sr">
+        <span class="label">Ihre Rechte</span>
+        <h2>Betroffenenrechte</h2>
+        <div class="section-line"></div>
+        <p>
+          Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
+        </p>
+        <ul>
+          <li><strong>Auskunft</strong> über Ihre bei uns gespeicherten personenbezogenen Daten (Art. 15 DSGVO)</li>
+          <li><strong>Berichtigung</strong> unrichtiger personenbezogener Daten (Art. 16 DSGVO)</li>
+          <li><strong>Löschung</strong> Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO)</li>
+          <li><strong>Einschränkung</strong> der Datenverarbeitung (Art. 18 DSGVO)</li>
+          <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+          <li><strong>Widerspruch</strong> gegen die Verarbeitung Ihrer personenbezogenen Daten (Art. 21 DSGVO)</li>
+          <li><strong>Widerruf</strong> einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p>
+          Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a>
+        </p>
+      </div>
+
+      <!-- Beschwerde bei Aufsichtsbehörde -->
+      <div class="legal-section sr">
+        <span class="label">Aufsichtsbehörde</span>
+        <h2>Beschwerderecht</h2>
+        <div class="section-line"></div>
+        <p>
+          Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt, haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren (Art. 77 DSGVO).
+        </p>
+        <p>
+          Zuständige Aufsichtsbehörde:<br><br>
+          <strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong><br>
+          Promenade 18<br>
+          91522 Ansbach<br>
+          Telefon: +49 (0) 981 180093-0<br>
+          E-Mail: <a href="mailto:poststelle@lda.bayern.de">poststelle@lda.bayern.de</a><br>
+          Website: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html">Startseite</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Scroll Reveal */
+  const srEls = document.querySelectorAll('.sr');
+  const srObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); srObs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  srEls.forEach(el => srObs.observe(el));
+
+  /* Mobile Menu */
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => menu.classList.add('open'));
+  closeBtn.addEventListener('click', () => menu.classList.remove('open'));
+  function closeMobile() { menu.classList.remove('open'); }
+</script>
+</body>
+</html>

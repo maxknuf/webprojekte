@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Heizkamin in Rosenheim einbauen lassen vom Meisterbetrieb Ofenbau Hogger. Individuelle Heizkamine nach Maß – Tunnel, Eck, 3-seitig oder bodentief. Beratung, Planung & Montage durch Ofenbaumeister Bastian Hogger." />
+  <meta name="keywords" content="Heizkamin Rosenheim, Heizkamin einbauen, Tunnelkamin Rosenheim, Eckkamin Rosenheim, Heizkamin Kosten, Ofenbauer Rosenheim, Ofenbaumeister Rosenheim, Kaminbauer Rosenheim" />
+  <title>Heizkamin Rosenheim – Heizkamin einbauen vom Meisterbetrieb | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/heizkamin-rosenheim" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Heizkamin Rosenheim – Heizkamin einbauen vom Meisterbetrieb" />
+  <meta property="og:description" content="Individuelle Heizkamine nach Maß in Rosenheim. Ofenbaumeister Bastian Hogger – Beratung, Planung und Montage aus einer Hand." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/heizkamin-rosenheim" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/oefen/colona-schwarz.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Heizkamin Rosenheim – Ofenbau Hogger" />
+  <meta name="twitter:description" content="Individuelle Heizkamine nach Maß in Rosenheim vom Meisterbetrieb." />
+
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0C0B09;
+      --bg2:          #131210;
+      --bg3:          #1A1917;
+      --bg4:          #222120;
+      --gold:         #C4A84C;
+      --gold-light:   #DFC882;
+      --gold-dim:     #8A7230;
+      --red:          #A61216;
+      --red-light:    #D01519;
+      --text:         #F0EAE0;
+      --text-muted:   #9A9080;
+      --text-dim:     #5A5448;
+      --border:       rgba(196,168,76,0.15);
+      --border-soft:  rgba(240,234,224,0.07);
+      --radius:       4px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    .display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .display-lg { font-size: clamp(3.2rem, 7vw, 7rem); }
+    .display-md { font-size: clamp(2.4rem, 4.5vw, 4.2rem); }
+    .display-sm { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ──────────────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: translateZ(0);
+      transition: height 0.4s ease, opacity 0.25s;
+    }
+    .nav-logo-img:hover { opacity: 0.85; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+
+    /* Mobile hamburger */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
+    }
+
+    /* ─── MOBILE NAV ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 250;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 24px 40px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 251;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-weight: 400;
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 160px 0 100px;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to bottom, var(--bg) 0%, transparent 30%),
+        linear-gradient(to top, var(--bg) 0%, transparent 30%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-content .label { margin-bottom: 20px; }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .breadcrumb a { color: var(--text-muted); transition: color 0.25s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ─── SECTION BASE ─────────────────────────────────────────── */
+    .section { padding: 100px 0; }
+    .section-alt { background: var(--bg2); }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-header .label { margin-bottom: 14px; }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── BENEFITS GRID ────────────────────────────────────────── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .benefit-card {
+      background: var(--bg2);
+      padding: 48px 32px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .benefit-card:hover { background: var(--bg3); }
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .benefit-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── ARTEN GRID ───────────────────────────────────────────── */
+    .arten-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .arten-card {
+      background: var(--bg3);
+      padding: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: background 0.3s;
+    }
+    .arten-card:hover { background: var(--bg4); }
+    .arten-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold-dim);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .arten-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .arten-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── PRICING ──────────────────────────────────────────────── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .pricing-card {
+      background: var(--bg2);
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .pricing-card:hover { background: var(--bg3); }
+    .pricing-card.featured {
+      border-top: 2px solid var(--gold);
+    }
+    .pricing-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+    .pricing-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    .pricing-card .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+    .pricing-card .price small {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+    }
+    .pricing-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .pricing-card ul {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pricing-card ul li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-left: 20px;
+      position: relative;
+    }
+    .pricing-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── PROCESS STEPS ────────────────────────────────────────── */
+    .prozess-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      counter-reset: step;
+    }
+    .prozess-step {
+      position: relative;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .prozess-step::before {
+      counter-increment: step;
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--gold-dim);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .prozess-step::after {
+      content: '';
+      position: absolute;
+      top: 55px;
+      right: -16px;
+      width: 32px;
+      height: 1px;
+      background: var(--border);
+    }
+    .prozess-step:last-child::after { display: none; }
+    .prozess-step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .prozess-step p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── GALLERY ──────────────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(12,11,9,0.85) 0%, transparent 100%);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    #faq { padding: 100px 0; background: var(--bg); }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .faq-header p {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text);
+      transition: color 0.25s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-question svg {
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      color: var(--text-dim);
+      transition: transform 0.3s, color 0.3s;
+    }
+    .faq-item.open .faq-question svg {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-answer p {
+      padding: 0 0 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ─── CTA SECTION ──────────────────────────────────────────── */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ─── INTERNAL LINKS ───────────────────────────────────────── */
+    .internal-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .internal-links a {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border-soft);
+      padding-bottom: 2px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .internal-links a:hover {
+      color: var(--gold);
+      border-color: var(--gold-dim);
+    }
+
+    /* ─── FLOATING CONTACT ─────────────────────────────────────── */
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 180;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .floating-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.5);
+    }
+    .floating-btn svg { width: 22px; height: 22px; }
+    .floating-whatsapp { background: #25D366; }
+    .floating-email { background: var(--gold); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 60px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .arten-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .prozess-steps { grid-template-columns: repeat(2, 1fr); }
+      .prozess-step::after { display: none; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .prozess-steps { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 60vh; padding: 140px 0 80px; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 14px; }
+      .hero-actions .btn-gold,
+      .hero-actions .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .floating-contact {
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        transform: none;
+      }
+      .floating-btn { width: 44px; height: 44px; }
+      .floating-btn svg { width: 20px; height: 20px; }
+      .section { padding: 72px 0; }
+      #faq { padding: 72px 0; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .mobile-menu a { font-size: 1.4rem; }
+      .mobile-menu { gap: 18px; }
+      .benefit-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── FLOATING CONTACT ────────────────────────────────────────── -->
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">&#10005;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section class="hero">
+  <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin in Rosenheim – modernes Sichtfeuer von Ofenbau Hogger" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Heizkamin vom Meisterbetrieb</p>
+    <h1>Heizkamin in Rosenheim</h1>
+    <p>Ihr individueller Heizkamin vom Ofenbaumeister — modernes Sichtfeuer, effiziente Heizleistung und zeitloses Design. Bastian Hogger plant und baut Ihren Heizkamin nach Maß.</p>
+    <div class="hero-actions">
+      <a href="index.html#kontakt" class="btn-gold">
+        Kostenlos beraten lassen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="referenzen.html" class="btn-ghost">Referenzen ansehen</a>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Startseite</a>
+      <span>/</span>
+      <span>Heizkamin Rosenheim</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── VORTEILE ───────────────────────────────────────────────── -->
+<section class="section" id="vorteile">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Die Vorteile</p>
+      <h2>Warum einen Heizkamin?</h2>
+      <p>Ein Heizkamin verbindet das faszinierende Erlebnis offener Flammen mit der Effizienz einer geschlossenen Feuerstätte — die perfekte Mischung aus Atmosphäre und Heizleistung.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card reveal reveal-delay-1">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 6c0 0-4 8-4 14a4 4 0 008 0c0-6-4-14-4-14z"/>
+          <path d="M18 34c0 3.3 2.7 6 6 6s6-2.7 6-6" opacity="0.5"/>
+          <rect x="10" y="38" width="28" height="4" rx="2" opacity="0.3"/>
+          <path d="M20 10c-2 3-6 9-6 16" opacity="0.4"/>
+          <path d="M28 10c2 3 6 9 6 16" opacity="0.4"/>
+        </svg>
+        <h3>Sichtfeuer-Erlebnis</h3>
+        <p>Grosse Sichtscheiben bieten einen unvergleichlichen Blick auf das Flammenspiel. Ein Heizkamin schafft Atmosphäre und wird zum Mittelpunkt Ihres Wohnraums.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 12v12l8 8"/>
+          <path d="M16 8c-2 3-3 7-3 11" opacity="0.5"/>
+          <path d="M35 14c1.5 2.8 2.5 6 2.5 10" opacity="0.5"/>
+        </svg>
+        <h3>Effiziente Heizleistung</h3>
+        <p>Moderne Heizkamine erreichen Wirkungsgrade von über 80 %. Die geschlossene Brennkammer sorgt für hohe Wärmeausbeute bei geringem Holzverbrauch.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 6l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z"/>
+          <circle cx="24" cy="35" r="7" opacity="0.5"/>
+        </svg>
+        <h3>Design-Freiheit</h3>
+        <p>Tunnel, Eck, 3-seitig oder bodentief — Heizkamine lassen sich in nahezu jede Architektur integrieren. Material, Form und Verkleidung bestimmen Sie.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-4">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 40V20l16-12 16 12v20H8z"/>
+          <path d="M18 40V28h12v12"/>
+          <path d="M20 22h8" opacity="0.5"/>
+        </svg>
+        <h3>Wertsteigerung</h3>
+        <p>Ein hochwertiger Heizkamin steigert den Wert Ihrer Immobilie nachhaltig. Käufer und Mieter schätzen den Komfort und die Ästhetik einer modernen Feuerstätte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ARTEN VON HEIZKAMINEN ──────────────────────────────────── -->
+<section class="section section-alt" id="arten">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Heizkamin-Typen</p>
+      <h2>Arten von Heizkaminen</h2>
+      <p>Jeder Raum ist anders — deshalb bieten wir verschiedene Heizkamin-Bauformen an, die sich perfekt in Ihre Architektur einfügen. Hier die beliebtesten Varianten.</p>
+    </div>
+
+    <div class="arten-grid">
+      <div class="arten-card reveal reveal-delay-1">
+        <span class="arten-num">01</span>
+        <div>
+          <h3>Tunnel-Kamin</h3>
+          <p>Der Tunnel-Heizkamin ist beidseitig verglast und dient als eleganter Raumteiler. Er bietet von zwei Seiten freie Sicht auf das Feuer und verbindet Wohnbereiche auf stilvolle Weise.</p>
+        </div>
+      </div>
+      <div class="arten-card reveal reveal-delay-2">
+        <span class="arten-num">02</span>
+        <div>
+          <h3>Eck-Kamin</h3>
+          <p>Perfekt für Raumecken, die sonst ungenutzt bleiben. Der Eck-Heizkamin nutzt den Platz optimal und bietet durch die abgewinkelte Scheibe ein besonders weites Sichtfeld auf die Flammen.</p>
+        </div>
+      </div>
+      <div class="arten-card reveal reveal-delay-3">
+        <span class="arten-num">03</span>
+        <div>
+          <h3>3-seitiger Heizkamin</h3>
+          <p>Maximale Sicht auf das Flammenspiel: Der 3-seitig verglaste Heizkamin ist von drei Seiten einsehbar und wird zum spektakulären Mittelpunkt jedes Raumes.</p>
+        </div>
+      </div>
+      <div class="arten-card reveal reveal-delay-4">
+        <span class="arten-num">04</span>
+        <div>
+          <h3>Bodentiefer Heizkamin</h3>
+          <p>Der rahmenlose, bodentiefe Einbau verschmilzt nahtlos mit der Architektur. Die Flammen scheinen direkt aus dem Boden zu kommen — puristisch, modern und besonders wirkungsvoll.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PREISE ─────────────────────────────────────────────────── -->
+<section class="section" id="preise">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Transparente Preise</p>
+      <h2>Was kostet ein Heizkamin?</h2>
+      <p>Die Kosten für einen Heizkamin in Rosenheim hängen von Bauart, Grösse und Ausstattung ab. Hier eine erste Orientierung — ein individuelles Angebot erstellen wir Ihnen gerne kostenlos.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card reveal reveal-delay-1">
+        <h3>Einbau Fertigkamin</h3>
+        <div class="price">ab 5.000 € <small>inkl. Montage</small></div>
+        <p>Hochwertiger Fertigkamin-Einsatz mit fachgerechtem Einbau — die wirtschaftliche Lösung für Ihr Sichtfeuer-Erlebnis.</p>
+        <ul>
+          <li>Marken-Kamineinsatz</li>
+          <li>Fachgerechter Einbau</li>
+          <li>Schornsteinfeger-Abstimmung</li>
+          <li>Beratung &amp; Einweisung</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured reveal reveal-delay-2">
+        <span class="pricing-badge">Beliebt</span>
+        <h3>Individueller Heizkamin</h3>
+        <div class="price">8.000 – 15.000 €</div>
+        <p>Massgeschneiderter Heizkamin mit individueller Verkleidung — abgestimmt auf Ihren Raum und Ihre Vorstellungen.</p>
+        <ul>
+          <li>Individuelle Planung</li>
+          <li>Verkleidung nach Wahl</li>
+          <li>Eck, frontal oder bodentief</li>
+          <li>Komplettservice</li>
+        </ul>
+      </div>
+      <div class="pricing-card reveal reveal-delay-3">
+        <h3>Premium Tunnelkamin</h3>
+        <div class="price">15.000 – 30.000 €</div>
+        <p>Exklusiver Tunnel- oder 3-seitiger Heizkamin als Raumteiler — das architektonische Highlight für anspruchsvolle Interieurs.</p>
+        <ul>
+          <li>Tunnel- oder 3-Seiten-Verglasung</li>
+          <li>Freie Material- &amp; Formgebung</li>
+          <li>Raumteiler-Funktion</li>
+          <li>Rundum-Sorglos-Service</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pricing-note reveal">Alle Preise sind Richtwerte inkl. MwSt. Ein persönliches Angebot erstellen wir Ihnen gerne im kostenlosen Erstgespräch.</p>
+  </div>
+</section>
+
+<!-- ── ABLAUF ─────────────────────────────────────────────────── -->
+<section class="section section-alt" id="ablauf">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">In 4 Schritten</p>
+      <h2>So entsteht Ihr Heizkamin</h2>
+      <p>Vom ersten Gespräch bis zum fertigen Heizkamin in Rosenheim — transparent, persönlich und professionell.</p>
+    </div>
+
+    <div class="prozess-steps">
+      <div class="prozess-step reveal reveal-delay-1">
+        <h3>Beratung vor Ort</h3>
+        <p>Wir besichtigen Ihren Raum, besprechen Ihre Wünsche und prüfen die technischen Voraussetzungen — kostenlos und unverbindlich.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-2">
+        <h3>Planung &amp; Entwurf</h3>
+        <p>Auf Basis der Beratung erstellen wir Entwürfe, wählen den passenden Kamineinsatz und stimmen alles mit dem Schornsteinfeger ab.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-3">
+        <h3>Einbau &amp; Montage</h3>
+        <p>Unser Team baut Ihren Heizkamin fachgerecht ein — sauber, termingerecht und nach allen geltenden Normen und Vorschriften.</p>
+      </div>
+      <div class="prozess-step reveal reveal-delay-4">
+        <h3>Abnahme &amp; Übergabe</h3>
+        <p>Abnahme durch den Schornsteinfeger, ausführliche Einweisung in die Bedienung und Übergabe — Ihr Heizkamin ist bereit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERIE ────────────────────────────────────────────────── -->
+<section class="section" id="galerie">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Arbeit</p>
+      <h2>Heizkamin-Projekte aus Rosenheim</h2>
+      <p>Jeder Heizkamin ist ein individuelles Projekt. Hier sehen Sie eine Auswahl realisierter Heizkamine in Rosenheim und Umgebung.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim – Modell Colona Schwarz von Ofenbau Hogger" loading="lazy" />
+        <div class="gallery-caption">Heizkamin Colona — modernes Design in Schwarz</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/images/oefen/sera-55.jpg" alt="Heizkamin einbauen Rosenheim – Modell Sera 55" loading="lazy" />
+        <div class="gallery-caption">Heizkamin Sera 55 — schlanke Linie, grosse Sichtscheibe</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="assets/images/oefen/fina-esl.jpg" alt="Individueller Heizkamin in Rosenheim – Modell Fina ESL" loading="lazy" />
+        <div class="gallery-caption">Heizkamin Fina ESL — elegant und leistungsstark</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="referenzen.html" class="btn-ghost">Alle Referenzen ansehen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ─────────────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-header reveal">
+        <p class="label">Häufige Fragen</p>
+        <h2>Fragen zum Heizkamin in Rosenheim</h2>
+        <p>Die wichtigsten Antworten rund um Ihren Heizkamin — von der Planung über Kosten bis zur Genehmigung.</p>
+      </div>
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Was ist der Unterschied zwischen einem Heizkamin und einem Kamin?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ein offener Kamin hat keine Scheibe und verliert viel Wärme über den Schornstein. Ein Heizkamin besitzt eine geschlossene Brennkammer mit grosser Sichtscheibe — er bietet das gleiche Flammen-Erlebnis, aber mit deutlich höherem Wirkungsgrad (über 80 %) und erfüllt die aktuellen Emissionsvorschriften der BImSchV.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Brauche ich einen Schornstein, um einen Heizkamin einbauen zu lassen?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, ein funktionsfähiger Schornstein ist Voraussetzung. Ist keiner vorhanden, kann in vielen Fällen ein Edelstahlschornstein aussen nachgerüstet werden. Wir prüfen die Gegebenheiten vor Ort und stimmen alles mit dem zuständigen Bezirksschornsteinfeger ab.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie lange dauert der Einbau eines Heizkamins?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Der reine Einbau dauert je nach Bauart 2 bis 5 Arbeitstage. Vom Erstgespräch über Planung bis zur Fertigstellung sollten Sie insgesamt 4 bis 10 Wochen einplanen — abhängig von der Verfügbarkeit des Kamineinsatzes und dem Umfang der Verkleidungsarbeiten.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Kann ich meinen alten offenen Kamin zum Heizkamin umbauen lassen?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>In den meisten Fällen ja. Wir setzen einen modernen Kamineinsatz in die bestehende Öffnung ein und passen die Verkleidung an. So erfüllt Ihr Kamin die aktuellen Vorschriften und heizt deutlich effizienter. Wir beraten Sie gerne, ob ein Umbau bei Ihnen möglich ist.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Welche Heizleistung hat ein Heizkamin?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Typische Heizkamine leisten zwischen 4 und 11 kW — das reicht je nach Dämmung für 40 bis 120 m² Wohnfläche. Wir dimensionieren den Kamineinsatz passend zu Ihrem Raum, damit Sie eine angenehme und effiziente Wärmeversorgung erhalten.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Jetzt starten</p>
+    <h2>Ihr Heizkamin in Rosenheim wartet</h2>
+    <p>Lassen Sie sich kostenlos und unverbindlich beraten. Ofenbaumeister Bastian Hogger freut sich auf Ihr Projekt.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+    <div class="internal-links">
+      <a href="kachelofen-rosenheim.html">Kachelofen Rosenheim</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="ueber-uns.html">Über Bastian Hogger</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="index.html#leistungen">Kachelöfen</a></li>
+          <li><a href="index.html#leistungen">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="index.html#leistungen">Beratung &amp; Planung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ─────────────────────────────────────────────────────── -->
+<script>
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* Mobile menu */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+
+<!-- Schema.org: Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Heizkamin in Rosenheim einbauen",
+  "description": "Individuelle Heizkamine nach Maß in Rosenheim und Umgebung. Beratung, Planung und Montage durch Ofenbaumeister Bastian Hogger.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "@id": "https://ofenbau-hogger.de",
+    "name": "Ofenbau Hogger – Bastian Hogger",
+    "telephone": "+4915221010008",
+    "email": "info@ofenbau-hogger.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Anton Bruckner Straße 1g",
+      "addressLocality": "Rosenheim",
+      "postalCode": "83024",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "47.856",
+      "longitude": "12.128"
+    },
+    "url": "https://ofenbau-hogger.de"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Rosenheim"},
+    {"@type": "City", "name": "Kolbermoor"},
+    {"@type": "City", "name": "Bad Aibling"},
+    {"@type": "City", "name": "Prien am Chiemsee"},
+    {"@type": "City", "name": "Wasserburg am Inn"},
+    {"@type": "City", "name": "Raubling"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Heizkamin-Angebote",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Einbau Fertigkamin",
+        "price": "5000",
+        "priceCurrency": "EUR",
+        "description": "Hochwertiger Fertigkamin-Einsatz mit fachgerechtem Einbau"
+      },
+      {
+        "@type": "Offer",
+        "name": "Individueller Heizkamin",
+        "price": "8000",
+        "priceCurrency": "EUR",
+        "description": "Massgeschneiderter Heizkamin mit individueller Verkleidung"
+      },
+      {
+        "@type": "Offer",
+        "name": "Premium Tunnelkamin",
+        "price": "15000",
+        "priceCurrency": "EUR",
+        "description": "Exklusiver Tunnel- oder 3-seitiger Heizkamin als Raumteiler"
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen einem Heizkamin und einem Kamin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein offener Kamin hat keine Scheibe und verliert viel Wärme über den Schornstein. Ein Heizkamin besitzt eine geschlossene Brennkammer mit grosser Sichtscheibe — er bietet das gleiche Flammen-Erlebnis, aber mit deutlich höherem Wirkungsgrad (über 80 %) und erfüllt die aktuellen Emissionsvorschriften der BImSchV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich einen Schornstein, um einen Heizkamin einbauen zu lassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, ein funktionsfähiger Schornstein ist Voraussetzung. Ist keiner vorhanden, kann in vielen Fällen ein Edelstahlschornstein aussen nachgerüstet werden. Ofenbau Hogger prüft die Gegebenheiten vor Ort und stimmt alles mit dem zuständigen Bezirksschornsteinfeger ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert der Einbau eines Heizkamins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der reine Einbau dauert je nach Bauart 2 bis 5 Arbeitstage. Vom Erstgespräch über Planung bis zur Fertigstellung sollten Sie insgesamt 4 bis 10 Wochen einplanen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich meinen alten offenen Kamin zum Heizkamin umbauen lassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In den meisten Fällen ja. Ofenbau Hogger setzt einen modernen Kamineinsatz in die bestehende Öffnung ein und passt die Verkleidung an. So erfüllt Ihr Kamin die aktuellen Vorschriften und heizt deutlich effizienter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Heizleistung hat ein Heizkamin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typische Heizkamine leisten zwischen 4 und 11 kW — das reicht je nach Dämmung für 40 bis 120 m² Wohnfläche. Ofenbau Hogger dimensioniert den Kamineinsatz passend zu Ihrem Raum."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://ofenbau-hogger.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Heizkamin Rosenheim",
+      "item": "https://ofenbau-hogger.de/heizkamin-rosenheim"
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

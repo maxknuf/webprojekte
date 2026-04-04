@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ofen im Altbau nachrüsten – So geht's richtig. Schornstein-Check, Statik, Brandschutz & Lösungen vom Ofenbaumeister. Ofenbau Hogger aus Rosenheim berät Sie kostenlos." />
+  <meta name="keywords" content="Ofen Altbau, Ofen nachträglich einbauen, Kamin nachrüsten, Ofen Altbau nachrüsten, Kaminofen Altbau, Ofenbauer Rosenheim, Edelstahlschornstein" />
+  <title>Ofen im Altbau nachrüsten – So geht's richtig | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/ofen-altbau.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ofen im Altbau nachrüsten – So geht's richtig" />
+  <meta property="og:description" content="Ofen nachträglich einbauen: Schornstein-Check, Statik, Brandschutz und Lösungen. Kostenlose Beratung vom Meisterbetrieb." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/ofen-altbau.html" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ofen im Altbau nachrüsten – Ofenbau Hogger" />
+  <meta name="twitter:description" content="So rüsten Sie einen Ofen im Altbau nach. Tipps vom Ofenbaumeister." />
+
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0C0B09;
+      --bg2:          #131210;
+      --bg3:          #1A1917;
+      --bg4:          #222120;
+      --gold:         #C4A84C;
+      --gold-light:   #DFC882;
+      --gold-dim:     #8A7230;
+      --red:          #A61216;
+      --red-light:    #D01519;
+      --text:         #F0EAE0;
+      --text-muted:   #9A9080;
+      --text-dim:     #5A5448;
+      --border:       rgba(196,168,76,0.15);
+      --border-soft:  rgba(240,234,224,0.07);
+      --radius:       4px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
+    .display {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .display-lg { font-size: clamp(3.2rem, 7vw, 7rem); }
+    .display-md { font-size: clamp(2.4rem, 4.5vw, 4.2rem); }
+    .display-sm { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── NAV ──────────────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: translateZ(0);
+      transition: height 0.4s ease, opacity 0.25s;
+    }
+    .nav-logo-img:hover { opacity: 0.85; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+
+    /* Mobile hamburger */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+      transition: 0.3s;
+    }
+
+    /* ─── MOBILE NAV ───────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 250;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 24px 40px;
+      overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 251;
+    }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-weight: 400;
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-ghost:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    /* ─── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 160px 0 100px;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to bottom, var(--bg) 0%, transparent 30%),
+        linear-gradient(to top, var(--bg) 0%, transparent 30%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-content .label { margin-bottom: 20px; }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .hero-content p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .breadcrumb a { color: var(--text-muted); transition: color 0.25s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb span { margin: 0 8px; }
+
+    /* ─── SECTION BASE ─────────────────────────────────────────── */
+    .section { padding: 100px 0; }
+    .section-alt { background: var(--bg2); }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-header .label { margin-bottom: 14px; }
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── CONTENT BLOCK (TEXT + IMAGE) ─────────────────────────── */
+    .content-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .content-block.reverse .content-text { order: 2; }
+    .content-block.reverse .content-media { order: 1; }
+    .content-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .content-text p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .content-text ul {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .content-text ul li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.65;
+    }
+    .content-text ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+    }
+    .content-media {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .content-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    /* ─── CHALLENGES LIST ──────────────────────────────────────── */
+    .challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .challenge-card {
+      background: var(--bg3);
+      padding: 40px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: background 0.3s;
+    }
+    .challenge-card:hover { background: var(--bg4); }
+    .challenge-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      color: var(--gold-dim);
+    }
+    .challenge-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .challenge-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── SOLUTIONS GRID ───────────────────────────────────────── */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .solution-card {
+      background: var(--bg2);
+      padding: 48px 36px;
+      text-align: center;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .solution-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .solution-card:hover { background: var(--bg3); }
+    .solution-card:hover::before { opacity: 1; }
+    .solution-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .solution-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .solution-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── BENEFITS GRID (reuse for Ofen-Empfehlungen) ──────────── */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .benefit-card {
+      background: var(--bg2);
+      padding: 48px 32px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .benefit-card:hover { background: var(--bg3); }
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+    }
+    .benefit-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── HIGHLIGHT BOX ────────────────────────────────────────── */
+    .highlight-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .highlight-box .highlight-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .highlight-box .highlight-text p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* ─── KOSTEN BOX ───────────────────────────────────────────── */
+    .kosten-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .kosten-box .price-range {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4vw, 3.5rem);
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .kosten-box p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .kosten-box .kosten-detail {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* ─── GALLERY ──────────────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(12,11,9,0.85) 0%, transparent 100%);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    /* ─── FAQ ───────────────────────────────────────────────────── */
+    #faq { padding: 100px 0; background: var(--bg); }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .faq-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .faq-header p {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text);
+      transition: color 0.25s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-question svg {
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      color: var(--text-dim);
+      transition: transform 0.3s, color 0.3s;
+    }
+    .faq-item.open .faq-question svg {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-answer p {
+      padding: 0 0 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ─── CTA SECTION ──────────────────────────────────────────── */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ─── EEAT BADGE ───────────────────────────────────────────── */
+    .eeat-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .eeat-badge svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold-dim);
+    }
+
+    /* ─── INTERNAL LINKS ───────────────────────────────────────── */
+    .internal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+    .internal-links a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .internal-links a:hover {
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    /* ─── FLOATING CONTACT ─────────────────────────────────────── */
+    .floating-contact {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 180;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .floating-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.5);
+    }
+    .floating-btn svg { width: 22px; height: 22px; }
+    .floating-whatsapp { background: #25D366; }
+    .floating-email { background: var(--gold); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 60px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-legal a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .challenges-grid { grid-template-columns: 1fr; }
+      .solutions-grid { grid-template-columns: 1fr; }
+      .content-block { grid-template-columns: 1fr; gap: 40px; }
+      .content-block.reverse .content-text { order: 1; }
+      .content-block.reverse .content-media { order: 2; }
+      .highlight-box { grid-template-columns: 1fr; gap: 24px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 60vh; padding: 140px 0 80px; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 14px; }
+      .hero-actions .btn-gold,
+      .hero-actions .btn-ghost { width: 100%; max-width: 280px; justify-content: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+      .floating-contact {
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        transform: none;
+      }
+      .floating-btn { width: 44px; height: 44px; }
+      .floating-btn svg { width: 20px; height: 20px; }
+      .section { padding: 72px 0; }
+      .kosten-box { padding: 40px 28px; }
+      .highlight-box { padding: 36px 28px; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .mobile-menu a { font-size: 1.4rem; }
+      .mobile-menu { gap: 18px; }
+      .benefit-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── FLOATING CONTACT ────────────────────────────────────────── -->
+<div class="floating-contact">
+  <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="index.html#kontakt" class="floating-btn floating-email" aria-label="Kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#0C0B09" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- ── MOBILE MENU ─────────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Menü schließen">&#10005;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────────── -->
+<section class="hero">
+  <img src="assets/images/referenzen/projekt-1.jpg" alt="Ofen im Altbau nachrüsten – Ofenbau Hogger Rosenheim" class="hero-bg-img" />
+  <div class="hero-overlay"></div>
+  <div class="container hero-content reveal">
+    <p class="label">Ofen im Altbau</p>
+    <h1>Ofen im Altbau nachrüsten</h1>
+    <p>Auch nachträglich ist ein Ofen im Altbau möglich — mit der richtigen Planung und einem erfahrenen Ofenbaumeister. Wir zeigen Ihnen, wie es geht.</p>
+    <div class="hero-actions">
+      <a href="index.html#kontakt" class="btn-gold">
+        Kostenlos beraten lassen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#herausforderungen" class="btn-ghost">Herausforderungen & Lösungen</a>
+    </div>
+    <div class="breadcrumb">
+      <a href="index.html">Startseite</a>
+      <span>/</span>
+      <span>Ofen im Altbau</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── GEHT DAS ÜBERHAUPT? ────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="content-block reveal">
+      <div class="content-text">
+        <p class="label">Die gute Nachricht</p>
+        <h2>Geht das überhaupt?</h2>
+        <p>Ja — in den allermeisten Fällen lässt sich ein Ofen auch im Altbau nachträglich einbauen. Entscheidend ist eine fachkundige Vorab-Prüfung durch den Ofenbaumeister.</p>
+        <ul>
+          <li><strong>Schornstein-Check:</strong> Ist ein Schornstein vorhanden? Ist er nutzbar oder muss er saniert werden? Oder braucht es einen Edelstahlschornstein außen?</li>
+          <li><strong>Statik prüfen:</strong> Ein Kachelofen wiegt 500–1.500 kg. Die Tragfähigkeit der Decke muss geprüft werden — besonders in Obergeschossen.</li>
+          <li><strong>Brandschutz klären:</strong> Abstände zu Wänden, Bodenplatte, Schutzabstände — alles muss den Vorschriften entsprechen.</li>
+        </ul>
+        <p>Wir übernehmen die komplette Prüfung bei einem kostenlosen Vor-Ort-Termin.</p>
+      </div>
+      <div class="content-media">
+        <img src="assets/images/referenzen/projekt-1.jpg" alt="Ofen im Altbau — Prüfung durch Ofenbau Hogger" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HÄUFIGE HERAUSFORDERUNGEN ──────────────────────────────── -->
+<section class="section section-alt" id="herausforderungen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Typische Hürden</p>
+      <h2>Häufige Herausforderungen im Altbau</h2>
+      <p>Beim nachträglichen Einbau eines Ofens gibt es einige typische Hürden. Für jede davon haben wir eine bewährte Lösung.</p>
+    </div>
+
+    <div class="challenges-grid">
+      <div class="challenge-card reveal reveal-delay-1">
+        <svg class="challenge-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 4v28M12 4h12M14 8v6M22 8v6"/>
+          <path d="M6 32h24" opacity="0.5"/>
+        </svg>
+        <div>
+          <h3>Kein Schornstein vorhanden</h3>
+          <p>Viele Altbauten haben keinen nutzbaren Schornstein mehr — entweder wurde er stillgelegt, rückgebaut oder ist für den Ofenanschluss ungeeignet.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal reveal-delay-2">
+        <svg class="challenge-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="8" y="4" width="20" height="28" rx="1"/>
+          <path d="M14 14h8M14 20h8"/>
+          <circle cx="18" cy="27" r="2" opacity="0.5"/>
+        </svg>
+        <div>
+          <h3>Zu kleiner Schornstein</h3>
+          <p>Alte Schornsteine haben oft einen zu geringen Querschnitt oder falsche Materialien für moderne Öfen. Eine Sanierung oder ein Einsatz kann helfen.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal reveal-delay-3">
+        <svg class="challenge-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 32V12l12-8 12 8v20H6z"/>
+          <path d="M14 32V22h8v10"/>
+          <path d="M2 32h32" opacity="0.5"/>
+        </svg>
+        <div>
+          <h3>Denkmalschutz</h3>
+          <p>Bei denkmalgeschützten Gebäuden gelten strenge Auflagen. Äußere Veränderungen (z.B. Edelstahlschornstein) müssen genehmigt werden.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal reveal-delay-4">
+        <svg class="challenge-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="4" y="20" width="28" height="12" rx="1"/>
+          <path d="M8 20V10h20v10"/>
+          <path d="M18 24v4" opacity="0.5"/>
+        </svg>
+        <div>
+          <h3>Bodenbelastung</h3>
+          <p>Holzbalkendecken im Altbau sind oft nicht für schwere Öfen ausgelegt. Die Tragfähigkeit muss individuell geprüft werden.</p>
+        </div>
+      </div>
+      <div class="challenge-card reveal reveal-delay-1">
+        <svg class="challenge-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="18" cy="18" r="14"/>
+          <path d="M18 10v8l6 4"/>
+          <path d="M10 6c-2 3-3 6-3 10" opacity="0.5"/>
+        </svg>
+        <div>
+          <h3>Fehlende Luftzufuhr</h3>
+          <p>Auch renovierte Altbauten mit neuen Fenstern können sehr dicht sein. Eine externe Verbrennungsluftleitung ist dann erforderlich.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LÖSUNGEN ────────────────────────────────────────────────── -->
+<section class="section" id="loesungen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Unsere Lösungen</p>
+      <h2>Für jede Herausforderung die passende Lösung</h2>
+      <p>Ofenbaumeister Bastian Hogger hat jahrelange Erfahrung mit Ofen-Nachrüstungen im Altbau. Diese Lösungen setzen wir regelmäßig um.</p>
+    </div>
+
+    <div class="solutions-grid">
+      <div class="solution-card reveal reveal-delay-1">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 6v36M20 6h8M20 42h8"/>
+          <path d="M16 18h-6v20h6M32 18h6v20h-6" opacity="0.5"/>
+        </svg>
+        <h3>Edelstahlschornstein außen</h3>
+        <p>Wenn kein Schornstein vorhanden ist, installieren wir einen doppelwandigen Edelstahlschornstein an der Außenwand. Schnell montiert, optisch dezent, sofort einsatzbereit.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-2">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="14" y="6" width="20" height="36" rx="2"/>
+          <path d="M20 16h8M20 24h8M20 32h8"/>
+          <circle cx="24" cy="40" r="1" opacity="0.5"/>
+        </svg>
+        <h3>Schornstein-Sanierung</h3>
+        <p>Ein vorhandener Schornstein wird mit einem Edelstahlrohr ausgefüttert (<a href="kamin-sanieren.html" style="color:var(--gold);border-bottom:1px solid var(--gold-dim);">Kamin sanieren</a>). So erfüllt er moderne Anforderungen und ist wieder voll nutzbar.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-3">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 42V18l16-12 16 12v24H8z"/>
+          <rect x="18" y="28" width="12" height="14" rx="1"/>
+          <path d="M24 6v12" opacity="0.5"/>
+        </svg>
+        <h3>Leichtbau-Öfen</h3>
+        <p>Für Altbauten mit begrenzter Tragfähigkeit empfehlen wir Leichtbau-Heizkamine oder kompakte Kaminöfen. Gewicht ab 200 kg — ideal für Holzbalkendecken.</p>
+      </div>
+      <div class="solution-card reveal reveal-delay-4">
+        <svg class="solution-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M18 24h12M24 18v12"/>
+          <path d="M12 12l4 4M32 12l-4 4" opacity="0.5"/>
+        </svg>
+        <h3>Externe Luftzufuhr</h3>
+        <p>Über eine Kernbohrung in der Außenwand oder einen Kanal im Fußboden wird frische Verbrennungsluft direkt zum Ofen geführt — raumluftunabhängig und sicher.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WELCHER OFEN FÜR DEN ALTBAU? ──────────────────────────── -->
+<section class="section section-alt" id="ofentypen">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Die richtige Wahl</p>
+      <h2>Welcher Ofen für den Altbau?</h2>
+      <p>Die Wahl hängt von den baulichen Gegebenheiten ab. Hier unsere Empfehlungen je nach Situation.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card reveal reveal-delay-1">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="10" y="8" width="28" height="36" rx="2"/>
+          <path d="M18 20h12M18 26h12M18 32h8"/>
+          <path d="M10 14h28" opacity="0.5"/>
+        </svg>
+        <h3><a href="kachelofen-rosenheim.html" style="color:inherit;border-bottom:1px solid var(--border);">Kachelofen</a></h3>
+        <p>Ideal bei tragfähiger Decke und vorhandenem Schornstein. Bietet langanhaltende Strahlungswärme und individuelle Gestaltung — perfekt für große Altbau-Wohnzimmer.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 42V14l16-8 16 8v28H8z"/>
+          <rect x="16" y="24" width="16" height="18" rx="1"/>
+          <path d="M24 6v8" opacity="0.5"/>
+        </svg>
+        <h3><a href="heizkamin-rosenheim.html" style="color:inherit;border-bottom:1px solid var(--border);">Heizkamin</a></h3>
+        <p>Leichter als ein Kachelofen und schnell montiert. Großes Sichtfenster für Flammenspiel — auch bei eingeschränkter Tragfähigkeit oft realisierbar.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <svg class="benefit-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="18"/>
+          <path d="M24 12v12l8 8"/>
+          <path d="M16 8c-2 3-3 7-3 11" opacity="0.5"/>
+        </svg>
+        <h3>Kompakter Kaminofen</h3>
+        <p>Die unkomplizierteste Lösung für den Altbau: leicht (ab 150 kg), flexibel positionierbar und schnell angeschlossen. Ideal als Einstieg.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EINSATZTAUSCH ALS ALTERNATIVE ──────────────────────────── -->
+<section class="section" id="einsatztausch">
+  <div class="container">
+    <div class="highlight-box reveal">
+      <div class="highlight-text">
+        <p class="label">Alternative</p>
+        <h3>Einsatztausch statt Neubau</h3>
+        <p>Sie haben bereits einen alten Ofen im Altbau, der nicht mehr den Vorschriften entspricht? Dann ist ein Einsatztausch oft die günstigere und schnellere Lösung. Der vorhandene Ofen wird innen erneuert und erfüllt danach die aktuellen BImSchV-Grenzwerte.</p>
+        <a href="ofen-modernisieren.html" class="btn-ghost">
+          Mehr zum Einsatztausch
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="content-media">
+        <img src="assets/images/oefen/fina-esl.jpg" alt="Ofen modernisieren – Einsatztausch als Alternative" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KOSTEN ALTBAU ──────────────────────────────────────────── -->
+<section class="section section-alt" id="kosten">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Transparente Kosten</p>
+      <h2>Was kostet ein Ofen im Altbau?</h2>
+    </div>
+
+    <div class="kosten-box reveal">
+      <div class="price-range">5.000 – 30.000 €</div>
+      <p>Die Kosten hängen stark vom Aufwand ab: Braucht es einen neuen Schornstein? Muss die Decke verstärkt werden? Oder ist ein einfacher Anschluss möglich?</p>
+      <p class="kosten-detail">Kompakter Kaminofen mit Anschluss ab ca. 5.000 € · Heizkamin mit Edelstahlschornstein 10.000–18.000 € · Kachelofen mit Schornsteinsanierung bis 30.000 €</p>
+      <div style="margin-top:32px;">
+        <a href="was-kostet-ein-ofen.html" class="btn-ghost">Ausführliche Preisübersicht
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALERIE ────────────────────────────────────────────────── -->
+<section class="section" id="galerie">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Inspiration</p>
+      <h2>Altbau-Projekte von Ofenbau Hogger</h2>
+      <p>Sehen Sie, wie wir Öfen in bestehende Gebäude integriert haben.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="assets/images/referenzen/projekt-1.jpg" alt="Ofen nachträglich im Altbau eingebaut – Referenzprojekt Ofenbau Hogger" loading="lazy" />
+        <div class="gallery-caption">Altbau-Projekt — Kachelofen nachträglich integriert</div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="assets/images/oefen/fina-esl.jpg" alt="Kompakter Heizkamin im Altbau – Fina ESL von Ofenbau Hogger" loading="lazy" />
+        <div class="gallery-caption">Fina ESL — kompakter Heizkamin für den Altbau</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;" class="reveal">
+      <a href="referenzen.html" class="btn-ghost">Alle Referenzen ansehen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ─────────────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-header reveal">
+        <p class="label">Häufige Fragen</p>
+        <h2>Fragen zum Ofen im Altbau</h2>
+        <p>Die wichtigsten Antworten zur Ofen-Nachrüstung im Altbau — von Genehmigungen über Kosten bis zu baulichen Voraussetzungen.</p>
+      </div>
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Kann ich einen Ofen einbauen, wenn kein Schornstein vorhanden ist?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, in diesem Fall wird ein doppelwandiger Edelstahlschornstein an der Außenwand montiert. Das ist genehmigungsfähig und in den meisten Gemeinden problemlos möglich. Die Kosten liegen bei ca. 2.000–5.000 € zusätzlich.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Brauche ich eine Genehmigung für einen Ofen im Altbau?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Jede Feuerstätte muss vom Bezirksschornsteinfeger abgenommen werden. Bei denkmalgeschützten Gebäuden oder Außenschornsteinen kann zusätzlich eine Baugenehmigung nötig sein. Wir klären alle Formalitäten für Sie.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Wie lange dauert der Einbau eines Ofens im Altbau?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ein einfacher Kaminofen-Anschluss kann in 1–2 Tagen erledigt sein. Ein Kachelofen mit Schornsteinsanierung dauert ca. 1–2 Wochen. Die Planungsphase davor umfasst in der Regel 4–8 Wochen.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Trägt mein Altbau-Boden das Gewicht eines Kachelofens?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Das kommt auf die Deckenkonstruktion an. Betondecken sind in der Regel kein Problem. Bei Holzbalkendecken muss die Tragfähigkeit geprüft werden. Alternativ empfehlen wir Leichtbau-Heizkamine (ab 200 kg) oder kompakte Kaminöfen (ab 150 kg).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── E-E-A-T BADGE ──────────────────────────────────────────── -->
+<div class="eeat-badge reveal">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+  <span>Geprüft von Ofenbaumeister Bastian Hogger</span>
+</div>
+
+<!-- ── CTA ─────────────────────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="container reveal">
+    <p class="label">Jetzt starten</p>
+    <h2>Ofen im Altbau nachrüsten? Wir helfen.</h2>
+    <p>Kostenloser Vor-Ort-Check durch Ofenbaumeister Bastian Hogger — wir prüfen, was möglich ist und beraten Sie ehrlich.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#kontakt" class="btn-gold">
+        Anfrage stellen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/4915221010008" target="_blank" rel="noopener" class="btn-ghost">
+        WhatsApp schreiben
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+      </a>
+    </div>
+
+    <!-- Internal Links -->
+    <div class="internal-links">
+      <a href="kachelofen-rosenheim.html">Kachelofen Rosenheim</a>
+      <a href="heizkamin-rosenheim.html">Heizkamin Rosenheim</a>
+      <a href="ofen-neubau.html">Ofen im Neubau</a>
+      <a href="ofen-modernisieren.html">Ofen modernisieren</a>
+      <a href="was-kostet-ein-ofen.html">Was kostet ein Ofen?</a>
+      <a href="kamin-sanieren.html">Kamin sanieren</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="index.html#leistungen">Kachelöfen</a></li>
+          <li><a href="index.html#leistungen">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="index.html#leistungen">Beratung & Planung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── JS ─────────────────────────────────────────────────────── -->
+<script>
+  /* Scroll reveal */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* Mobile menu */
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  function closeMobile() { mobileMenu.classList.remove('open'); }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+</script>
+
+<!-- Schema.org: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ofen im Altbau nachrüsten – So geht's richtig",
+  "description": "Ofen nachträglich einbauen im Altbau: Schornstein-Check, Statik, Brandschutz und bewährte Lösungen. Kostenlose Beratung vom Meisterbetrieb Ofenbau Hogger in Rosenheim.",
+  "author": {
+    "@type": "Person",
+    "name": "Bastian Hogger",
+    "jobTitle": "Ofenbaumeister",
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "Ofenbau Hogger"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ofenbau Hogger",
+    "url": "https://ofenbau-hogger.de"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2025-06-01",
+  "image": "https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg",
+  "mainEntityOfPage": "https://ofenbau-hogger.de/ofen-altbau.html"
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kann ich einen Ofen einbauen, wenn kein Schornstein vorhanden ist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, in diesem Fall wird ein doppelwandiger Edelstahlschornstein an der Außenwand montiert. Das ist genehmigungsfähig und in den meisten Gemeinden problemlos möglich. Die Kosten liegen bei ca. 2.000–5.000 € zusätzlich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Genehmigung für einen Ofen im Altbau?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jede Feuerstätte muss vom Bezirksschornsteinfeger abgenommen werden. Bei denkmalgeschützten Gebäuden oder Außenschornsteinen kann zusätzlich eine Baugenehmigung nötig sein. Ofenbau Hogger klärt alle Formalitäten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange dauert der Einbau eines Ofens im Altbau?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein einfacher Kaminofen-Anschluss kann in 1–2 Tagen erledigt sein. Ein Kachelofen mit Schornsteinsanierung dauert ca. 1–2 Wochen. Die Planungsphase davor umfasst in der Regel 4–8 Wochen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Trägt mein Altbau-Boden das Gewicht eines Kachelofens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das kommt auf die Deckenkonstruktion an. Betondecken sind in der Regel kein Problem. Bei Holzbalkendecken muss die Tragfähigkeit geprüft werden. Alternativ empfehlen wir Leichtbau-Heizkamine oder kompakte Kaminöfen."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema.org: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://ofenbau-hogger.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ofen im Altbau nachrüsten",
+      "item": "https://ofenbau-hogger.de/ofen-altbau.html"
+    }
+  ]
+}
+</script>
+</body>
+</html>

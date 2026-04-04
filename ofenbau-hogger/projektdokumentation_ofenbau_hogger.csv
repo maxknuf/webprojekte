@@ -1,0 +1,109 @@
+Bereich,Komponente,Detail,Status
+Design & Konzeption,Farbsystem,"Dark Theme: Schwarz (#0C0B09), Gold (#C4A84C), Rot (#A61216), abgestufte Grautöne",erledigt
+Design & Konzeption,Typografie,"Cormorant Garamond (Überschriften), DM Sans (Fließtext) — Google Fonts",erledigt
+Design & Konzeption,Responsive Design,"Breakpoints bei 1024px, 768px, 420px — Desktop, Tablet, Mobile (Pixel 7/10 getestet)",erledigt
+Design & Konzeption,Technologie,"Single-File HTML mit Inline-CSS, kein Build-Step, vanilla JS",erledigt
+,,
+Startseite,Video-Hero,"Der Ofenbauer-Animation (MP4, Slow-Motion 0.45x), physisch zugeschnitten und re-encoded (CRF 18)",erledigt
+Startseite,Navigation,"Fixed Nav mit Blur-Backdrop, Mobile Hamburger-Menü (z-index 250), konsistent auf allen 24 Seiten",erledigt
+Startseite,Gold-Banner,"Marquee mit Leistungsbegriffen (Kachelöfen, Heizkamine, Speicheröfen etc.)",erledigt
+Startseite,Leistungen,"4 Kacheln mit Icons, jeweils verlinkt zu Detailseiten",erledigt
+Startseite,Fliesen.Studio Teaser,"Hero-Bild, 3 Kategorie-Kacheln (Mexicotto, Stein-/Marmor, Naturstein/Outdoor)",erledigt
+Startseite,Über uns Sektion,"Portrait, Zitat, animierte Credentials (50+ Projekte, 15+ Jahre, 100% Meister)",erledigt
+Startseite,Mini Foto-Teaser,"Kamera-Icon, Visualisierung in 48h, Link zu Kontaktbereich",erledigt
+Startseite,Qualitäts-Features,"4 Kacheln: Meisterbetrieb, Pünktlichkeit, Regionalität, Individuelle Lösungen",erledigt
+Startseite,Trust-Streifen,"Rosenheims Beste Logo, Meisterbetrieb Badge, Google 5.0, MyHammer",erledigt
+Startseite,Referenzen-Grid,"5 Ofen-Bilder mit Hover-Overlay + 4 native TikTok-Videos",erledigt
+Startseite,Rezensionen,"3 Google-Bewertungen mit Sternen, Avatar, Autor",erledigt
+Startseite,TikTok Profil-Embed,"Offizieller oEmbed mit Follow-Button, 16px abgerundete Ecken",erledigt
+Startseite,Prozess/Ablauf,"4 Schritte: Erstgespräch, Planung, Handwerk, Übergabe",erledigt
+Startseite,FAQ-Sektion,"6 Fragen mit Akkordeon (Kosten, Dauer, Genehmigung, Modernisierung, Gebiete, Fliesen)",erledigt
+Startseite,Kontakt-System,"Quick-Contact (Freitext + WhatsApp/E-Mail), Foto-Upload-Feature, ausklappbares Detailformular",erledigt
+Startseite,Floating Buttons,"WhatsApp (grün), E-Mail (gold), Foto (dunkel) — rechts fixiert, responsive",erledigt
+Startseite,Partner-Logos,"Austroflamm, Brunner, Spartherm, Ofen Innovativ, LEDA",erledigt
+Startseite,Partnerfirmen,"Mexicotto / ATB-Import, Kayser & Staimer GbR / Garten & Design",erledigt
+Startseite,Footer,"5 Spalten: Leistungen, Wissen, Regionen, Kontakt, Brand + Über uns/Referenzen",erledigt
+,,
+Fliesen.Studio,Page-Hero,"Bild-Overlay mit Headline und CTA",erledigt
+Fliesen.Studio,Intro-Grid,"Schwerpunkt + Beschreibung (2-spaltig)",erledigt
+Fliesen.Studio,Kategorie-Karten,"Mexicotto, Stein-/Marmor, Zement-/Holz, Naturstein, Outdoor — mit Bildern",erledigt
+Fliesen.Studio,Highlight-Strip,"19+ Kollektionen, 5 Stilrichtungen, 2cm Outdoor, 1 Ansprechpartner",erledigt
+Fliesen.Studio,Galerie,"6 Bilder mit Hover-Tags",erledigt
+Fliesen.Studio,CTA,"Beratungstermin anfragen",erledigt
+,,
+Über uns,Hero,"Clean Dark Hero mit animierter Typografie (kein Bild)",erledigt
+Über uns,Credentials Counter,"50+ Projekte, 15+ Jahre, 2021 Meistertitel, 5.0 Sterne — animiert",erledigt
+Über uns,Scrollytelling Kapitel 1,"Die Entscheidung (2010) — Bild sticky links, Text scrollt rechts",erledigt
+Über uns,Zitat-Banner,"Feuer ist mehr als Wärme — Cormorant Garamond italic",erledigt
+Über uns,Scrollytelling Kapitel 2,"Der Meistertitel (2021) — reversed Layout",erledigt
+Über uns,Team-Foto,"Bastian & Carina Hogger, Parallax-Effekt, Caption",erledigt
+Über uns,Werte-Grid,"3 Karten: Meisterqualität, Verlässlichkeit, Regionalität",erledigt
+Über uns,Timeline,"Vertikale Zeitachse 2010–2025, 5 Meilensteine, alternierend, goldene Dots",erledigt
+,,
+Referenzen,Parallax-Hero,"Scroll-Zoom-Effekt auf Hero-Bild",erledigt
+Referenzen,Counter Animation,"50+ Projekte, 15+ Jahre, 100% Meister, 5.0 Sterne",erledigt
+Referenzen,4 Projekt-Showcases,"Scrollytelling: Bild sticky, Text scrollt, alternierend links/rechts",erledigt
+Referenzen,Video-Showcase,"4 TikTok-Videos, auto-play on scroll via IntersectionObserver",erledigt
+Referenzen,Horizontale Parallax-Galerie,"10 Bilder, scroll-gesteuerte horizontale Bewegung",erledigt
+Referenzen,Einzelprojekte verlinkt,"3 Detail-Karten mit Bild und Link",erledigt
+,,
+Referenz-Einzelseiten,Heizkamin Rosenheim,"Projekt-Story, Sidebar (Typ/Ort/Jahr/Dauer/Material/Leistung), Galerie, Kundenzitat",erledigt
+Referenz-Einzelseiten,Kachelofen Prien,"gleiche Struktur, einzigartige Story",erledigt
+Referenz-Einzelseiten,Einsatztausch Kolbermoor,"gleiche Struktur, einzigartige Story",erledigt
+Referenz-Einzelseiten,Cross-Links,"Weitere Projekte Sektion auf jeder Einzelseite",erledigt
+,,
+Leistungs-Landingpages,Kachelofen Rosenheim,"Vorteile, Leistungen, 3 Preisstufen (ab 8.000€), Ablauf, Galerie, FAQ",erledigt
+Leistungs-Landingpages,Heizkamin Rosenheim,"4 Arten (Tunnel/Eck/3-seitig/bodentief), 3 Preisstufen (ab 5.000€), FAQ",erledigt
+Leistungs-Landingpages,Ofen modernisieren / Einsatztausch,"BImSchV-Fristen-Tabelle, Sanierung vs. Neubau, 4 Preisstufen (ab 3.500€)",erledigt
+Leistungs-Landingpages,Kamin sanieren,"5 Probleme, 5 Lösungen, Entscheidungshilfe, 4 Preisstufen (ab 500€)",erledigt
+Leistungs-Landingpages,Ofenbauer Rosenheim,"Komplettseite: Portrait, 5 Leistungskarten, Referenzen, Reviews, Einzugsgebiet, Preisübersicht",erledigt
+,,
+Wissens-/Content-Seiten,Was kostet ein Ofen?,"Preisguide: 5 Ofentypen, Kostenfaktoren, versteckte Kosten, Förderungen, Vergleichstabelle, Lesefortschrittsbalken",erledigt
+Wissens-/Content-Seiten,Kachelofen vs Kamin,"Erklärung beider Typen, 8-Kriterien-Vergleichstabelle, Entscheidungshilfe (4 Personas)",erledigt
+Wissens-/Content-Seiten,Speicherofen Vorteile,"Funktionsprinzip, 7 Vorteile, 3-Wege-Vergleich (Speicher/Kamin/Grundofen), Zielgruppen",erledigt
+Wissens-/Content-Seiten,Ofen im Neubau,"Frühzeitige Planung, 8-Punkte-Checkliste, Timeline (Rohbau→Fertigstellung), Kosten",erledigt
+Wissens-/Content-Seiten,Ofen im Altbau,"5 Herausforderungen, 4 Lösungen (Edelstahlschornstein etc.), Einsatztausch als Alternative",erledigt
+,,
+Lokale SEO-Seiten,Ofenbauer Rosenheim,"Hauptseite mit allen Leistungen, Referenzen, Bewertungen, Einzugsgebiet",erledigt
+Lokale SEO-Seiten,Ofenbauer Kolbermoor,"~5km, 10 Min Fahrt, lokale Referenz, 3 FAQ",erledigt
+Lokale SEO-Seiten,Ofenbauer Bad Aibling,"~15km, 20 Min Fahrt, lokale Referenz, 3 FAQ",erledigt
+Lokale SEO-Seiten,Ofenbauer Prien am Chiemsee,"~20km, 25 Min Fahrt, lokale Referenz, 3 FAQ",erledigt
+Lokale SEO-Seiten,Ofenbauer Wasserburg am Inn,"~25km, 30 Min Fahrt, lokale Referenz, Altbau-Expertise, 3 FAQ",erledigt
+,,
+Rechtliches,Impressum,"TMG-konform: Angaben §5, Haftungsausschluss, Urheberrecht, Streitschlichtung",erledigt
+Rechtliches,Datenschutzerklärung,"DSGVO-konform: Verantwortlicher, SSL, GitHub Pages, Kontaktformular, TikTok, Google Fonts, Betroffenenrechte",erledigt
+,,
+SEO & Technik,Schema.org,"LocalBusiness, FAQPage, Service, Article, BreadcrumbList — auf allen relevanten Seiten",erledigt
+SEO & Technik,Meta-Tags,"Title (keyword-optimiert), Description (mit CTA), Keywords — jede Seite individuell",erledigt
+SEO & Technik,Open Graph + Twitter Cards,"og:title, og:description, og:image, og:type, twitter:card — auf allen Seiten",erledigt
+SEO & Technik,Canonical URLs,"Auf allen Unterseiten gesetzt",erledigt
+SEO & Technik,sitemap.xml,"22 URLs mit Prioritäten (1.0 Startseite → 0.3 Rechtliches)",erledigt
+SEO & Technik,robots.txt,"Allow: / — Disallow: /_archive/",erledigt
+SEO & Technik,E-E-A-T Badges,"Geprüft von Ofenbaumeister Bastian Hogger — dezent vor Footer auf allen Seiten",erledigt
+SEO & Technik,Interne Verlinkung,"Leistungs-Kacheln → Detailseiten, FAQ → Preisguide/Einsatztausch, Footer 5-spaltig, Cross-Links",erledigt
+SEO & Technik,H1/H2/H3 Hierarchie,"Saubere Heading-Struktur auf allen 24 Seiten",erledigt
+SEO & Technik,ALT-Texte,"Keyword-optimiert auf allen Bildern",erledigt
+SEO & Technik,Favicon,"Favicon-Retina.png auf allen 24 Seiten verlinkt",erledigt
+SEO & Technik,Lazy Loading,"loading=lazy auf Bilder unterhalb des Folds",erledigt
+,,
+Video-Bearbeitung,Hero-Video Schnitt,"FFmpeg: 2s Anfang entfernt, 160px rechts gecroppt für Zentrierung",erledigt
+Video-Bearbeitung,Hero-Video Encoding,"CRF 18 / preset slow — maximale Schärfe bei 555 kbit/s",erledigt
+Video-Bearbeitung,TikTok-Videos,"5 Videos nativ als MP4 eingebunden (autoplay, muted, loop)",erledigt
+Video-Bearbeitung,TikTok Profil-Embed,"Offizieller oEmbed-Code von @bastianhogger",erledigt
+Video-Bearbeitung,Portrait-Schärfung,"Unsharp-Mask-Filter via FFmpeg auf bastian-hogger.jpg",erledigt
+,,
+Kontakt-Features,Quick-Contact,"Freitext-Feld + WhatsApp-Button + E-Mail-Button",erledigt
+Kontakt-Features,Foto-Upload,"Visualisierung in 48h — WhatsApp/E-Mail mit vorausgefülltem Text",erledigt
+Kontakt-Features,Detail-Formular,"Ausklappbar: Name, E-Mail, Interesse-Dropdown, Nachricht",erledigt
+Kontakt-Features,Floating Buttons,"3 Buttons rechts fixiert: WhatsApp, E-Mail, Foto — responsive (unten auf Mobile)",erledigt
+Kontakt-Features,WhatsApp-Integration,"wa.me/4915221010008 mit vorausgefülltem Text auf allen CTAs",erledigt
+,,
+Ordnerstruktur,assets/images/brand/,"Logos (logo.png, logo2.png), Favicons (Favicon-Retina.png, favicon_weiß.png)",erledigt
+Ordnerstruktur,assets/images/oefen/,"11 Ofen-Produktfotos (Apella, Colona, Juwel, Kala, Sera, Fina)",erledigt
+Ordnerstruktur,assets/images/referenzen/,"6 Projektfotos (projekt-1 bis projekt-5, social-media)",erledigt
+Ordnerstruktur,assets/images/team/,"5 Teamfotos (Portrait, Messe, Ofenbaumeister 1-3, Über uns)",erledigt
+Ordnerstruktur,assets/images/fliesen/,"6 Fliesen-Bilder (Cotto, Stein-Optik, Zubehör)",erledigt
+Ordnerstruktur,assets/images/Partner/,"10 Hersteller-Logos (weiß + schwarz Varianten)",erledigt
+Ordnerstruktur,assets/videos/,"7 Videos (Hero, 5 TikTok, Fireplace)",erledigt
+Ordnerstruktur,referenzen/,"3 Referenz-Einzelseiten (Unterordner)",erledigt
+Ordnerstruktur,_archive/,"Alte HTML-Versionen (3 Dateien)",erledigt

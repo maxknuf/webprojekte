@@ -1,0 +1,17 @@
+Pos.,Leistung,Beschreibung,Anzahl,Einheit
+1,Konzeption & Design,"Premium Dark Theme, Farbsystem, Typografie, responsive Layout-Konzept für alle Endgeräte",1,pauschal
+2,Startseite,"Video-Hero, Leistungsübersicht, Fliesen-Teaser, Über uns, Referenzen, Rezensionen, TikTok, FAQ, Kontakt mit WhatsApp-Integration, Partner-Sektion, Floating Buttons",1,Seite
+3,Fliesen.Studio Seite,"Eigenständige Unterseite mit Hero, Kategorien, Highlight-Strip, Galerie, CTA",1,Seite
+4,Über uns Seite,"Scrollytelling mit Parallax, animierte Timeline, Team-Foto, Werte-Grid",1,Seite
+5,Referenzen Seite,"Scrollytelling, Parallax-Galerie, Video-Showcase, Projekt-Verlinkung",1,Seite
+6,Referenz-Einzelseiten,"Projekt-Storys mit Bildern, Sidebar-Details, Kundenzitat, Cross-Links",3,Seiten
+7,Leistungs-Landingpages,"Kachelofen, Heizkamin, Einsatztausch, Kamin sanieren, Ofenbauer Rosenheim — jeweils mit Preisen, Ablauf, FAQ, Schema.org",5,Seiten
+8,Wissens-/Content-Seiten,"Preisguide, Kachelofen vs Kamin, Speicherofen Vorteile, Ofen Neubau, Ofen Altbau — Ratgeber-Artikel",5,Seiten
+9,Lokale SEO-Seiten,"Rosenheim, Kolbermoor, Bad Aibling, Prien, Wasserburg — jeweils mit lokaler Referenz und FAQ",5,Seiten
+10,Impressum & Datenschutz,"TMG-konformes Impressum, DSGVO-konforme Datenschutzerklärung",2,Seiten
+11,SEO-Optimierung,"Schema.org Structured Data (LocalBusiness, FAQ, Service, Article, Breadcrumb), Meta-Tags, Open Graph, Twitter Cards, sitemap.xml, robots.txt, E-E-A-T Badges, interne Verlinkung",1,pauschal
+12,Video-Bearbeitung,"Hero-Video Schnitt/Cropping/Re-Encoding (FFmpeg), 5 TikTok-Videos nativ eingebunden, TikTok Profil-Embed",1,pauschal
+13,Kontakt-System,"Quick-Contact (WhatsApp/E-Mail), Foto-Upload-Feature (Visualisierung in 48h), Floating Buttons, ausklappbares Formular",1,pauschal
+14,Responsive Optimierung,"Anpassung aller 24 Seiten für Desktop, Tablet, Mobile (inkl. Google Pixel getestet)",1,pauschal
+,,,,
+,GESAMT,,24,Seiten

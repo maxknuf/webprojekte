@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Referenzen – Ofenbau Hogger. Projekte, Kachelöfen, Heizkamine und Speicheröfen in Rosenheim und Umgebung." />
+  <title>Referenzen – Ofenbau Hogger</title>
+  <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0C0B09;
+      --bg2:        #131210;
+      --bg3:        #1A1917;
+      --bg4:        #222120;
+      --gold:       #C4A84C;
+      --gold-light: #DFC882;
+      --gold-dim:   #8A7230;
+      --red:        #A61216;
+      --text:       #F0EAE0;
+      --text-muted: #9A9080;
+      --text-dim:   #5A5448;
+      --border:     rgba(196,168,76,0.15);
+      --border-soft:rgba(240,234,224,0.07);
+      --radius:     4px;
+    }
+
+    html { font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ─── NAV ──────────────────────────────────────────── */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(12,11,9,0.92);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo-img {
+      height: 48px;
+      width: auto;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--gold-dim);
+      border-radius: var(--radius);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--gold) !important;
+      transition: background 0.25s, border-color 0.25s, color 0.25s !important;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--bg) !important;
+    }
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--text);
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 250;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding: 80px 24px 40px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 251;
+    }
+
+    /* ─── PARALLAX HERO ───────────────────────────────── */
+    .p-hero {
+      position: relative;
+      height: 100svh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .p-hero-img {
+      position: absolute;
+      inset: -20%;
+      width: 140%;
+      height: 140%;
+      object-fit: cover;
+      object-position: center 40%;
+      will-change: transform;
+    }
+    .p-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 50% at 50% 50%, rgba(12,11,9,0.5) 0%, rgba(12,11,9,0.85) 100%);
+    }
+    .p-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .p-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: heroReveal 1.2s ease forwards 0.3s;
+    }
+    .p-hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .p-hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: heroReveal 1s ease forwards 0.7s;
+    }
+    .p-hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: heroReveal 1s ease forwards 1.2s;
+    }
+    .p-hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold-dim), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes heroReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ─── INTRO COUNTER ───────────────────────────────── */
+    .intro-counter {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .counter-item {
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .counter-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .counter-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ─── SCROLLYTELLING PROJECTS ──────────────────────── */
+    .project {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+    }
+    .project-sticky {
+      position: sticky;
+      top: 0;
+      width: 55%;
+      height: 100vh;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 8s ease;
+    }
+    .project:hover .project-img {
+      transform: scale(1.06);
+    }
+    .project-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 50%, var(--bg) 100%);
+    }
+    .project-text {
+      width: 45%;
+      padding: 120px 60px 120px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .project-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text-dim);
+      opacity: 0.25;
+      margin-bottom: 20px;
+    }
+    .project-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .project-location {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .project-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .project-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 6px 14px;
+      border: 1px solid var(--border-soft);
+      border-radius: 2px;
+    }
+    /* Alternate: image right */
+    .project.reverse { flex-direction: row-reverse; }
+    .project.reverse .project-img-overlay {
+      background: linear-gradient(to left, transparent 50%, var(--bg) 100%);
+    }
+    .project.reverse .project-text {
+      padding: 120px 80px 120px 60px;
+    }
+
+    /* ─── VIDEO SHOWCASE ──────────────────────────────── */
+    .video-showcase {
+      padding: 0;
+      position: relative;
+    }
+    .video-showcase-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .vs-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 9/16;
+    }
+    .vs-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .vs-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,11,9,0.7) 0%, transparent 40%);
+      display: flex;
+      align-items: flex-end;
+      padding: 24px 20px;
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .vs-item:hover .vs-item-overlay { opacity: 1; }
+    .vs-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 5px 12px;
+      border: 1px solid rgba(196,168,76,0.3);
+      border-radius: 2px;
+    }
+    .vs-header {
+      text-align: center;
+      padding: 100px 0 48px;
+    }
+    .vs-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+
+    /* ─── PARALLAX GALLERY ────────────────────────────── */
+    .parallax-gallery {
+      padding: 120px 0;
+      overflow: hidden;
+    }
+    .pg-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .pg-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+    }
+    .pg-track {
+      display: flex;
+      gap: 16px;
+      will-change: transform;
+    }
+    .pg-item {
+      flex: 0 0 auto;
+      width: 320px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .pg-item img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .pg-item:hover img { transform: scale(1.04); }
+    .pg-item-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(12,11,9,0.8), transparent);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .pg-item:hover .pg-item-label { opacity: 1; }
+
+    /* ─── SCROLL REVEAL ───────────────────────────────── */
+    .sr {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .sr.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .sr-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .sr-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .sr-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .sr-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .sr-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .sr-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ─── CTA ─────────────────────────────────────────── */
+    .cta {
+      padding: 120px 0;
+      background: var(--bg2);
+      text-align: center;
+      border-top: 1px solid var(--border-soft);
+    }
+    .cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+    .cta p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-gold, .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--bg);
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-ghost {
+      border: 1px solid var(--border-soft);
+      color: var(--text-muted);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-ghost:hover { border-color: rgba(240,234,224,0.25); color: var(--text); }
+
+    /* ─── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border-soft);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--text-muted); }
+
+    /* ─── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .project { flex-direction: column !important; }
+      .project-sticky { position: relative; width: 100%; height: 60vw; }
+      .project-text { width: 100%; padding: 60px 24px !important; }
+      .project-img-overlay { background: linear-gradient(to top, var(--bg) 10%, transparent 60%) !important; }
+      .project-num { font-size: 4rem; }
+      .video-showcase-inner { grid-template-columns: repeat(2, 1fr); }
+      .counter-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+      .video-showcase-inner { grid-template-columns: 1fr 1fr; }
+      .pg-item { width: 260px; }
+      .pg-item img { height: 340px; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .container { width: min(1160px, calc(100% - 32px)); }
+    }
+    @media (max-width: 420px) {
+      .nav-logo-img { height: 38px; }
+      .counter-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── MOBILE MENU ──────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&#x2715;</button>
+  <a href="index.html#leistungen" onclick="closeMobile()">Leistungen</a>
+  <a href="fliesen-studio.html" onclick="closeMobile()">Fliesen.Studio</a>
+  <a href="ueber-uns.html" onclick="closeMobile()">Über uns</a>
+  <a href="referenzen.html" onclick="closeMobile()">Referenzen</a>
+  <a href="index.html#prozess" onclick="closeMobile()">Ablauf</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="index.html">
+      <img src="assets/images/brand/Favicon-Retina.png" alt="Ofenbau Hogger" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#leistungen">Leistungen</a></li>
+      <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="#" class="active">Referenzen</a></li>
+      <li><a href="index.html#prozess">Ablauf</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Anfrage stellen</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ── PARALLAX HERO ────────────────────────────────── -->
+<section class="p-hero">
+  <img src="assets/images/oefen/apella.jpg" alt="Referenzen" class="p-hero-img" id="heroImg" />
+  <div class="p-hero-overlay"></div>
+  <div class="p-hero-content">
+    <span class="label">Referenzen</span>
+    <h1 class="p-hero-title">Unsere<br><em>Projekte</em></h1>
+    <p class="p-hero-sub">Rosenheim & Umgebung</p>
+  </div>
+  <div class="p-hero-scroll">
+    <span>Entdecken</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ── COUNTER ──────────────────────────────────────── -->
+<section class="intro-counter">
+  <div class="container">
+    <div class="counter-grid">
+      <div class="counter-item sr">
+        <div class="counter-num" data-target="50">0</div>
+        <div class="counter-label">Projekte</div>
+      </div>
+      <div class="counter-item sr">
+        <div class="counter-num" data-target="15">0</div>
+        <div class="counter-label">Jahre Erfahrung</div>
+      </div>
+      <div class="counter-item sr">
+        <div class="counter-num" data-target="100">0</div>
+        <div class="counter-label">% Meisterbetrieb</div>
+      </div>
+      <div class="counter-item sr">
+        <div class="counter-num" data-target="5" data-suffix=".0">0</div>
+        <div class="counter-label">Sterne Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECT 1 ────────────────────────────────────── -->
+<div class="project sr-scale">
+  <div class="project-sticky">
+    <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" class="project-img" />
+    <div class="project-img-overlay"></div>
+  </div>
+  <div class="project-text">
+    <div class="project-num sr-right">01</div>
+    <h2 class="project-title sr-right">Moderner Heizkamin</h2>
+    <div class="project-location sr-right">Rosenheim · 2024</div>
+    <p class="project-desc sr-right">Schlichtes Design trifft auf maximale Wärmeleistung. Der bodentiefe Heizkamin wurde als zentrales Element des offenen Wohnraums geplant — mit dreiseitiger Verglasung und integrierter Holzlege.</p>
+    <div class="project-details sr-right">
+      <span class="project-tag">Heizkamin</span>
+      <span class="project-tag">Dreiseitig</span>
+      <span class="project-tag">Neubau</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECT 2 ────────────────────────────────────── -->
+<div class="project reverse sr-scale">
+  <div class="project-sticky">
+    <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" class="project-img" />
+    <div class="project-img-overlay"></div>
+  </div>
+  <div class="project-text">
+    <div class="project-num sr-left">02</div>
+    <h2 class="project-title sr-left">Kachelofen mit Sitzbank</h2>
+    <div class="project-location sr-left">Prien am Chiemsee · 2024</div>
+    <p class="project-desc sr-left">Ein klassischer Kachelofen, der Wärme und Gemütlichkeit verbindet. Die integrierte Sitzbank mit Speicherkern heizt den Wohnraum noch Stunden nach dem letzten Nachlegen.</p>
+    <div class="project-details sr-left">
+      <span class="project-tag">Kachelofen</span>
+      <span class="project-tag">Sitzbank</span>
+      <span class="project-tag">Speicher</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECT 3 ────────────────────────────────────── -->
+<div class="project sr-scale">
+  <div class="project-sticky">
+    <img src="assets/images/oefen/sera-55.jpg" alt="Kaminanlage Bad Aibling" class="project-img" />
+    <div class="project-img-overlay"></div>
+  </div>
+  <div class="project-text">
+    <div class="project-num sr-right">03</div>
+    <h2 class="project-title sr-right">Kaminanlage mit Naturstein</h2>
+    <div class="project-location sr-right">Bad Aibling · 2023</div>
+    <p class="project-desc sr-right">Maßgeschneiderte Kaminanlage mit Naturstein-Verkleidung. Der Speicherofen nutzt die Strahlungswärme optimal und fügt sich nahtlos in den Altbau-Charme ein.</p>
+    <div class="project-details sr-right">
+      <span class="project-tag">Kaminanlage</span>
+      <span class="project-tag">Naturstein</span>
+      <span class="project-tag">Altbau</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECT 4 ────────────────────────────────────── -->
+<div class="project reverse sr-scale">
+  <div class="project-sticky">
+    <img src="assets/images/referenzen/projekt-1.jpg" alt="Grundofen Kolbermoor" class="project-img" />
+    <div class="project-img-overlay"></div>
+  </div>
+  <div class="project-text">
+    <div class="project-num sr-left">04</div>
+    <h2 class="project-title sr-left">Einsatztausch & Sanierung</h2>
+    <div class="project-location sr-left">Kolbermoor · 2023</div>
+    <p class="project-desc sr-left">Aus alt mach neu: Der bestehende Kamin erhielt einen modernen Heizeinsatz mit höherem Wirkungsgrad. Die vorhandene Verkleidung wurde erhalten und fachgerecht angepasst.</p>
+    <div class="project-details sr-left">
+      <span class="project-tag">Einsatztausch</span>
+      <span class="project-tag">Sanierung</span>
+      <span class="project-tag">Bestand</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── VIDEO SHOWCASE ─────────────────────────────────── -->
+<section class="video-showcase">
+  <div class="vs-header sr">
+    <span class="label">Einblicke</span>
+    <h2>Direkt von der Baustelle</h2>
+  </div>
+  <div class="video-showcase-inner">
+    <div class="vs-item sr-scale">
+      <video muted loop playsinline class="scroll-video">
+        <source src="assets/videos/feuer-ofenbau-bastianhogger-rosenheim-kaminbau-ofen-new-kamin.mp4" type="video/mp4" />
+      </video>
+      <div class="vs-item-overlay"><span class="vs-tag">Neubau</span></div>
+    </div>
+    <div class="vs-item sr-scale">
+      <video muted loop playsinline class="scroll-video">
+        <source src="assets/videos/einsatztausch-ausaltmachneu-feuer-ofenbau-bastianhogger-rosenheim-kaminbau-ofen-new-umbau.mp4" type="video/mp4" />
+      </video>
+      <div class="vs-item-overlay"><span class="vs-tag">Einsatztausch</span></div>
+    </div>
+    <div class="vs-item sr-scale">
+      <video muted loop playsinline class="scroll-video">
+        <source src="assets/videos/feuer-ofenbau-bastianhogger-rosenheim-kaminbau-kamin-ofen-umbau-new.mp4" type="video/mp4" />
+      </video>
+      <div class="vs-item-overlay"><span class="vs-tag">Umbau</span></div>
+    </div>
+    <div class="vs-item sr-scale">
+      <video muted loop playsinline class="scroll-video">
+        <source src="assets/videos/feuer-ofenbau-bastianhogger-rosenheim-kaminbau-kamin-ofen-new.mp4" type="video/mp4" />
+      </video>
+      <div class="vs-item-overlay"><span class="vs-tag">Fertigstellung</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PARALLAX GALLERY ───────────────────────────────── -->
+<section class="parallax-gallery">
+  <div class="pg-header sr">
+    <span class="label">Galerie</span>
+    <h2>Impressionen</h2>
+  </div>
+  <div class="pg-track" id="pgTrack">
+    <div class="pg-item"><img src="assets/images/oefen/juwel-e.jpg" alt="Juwel" /><div class="pg-item-label">Juwel Serie</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/fina-esl.jpg" alt="Fina" /><div class="pg-item-label">Fina ESL</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-2.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Rosenheim</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/kala-s.jpg" alt="Kala" /><div class="pg-item-label">Kala Serie</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-3.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Prien</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/sera-78.jpg" alt="Sera" /><div class="pg-item-label">Sera 78</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/fina-es.jpg" alt="Fina ES" /><div class="pg-item-label">Fina ES</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-4.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Bad Aibling</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/kala-qs.jpg" alt="Kala QS" /><div class="pg-item-label">Kala QS</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-5.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Wasserburg</div></div>
+  </div>
+</section>
+
+<!-- ── EINZELPROJEKTE ──────────────────────────────── -->
+<section style="padding:100px 0;background:var(--bg2);border-top:1px solid var(--border-soft);">
+  <div class="container">
+    <div class="sr" style="text-align:center;margin-bottom:48px;">
+      <span class="label">Projekt-Details</span>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-top:14px;">Projekte im Detail</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <a href="referenzen/heizkamin-rosenheim.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
+        <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
+          <div class="label" style="margin-bottom:6px;">Heizkamin · 2024</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Moderner Heizkamin in Rosenheim</div>
+        </div>
+      </a>
+      <a href="referenzen/kachelofen-prien.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
+        <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
+          <div class="label" style="margin-bottom:6px;">Kachelofen · 2024</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Kachelofen mit Sitzbank in Prien</div>
+        </div>
+      </a>
+      <a href="referenzen/einsatztausch-kolbermoor.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
+        <img src="assets/images/referenzen/projekt-1.jpg" alt="Einsatztausch Kolbermoor" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
+          <div class="label" style="margin-bottom:6px;">Einsatztausch · 2023</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Einsatztausch in Kolbermoor</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────── -->
+<section class="cta">
+  <div class="container">
+    <div class="sr">
+      <span class="label">Ihr Projekt</span>
+      <h2>Bereit für Ihren<br>Traumofen?</h2>
+      <p>Schreiben Sie uns — wir beraten Sie kostenlos und unverbindlich.</p>
+      <div class="cta-actions">
+        <a href="index.html#kontakt" class="btn-gold">
+          Projekt anfragen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="index.html" class="btn-ghost">Zurück zur Startseite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<div style="text-align:center;padding:24px 0;opacity:0.35;font-size:0.65rem;color:#5A5448;letter-spacing:0.06em;">Geprüft von Ofenbaumeister Bastian Hogger · Meisterbetrieb seit 2021</div>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html">Startseite</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Scroll Reveal (fade up, left, right, scale) ── */
+  const srEls = document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale');
+  const srObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        srObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  srEls.forEach(el => srObs.observe(el));
+
+  /* ── Parallax Hero Image ── */
+  const heroImg = document.getElementById('heroImg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight * 1.5) {
+      heroImg.style.transform = `translateY(${y * 0.3}px) scale(1.1)`;
+    }
+  }, { passive: true });
+
+  /* ── Counter Animation ── */
+  const counterNums = document.querySelectorAll('.counter-num');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const target = parseInt(el.dataset.target);
+        const customSuffix = el.dataset.suffix;
+        const suffix = customSuffix !== undefined ? customSuffix : (target === 100 ? '%' : '+');
+        const duration = 1600;
+        let start = 0;
+        const step = ts => {
+          if (!start) start = ts;
+          const progress = Math.min((ts - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterNums.forEach(el => counterObs.observe(el));
+
+  /* ── Videos play on scroll into view ── */
+  const scrollVideos = document.querySelectorAll('.scroll-video');
+  const videoObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.play();
+      } else {
+        e.target.pause();
+      }
+    });
+  }, { threshold: 0.3 });
+  scrollVideos.forEach(v => videoObs.observe(v));
+
+  /* ── Parallax Gallery (horizontal scroll on vertical scroll) ── */
+  const pgTrack = document.getElementById('pgTrack');
+  const pgSection = document.querySelector('.parallax-gallery');
+  window.addEventListener('scroll', () => {
+    const rect = pgSection.getBoundingClientRect();
+    const progress = -rect.top / (rect.height + window.innerHeight);
+    const maxShift = pgTrack.scrollWidth - window.innerWidth;
+    const shift = Math.max(0, Math.min(maxShift, progress * maxShift * 2.5));
+    pgTrack.style.transform = `translateX(-${shift}px)`;
+  }, { passive: true });
+
+  /* ── Mobile Menu ── */
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('mobileClose');
+  burger.addEventListener('click', () => menu.classList.add('open'));
+  closeBtn.addEventListener('click', () => menu.classList.remove('open'));
+  function closeMobile() { menu.classList.remove('open'); }
+</script>
+</body>
+</html>
