@@ -133,7 +133,7 @@
       background: var(--bg);
       z-index: 250;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 24px;
       padding: 80px 24px 40px;
@@ -587,6 +587,7 @@
       .counter-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
+      .detail-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
       .nav-links { display: none; }
       .nav-cta { display: none; }
       .nav-burger { display: flex; }
@@ -810,7 +811,7 @@
       <span class="label">Projekt-Details</span>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;margin-top:14px;">Projekte im Detail</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+    <div class="detail-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
       <a href="referenzen/heizkamin-rosenheim.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
         <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
         <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">

@@ -391,6 +391,10 @@
       height: 48px;
       margin-bottom: 28px;
       color: var(--gold);
+      transition: transform 0.4s ease;
+    }
+    .leistung-card:hover .leistung-icon {
+      transform: translateY(-4px) scale(1.1);
     }
     .leistung-number {
       position: absolute;
@@ -1479,7 +1483,7 @@
     }
     .fliesen-hero {
       position: relative;
-      height: min(560px, 60vw);
+      min-height: min(560px, 75vw);
       overflow: hidden;
     }
     .fliesen-hero-img {
@@ -1692,10 +1696,10 @@
       background: var(--bg);
       z-index: 250;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 24px;
-      padding: 80px 24px 40px;
+      padding: 100px 24px 40px;
       overflow-y: auto;
     }
     .mobile-menu.open { display: flex; }
@@ -1727,9 +1731,10 @@
       .leistungen-grid {
         grid-template-columns: 1fr;
       }
+      #ueber { padding: 60px 0; }
       .ueber-grid {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 32px;
       }
       .ueber-visual {
         max-width: 380px;
@@ -1764,15 +1769,15 @@
 
     @media (max-width: 768px) {
       .fliesen-kategorien { grid-template-columns: 1fr; }
-      .fliesen-hero { height: 70vw; min-height: 280px; }
+      .fliesen-hero { min-height: max(70vw, 360px); }
       .nav-links { display: none; }
       .nav-cta { display: none; }
       .nav-burger { display: flex; }
 
-      #hero { min-height: auto; height: auto; padding-top: 40px; padding-bottom: 0; display: flex; flex-direction: column; align-items: center; }
+      #hero { min-height: auto; height: auto; padding-top: 80px; padding-bottom: 0; display: flex; flex-direction: column; align-items: center; }
       .hero-video-desktop { display: none !important; }
-      .hero-video-mobile { display: block !important; position: relative; width: 100%; height: auto; object-fit: contain; opacity: 0.9; }
-      .hero-content { max-width: 100%; padding: 16px 16px 20px; position: relative; text-align: center; }
+      .hero-video-mobile { display: block !important; position: relative; width: 100%; height: auto; object-fit: contain; opacity: 0.9; mask-image: linear-gradient(to bottom, transparent 0%, black 15%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%); }
+      .hero-content { max-width: 100%; padding: 16px 16px 60px; position: relative; text-align: center; }
       .hero-label { margin-bottom: 14px; justify-content: center; }
       .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.1em; }
       .hero-actions { flex-direction: column; align-items: center; gap: 10px; }
@@ -1793,7 +1798,7 @@
 
       .footer-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-      .ueber-credentials { flex-direction: column; gap: 20px; }
+      .ueber-credentials { flex-direction: row; gap: 16px; justify-content: space-between; }
 
       .leistung-card { padding: 36px 28px; }
       .leistung-number { font-size: 3rem; right: 28px; top: 36px; }
@@ -1997,7 +2002,7 @@
     </div>
 
     <!-- Mini Foto Teaser -->
-    <a href="#kontakt" class="foto-mini reveal">
+    <a href="#foto-upload" class="foto-mini reveal">
       <svg class="foto-mini-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
         <rect x="6" y="10" width="36" height="28" rx="3"/>
         <circle cx="24" cy="26" r="8"/>
@@ -2092,7 +2097,7 @@
   <div class="container">
     <div class="ueber-grid">
       <div class="ueber-visual reveal">
-        <span class="ueber-visual-name">Bastian Hogger</span>
+
         <img src="assets/images/team/bastian-hogger.jpg" alt="Bastian Hogger – Ofenbaumeister" class="ueber-portrait-img" />
         <div class="ueber-badge">
           <span class="ueber-badge-num">15+</span>

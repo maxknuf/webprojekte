@@ -80,7 +80,7 @@
     .nav-cta:hover { background: var(--gold); border-color: var(--gold); color: var(--bg) !important; }
     .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
     .nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--text); }
-    .mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 250; flex-direction: column; justify-content: center; align-items: center; gap: 24px; padding: 80px 24px 40px; }
+    px 24px 40px; }
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.6rem, 5vw, 2.5rem); font-weight: 300; color: var(--text-muted); transition: color 0.25s; }
     .mobile-menu a:hover { color: var(--gold); }
@@ -181,6 +181,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
       transition: transform 6s ease;
     }
     .story-chapter:hover .story-sticky img { transform: scale(1.05); }
@@ -476,7 +477,7 @@
     /* ─── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 1024px) {
       .story-chapter { flex-direction: column !important; }
-      .story-sticky { position: relative; width: 100%; height: 60vw; }
+      .story-sticky { position: relative; width: 100%; height: 100vw; }
       .story-body { width: 100%; padding: 60px 24px !important; }
       .story-sticky-overlay { background: linear-gradient(to top, var(--bg) 10%, transparent 60%) !important; }
       .values-grid { grid-template-columns: 1fr; }
