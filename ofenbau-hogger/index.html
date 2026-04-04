@@ -218,6 +218,9 @@
       object-position: center center;
       opacity: 0.85;
     }
+    .hero-video-mobile { display: none; }
+    .hero-video-desktop { display: block;
+    }
     .hero-bg {
       position: absolute;
       inset: 0;
@@ -1766,19 +1769,18 @@
       .nav-cta { display: none; }
       .nav-burger { display: flex; }
 
-      #hero { min-height: 100svh; }
-      .hero-video {
-        object-fit: contain;
-        object-position: center 30%;
-        background: var(--bg);
-      }
-      .hero-content { max-width: 100%; padding: 0 0 100px; }
-      .hero-logo { height: clamp(72px, 22vw, 140px); }
-      .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.15em; }
-      .hero-actions { flex-direction: column; align-items: center; gap: 14px; }
+      #hero { min-height: auto; height: auto; padding-top: 40px; padding-bottom: 0; display: flex; flex-direction: column; align-items: center; }
+      .hero-video-desktop { display: none !important; }
+      .hero-video-mobile { display: block !important; position: relative; width: 100%; height: auto; object-fit: contain; opacity: 0.9; }
+      .hero-content { max-width: 100%; padding: 16px 16px 20px; position: relative; text-align: center; }
+      .hero-label { margin-bottom: 14px; justify-content: center; }
+      .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.1em; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 10px; }
       .hero-actions .btn-gold,
-      .hero-actions .btn-ghost { width: 100%; max-width: 280px; justify-content: center; padding: 14px 24px; font-size: 0.75rem; }
-      .hero-scroll { bottom: 20px; }
+      .hero-actions .btn-ghost { width: 100%; max-width: 260px; justify-content: center; padding: 12px 20px; font-size: 0.72rem; }
+      .hero-scroll { display: none; }
+      .hero-bg { display: none; }
+      .gold-banner { display: none; }
 
       .referenzen-header { flex-direction: column; align-items: flex-start; gap: 20px; }
       .referenzen-grid { grid-template-columns: 1fr; }
@@ -1804,8 +1806,8 @@
       #nav { padding: 16px 0; }
       #nav.scrolled { padding: 10px 0; }
       #nav.scrolled .nav-logo-img { height: 32px; }
-      .hero-content { padding: 0 0 80px; }
-      .hero-eyebrow { font-size: 0.58rem; }
+      .hero-content { padding: 8px 0 0; }
+      .hero-eyebrow { font-size: 0.55rem; }
       .mobile-menu a { font-size: 1.4rem; }
       .mobile-menu { gap: 18px; }
     }
@@ -1859,9 +1861,11 @@
 
 <!-- ── HERO ───────────────────────────────────────────────────── -->
 <section id="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
+  <video class="hero-video hero-video-desktop" autoplay muted loop playsinline>
     <source src="assets/videos/Video_Hero_ohne_Hogger.mp4" type="video/mp4" />
-    <source src="assets/videos/hero-fireplace.mp4" type="video/mp4" />
+  </video>
+  <video class="hero-video hero-video-mobile" autoplay muted loop playsinline>
+    <source src="assets/videos/Video_Hero_mit_Hogger.mp4" type="video/mp4" />
   </video>
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -2694,11 +2698,10 @@
 
 <!-- ── JS ─────────────────────────────────────────────────────── -->
 <script>
-  /* Hero video slow motion */
-  const heroVideo = document.querySelector('.hero-video');
-  if (heroVideo) {
-    heroVideo.addEventListener('loadedmetadata', () => { heroVideo.playbackRate = 0.45; });
-  }
+  /* Hero video slow motion (both desktop + mobile) */
+  document.querySelectorAll('.hero-video').forEach(v => {
+    v.addEventListener('loadedmetadata', () => { v.playbackRate = 0.45; });
+  });
 
   /* Nav scroll + parallax (single handler) */
   const nav = document.getElementById('nav');
