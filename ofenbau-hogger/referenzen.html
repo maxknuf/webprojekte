@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Referenzen – Ofenbau Hogger. Projekte, Kachelöfen, Heizkamine und Speicheröfen in Rosenheim und Umgebung." />
-  <title>Referenzen – Ofenbau Hogger</title>
+  <meta name="description" content="Referenzen von Ofenbau Hogger: Kachelöfen, Heizkamine & Speicheröfen in Rosenheim und Umgebung. Sehen Sie unsere realisierten Projekte im Überblick." />
+  <meta name="keywords" content="Ofenbau Hogger Referenzen, Kachelofen Projekte, Heizkamin Referenz, Ofenbau Rosenheim Projekte" />
+  <title>Referenzen & Projekte | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/referenzen.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Referenzen & Projekte | Ofenbau Hogger" />
+  <meta property="og:description" content="Kachelöfen, Heizkamine & Speicheröfen in Rosenheim und Umgebung. Unsere realisierten Projekte im Überblick." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/referenzen.html" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/referenzen/projekt-1.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Referenzen & Projekte | Ofenbau Hogger" />
+  <meta name="twitter:description" content="Kachelöfen, Heizkamine & Speicheröfen – unsere Projekte in Rosenheim und Umgebung." />
+
   <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -557,24 +573,57 @@
       padding: 48px 0 32px;
     }
     .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
     }
     .footer-copy {
       font-size: 0.78rem;
       color: var(--text-dim);
     }
-    .footer-links {
+    .footer-legal {
       display: flex;
       gap: 24px;
     }
-    .footer-links a {
+    .footer-legal a {
       font-size: 0.78rem;
       color: var(--text-dim);
       transition: color 0.25s;
     }
-    .footer-links a:hover { color: var(--text-muted); }
+    .footer-legal a:hover { color: var(--text-muted); }
 
     /* ─── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -585,6 +634,7 @@
       .project-num { font-size: 4rem; }
       .video-showcase-inner { grid-template-columns: repeat(2, 1fr); }
       .counter-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
     @media (max-width: 768px) {
       .detail-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
@@ -594,7 +644,8 @@
       .video-showcase-inner { grid-template-columns: 1fr 1fr; }
       .pg-item { width: 260px; }
       .pg-item img { height: 340px; }
-      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
       .container { width: min(1160px, calc(100% - 32px)); }
     }
     @media (max-width: 420px) {
@@ -677,7 +728,7 @@
 <!-- ── PROJECT 1 ────────────────────────────────────── -->
 <div class="project sr-scale">
   <div class="project-sticky">
-    <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" class="project-img" />
+    <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" class="project-img" loading="lazy" />
     <div class="project-img-overlay"></div>
   </div>
   <div class="project-text">
@@ -696,7 +747,7 @@
 <!-- ── PROJECT 2 ────────────────────────────────────── -->
 <div class="project reverse sr-scale">
   <div class="project-sticky">
-    <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" class="project-img" />
+    <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" class="project-img" loading="lazy" />
     <div class="project-img-overlay"></div>
   </div>
   <div class="project-text">
@@ -715,7 +766,7 @@
 <!-- ── PROJECT 3 ────────────────────────────────────── -->
 <div class="project sr-scale">
   <div class="project-sticky">
-    <img src="assets/images/oefen/sera-55.jpg" alt="Kaminanlage Bad Aibling" class="project-img" />
+    <img src="assets/images/oefen/sera-55.jpg" alt="Kaminanlage Bad Aibling" class="project-img" loading="lazy" />
     <div class="project-img-overlay"></div>
   </div>
   <div class="project-text">
@@ -734,7 +785,7 @@
 <!-- ── PROJECT 4 ────────────────────────────────────── -->
 <div class="project reverse sr-scale">
   <div class="project-sticky">
-    <img src="assets/images/referenzen/projekt-1.jpg" alt="Grundofen Kolbermoor" class="project-img" />
+    <img src="assets/images/referenzen/projekt-1.jpg" alt="Grundofen Kolbermoor" class="project-img" loading="lazy" />
     <div class="project-img-overlay"></div>
   </div>
   <div class="project-text">
@@ -791,16 +842,16 @@
     <h2>Impressionen</h2>
   </div>
   <div class="pg-track" id="pgTrack">
-    <div class="pg-item"><img src="assets/images/oefen/juwel-e.jpg" alt="Juwel" /><div class="pg-item-label">Juwel Serie</div></div>
-    <div class="pg-item"><img src="assets/images/oefen/fina-esl.jpg" alt="Fina" /><div class="pg-item-label">Fina ESL</div></div>
-    <div class="pg-item"><img src="assets/images/referenzen/projekt-2.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Rosenheim</div></div>
-    <div class="pg-item"><img src="assets/images/oefen/kala-s.jpg" alt="Kala" /><div class="pg-item-label">Kala Serie</div></div>
-    <div class="pg-item"><img src="assets/images/referenzen/projekt-3.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Prien</div></div>
-    <div class="pg-item"><img src="assets/images/oefen/sera-78.jpg" alt="Sera" /><div class="pg-item-label">Sera 78</div></div>
-    <div class="pg-item"><img src="assets/images/oefen/fina-es.jpg" alt="Fina ES" /><div class="pg-item-label">Fina ES</div></div>
-    <div class="pg-item"><img src="assets/images/referenzen/projekt-4.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Bad Aibling</div></div>
-    <div class="pg-item"><img src="assets/images/oefen/kala-qs.jpg" alt="Kala QS" /><div class="pg-item-label">Kala QS</div></div>
-    <div class="pg-item"><img src="assets/images/referenzen/projekt-5.jpg" alt="Projekt" /><div class="pg-item-label">Projekt Wasserburg</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/juwel-e.jpg" alt="Juwel" loading="lazy" /><div class="pg-item-label">Juwel Serie</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/fina-esl.jpg" alt="Fina" loading="lazy" /><div class="pg-item-label">Fina ESL</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-2.jpg" alt="Projekt" loading="lazy" /><div class="pg-item-label">Projekt Rosenheim</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/kala-s.jpg" alt="Kala" loading="lazy" /><div class="pg-item-label">Kala Serie</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-3.jpg" alt="Projekt" loading="lazy" /><div class="pg-item-label">Projekt Prien</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/sera-78.jpg" alt="Sera" loading="lazy" /><div class="pg-item-label">Sera 78</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/fina-es.jpg" alt="Fina ES" loading="lazy" /><div class="pg-item-label">Fina ES</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-4.jpg" alt="Projekt" loading="lazy" /><div class="pg-item-label">Projekt Bad Aibling</div></div>
+    <div class="pg-item"><img src="assets/images/oefen/kala-qs.jpg" alt="Kala QS" loading="lazy" /><div class="pg-item-label">Kala QS</div></div>
+    <div class="pg-item"><img src="assets/images/referenzen/projekt-5.jpg" alt="Projekt" loading="lazy" /><div class="pg-item-label">Projekt Wasserburg</div></div>
   </div>
 </section>
 
@@ -813,21 +864,21 @@
     </div>
     <div class="detail-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
       <a href="referenzen/heizkamin-rosenheim.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
-        <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <img src="assets/images/oefen/colona-schwarz.jpg" alt="Heizkamin Rosenheim" style="width:100%;aspect-ratio:3/4;object-fit:cover;" loading="lazy" />
         <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
           <div class="label" style="margin-bottom:6px;">Heizkamin · 2024</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Moderner Heizkamin in Rosenheim</div>
         </div>
       </a>
       <a href="referenzen/kachelofen-prien.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
-        <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <img src="assets/images/oefen/apella.jpg" alt="Kachelofen Prien" style="width:100%;aspect-ratio:3/4;object-fit:cover;" loading="lazy" />
         <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
           <div class="label" style="margin-bottom:6px;">Kachelofen · 2024</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Kachelofen mit Sitzbank in Prien</div>
         </div>
       </a>
       <a href="referenzen/einsatztausch-kolbermoor.html" class="sr" style="display:block;position:relative;overflow:hidden;border-radius:8px;text-decoration:none;color:inherit;">
-        <img src="assets/images/referenzen/projekt-1.jpg" alt="Einsatztausch Kolbermoor" style="width:100%;aspect-ratio:3/4;object-fit:cover;" />
+        <img src="assets/images/referenzen/projekt-1.jpg" alt="Einsatztausch Kolbermoor" style="width:100%;aspect-ratio:3/4;object-fit:cover;" loading="lazy" />
         <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top,rgba(12,11,9,0.9),transparent);">
           <div class="label" style="margin-bottom:6px;">Einsatztausch · 2023</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Einsatztausch in Kolbermoor</div>
@@ -860,11 +911,54 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" loading="lazy" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="index.html#leistungen">Kachelöfen</a></li>
+          <li><a href="index.html#leistungen">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="index.html#leistungen">Beratung & Planung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Wissen</div>
+        <ul class="footer-links">
+          <li><a href="was-kostet-ein-ofen.html">Was kostet ein Ofen?</a></li>
+          <li><a href="grundofen-rosenheim.html">Grundofen</a></li>
+          <li><a href="bimschv-ratgeber.html">BImSchV-Ratgeber</a></li>
+          <li><a href="kachelofen-foerderung.html">Förderung</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
-      <div class="footer-links">
+      <div class="footer-legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
-        <a href="index.html">Startseite</a>
       </div>
     </div>
   </div>
@@ -948,6 +1042,9 @@
   burger.addEventListener('click', () => menu.classList.add('open'));
   closeBtn.addEventListener('click', () => menu.classList.remove('open'));
   function closeMobile() { menu.classList.remove('open'); }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ofenbau-hogger.de/"},{"@type":"ListItem","position":2,"name":"Referenzen","item":"https://ofenbau-hogger.de/referenzen.html"}]}
 </script>
 </body>
 </html>

@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fliesen.Studio by Ofenbau Hogger – Exklusive Fliesen und Bodenbeläge in Rosenheim. Mexicotto, Feinsteinzeug, Naturstein und Outdoor-Platten." />
-  <title>Fliesen.Studio – Ofenbau Hogger</title>
+  <meta name="description" content="Fliesen.Studio by Ofenbau Hogger – exklusive Fliesen & Bodenbeläge in Rosenheim. Mexicotto, Feinsteinzeug, Naturstein & Outdoor-Platten. Beratung vor Ort." />
+  <meta name="keywords" content="Fliesen Rosenheim, Fliesen Studio, Mexicotto, Feinsteinzeug, Naturstein, Bodenbeläge Rosenheim, Ofenbau Hogger Fliesen" />
+  <title>Fliesen Studio Rosenheim | Ofenbau Hogger</title>
+  <link rel="canonical" href="https://ofenbau-hogger.de/fliesen-studio.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fliesen Studio Rosenheim | Ofenbau Hogger" />
+  <meta property="og:description" content="Exklusive Fliesen & Bodenbeläge in Rosenheim. Mexicotto, Feinsteinzeug, Naturstein & Outdoor-Platten." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ofenbau-hogger.de/fliesen-studio.html" />
+  <meta property="og:image" content="https://ofenbau-hogger.de/assets/images/fliesen/mexicotto.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fliesen Studio Rosenheim | Ofenbau Hogger" />
+  <meta name="twitter:description" content="Exklusive Fliesen & Bodenbeläge in Rosenheim – Mexicotto, Feinsteinzeug & Naturstein." />
+
   <link rel="icon" href="assets/images/brand/Favicon-Retina.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -446,33 +462,67 @@
     footer {
       background: var(--bg);
       border-top: 1px solid var(--border-soft);
-      padding: 48px 0 32px;
+      padding: 60px 0 40px;
     }
     .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-soft);
     }
     .footer-copy {
       font-size: 0.78rem;
       color: var(--text-dim);
     }
-    .footer-links {
+    .footer-legal {
       display: flex;
       gap: 24px;
     }
-    .footer-links a {
+    .footer-legal a {
       font-size: 0.78rem;
       color: var(--text-dim);
       transition: color 0.25s;
     }
-    .footer-links a:hover { color: var(--text-muted); }
+    .footer-legal a:hover { color: var(--text-muted); }
 
     /* ─── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 1024px) {
       .cat-grid { grid-template-columns: 1fr; }
       .intro-grid { grid-template-columns: 1fr; gap: 28px; }
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -480,7 +530,8 @@
       .nav-burger { display: flex; }
       .page-hero { min-height: 260px; }
       .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
       .container { width: min(1160px, calc(100% - 32px)); }
     }
     @media (max-width: 420px) {
@@ -694,27 +745,27 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item reveal reveal-delay-1">
-        <img src="assets/images/fliesen/cotto-campiano.jpg" alt="Cotto Campiano" />
+        <img src="assets/images/fliesen/cotto-campiano.jpg" alt="Cotto Campiano" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Mexicotto</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-2">
-        <img src="assets/images/fliesen/stein-optik-rustikal.jpg" alt="Steinoptik rustikal" />
+        <img src="assets/images/fliesen/stein-optik-rustikal.jpg" alt="Steinoptik rustikal" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Steinoptik</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-3">
-        <img src="assets/images/fliesen/cotto-pomposa.jpg" alt="Cotto Pomposa" />
+        <img src="assets/images/fliesen/cotto-pomposa.jpg" alt="Cotto Pomposa" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Naturstein</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-1">
-        <img src="assets/images/fliesen/zubehoer-header.jpg" alt="Zubehör" />
+        <img src="assets/images/fliesen/zubehoer-header.jpg" alt="Zubehör" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Zementoptik</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-2">
-        <img src="assets/images/fliesen/zubehoer-bg.jpg" alt="Outdoor Belag" />
+        <img src="assets/images/fliesen/zubehoer-bg.jpg" alt="Outdoor Belag" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Outdoor</span></div>
       </div>
       <div class="gallery-item reveal reveal-delay-3">
-        <img src="assets/images/fliesen/fire.jpg" alt="Feuer und Fliesen" />
+        <img src="assets/images/fliesen/fire.jpg" alt="Feuer und Fliesen" loading="lazy" />
         <div class="gallery-overlay"><span class="gallery-tag">Ofenbau & Fliesen</span></div>
       </div>
     </div>
@@ -744,11 +795,54 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/brand/logo.png" alt="Ofenbau Hogger" style="height:38px;width:auto;margin-bottom:16px;" loading="lazy" />
+        <p class="footer-tagline">
+          Individuelle Kachelöfen, Heizkamine und Speicheröfen — handgefertigt mit Leidenschaft seit über 15 Jahren.
+        </p>
+      </div>
+      <div>
+        <div class="footer-col-title">Leistungen</div>
+        <ul class="footer-links">
+          <li><a href="index.html#leistungen">Kachelöfen</a></li>
+          <li><a href="index.html#leistungen">Heizkamine</a></li>
+          <li><a href="index.html#leistungen">Speicheröfen</a></li>
+          <li><a href="index.html#leistungen">Beratung & Planung</a></li>
+          <li><a href="fliesen-studio.html">Fliesen.Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Unternehmen</div>
+        <ul class="footer-links">
+          <li><a href="ueber-uns.html">Über Bastian Hogger</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="index.html#prozess">Unser Ablauf</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Wissen</div>
+        <ul class="footer-links">
+          <li><a href="was-kostet-ein-ofen.html">Was kostet ein Ofen?</a></li>
+          <li><a href="grundofen-rosenheim.html">Grundofen</a></li>
+          <li><a href="bimschv-ratgeber.html">BImSchV-Ratgeber</a></li>
+          <li><a href="kachelofen-foerderung.html">Förderung</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <ul class="footer-links">
+          <li><a href="tel:+4915221010008">01522 1010008</a></li>
+          <li><a href="mailto:info@ofenbau-hogger.de">info@ofenbau-hogger.de</a></li>
+          <li><a href="index.html#kontakt">Anton Bruckner Str. 1g<br>83024 Rosenheim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
       <p class="footer-copy">&copy; 2025 Bastian Hogger – Ofenbaumeister. Alle Rechte vorbehalten.</p>
-      <div class="footer-links">
+      <div class="footer-legal">
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
-        <a href="index.html">Startseite</a>
       </div>
     </div>
   </div>
@@ -771,6 +865,9 @@
   burger.addEventListener('click', () => menu.classList.add('open'));
   close.addEventListener('click', () => menu.classList.remove('open'));
   function closeMobile() { menu.classList.remove('open'); }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ofenbau-hogger.de/"},{"@type":"ListItem","position":2,"name":"Fliesen Studio","item":"https://ofenbau-hogger.de/fliesen-studio.html"}]}
 </script>
 </body>
 </html>
