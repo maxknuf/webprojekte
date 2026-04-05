@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.italia-strandliegen.de/sitemap.xml
+
+# Block admin/internal paths
+Disallow: /.claude/
